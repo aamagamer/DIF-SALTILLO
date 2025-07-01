@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIF Saltillo | Coordinación de Mujeres</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 scroll-smooth">
+
+<!-- Menú navbar -->
+<header id="mainNav"
+        class="navbar absolute inset-x-0 top-0 z-50
+               bg-[#e20d7b] px-4 transition-all duration-300 items-start">
+    <div class="flex-1">
+        <a href="../index.html" class="block w-20 md:w-24">
+            <img src="../Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" 
+                 alt="Logo DIF Saltillo" 
+                 class="w-full h-auto object-contain" />
+        </a>
+    </div>
+
+    <!-- Escritorio -->
+    <div class="hidden md:flex flex-col items-end gap-2">
+        <nav class="flex gap-4 font-medium">
+            <a class="btn btn-ghost text-white" href="../index.html#inicio">Inicio</a>
+            <a class="btn btn-ghost text-white" href="../index.html#programas">Programas Sociales</a>
+            <a class="btn btn-ghost text-white" href="../index.html#coordinaciones">Coordinaciones</a>
+            <a class="btn btn-ghost text-white" href="../index.html#blog">Blog</a>
+            <a class="btn btn-ghost text-white" href="../index.html#transparencia">Transparencia</a>
+            <a class="btn btn-ghost text-white" href="../index.html#contacto">Contáctanos</a>
+        </nav>
+
+        <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
+
+        <div class="flex gap-4 mt-2 text-white text-2xl">
+            <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+            </a>
+            <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram hover:scale-110 transition"></i>
+            </a>
+            <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp hover:scale-110 transition"></i>
+            </a>
+            <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube hover:scale-110 transition"></i>
+            </a>
+            <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
+                <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
+            </a>
+            <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok hover:scale-110 transition"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Móvil -->
+    <div class="md:hidden dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
+            <li><a href="../index.html#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+            <li><a href="../index.html#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
+            <li><a href="../index.html#programas" onclick="closeMobileMenu()">Programas</a></li>
+            <li><a href="../index.html#blog" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="../index.html#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
+            <li><a href="../index.html#contacto" onclick="closeMobileMenu()">Contáctanos</a></li>
+            <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
+                <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!-- Contenido -->
+<section class="pt-32 pb-14 px-4 max-w-7xl mx-auto min-h-screen">
+    <div class="text-center mb-10">
+        <!-- Logo Coordinación-->
+        <img src="..\Media\IMÁGENES_Y_LOGOTIPOS_COORDINACIONES\íconos coordinaciones DIF/Mujeres.png" alt="Logo Coordinación de Mujeres" class="mx-auto w-48 h-48 object-contain rounded-full mb-6 shadow-lg">
+
+        <!-- Título -->
+        <h1 class="text-4xl font-bold text-primary mb-4 text-[#622180]">Coordinación de Mujeres</h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Brindamos acompañamiento, ayuda y asesoría a las mujeres a través de programas de prevención, atención integral y apoyo en casos de violencia, promoviendo su autonomía y bienestar.
+        </p>
+    </div>
+
+    <!-- Lista Programas-->
+    <h2 class="text-3xl font-bold text-center mb-10 text-primary mt-16 text-[#622180]">Nuestros Programas</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="..\Media\PROGRAMAS_POR_COORDINACION\MUJERES\lactarios.png" alt="Programa de Apoyo" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Lactarios Con Amor</h3>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="https://via.placeholder.com/400x250?text=Capacitacion+Laboral" alt="Capacitación Laboral" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Mujer Escucha</h3>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="https://via.placeholder.com/400x250?text=Asesoria+Legal" alt="Asesoría Legal" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Campaña de Recolección de Trenzas</h3>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="https://via.placeholder.com/400x250?text=Prevencion+Violencia" alt="Prevención de Violencia" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Entrega de Kits para Pacientes Oncológicas</h3>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="https://via.placeholder.com/400x250?text=Redes+de+Apoyo" alt="Redes de Apoyo" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Apoyos Con Amor</h3>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl image-full">
+            <figure><img src="https://via.placeholder.com/400x250?text=Talleres+de+Empoderamiento" alt="Talleres de Empoderamiento" /></figure>
+            <div class="card-body justify-end">
+                <h3 class="card-title text-white">Talleres de Empoderamiento Femenino</h3>
+                <p class="text-white text-opacity-80">Fortalecemos habilidades para el liderazgo y la toma de decisiones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
