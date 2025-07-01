@@ -14,7 +14,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 scroll-smooth">
-
+<style>
+  *{
+    scroll-behavior: smooth;
+  }
+</style>
 <!-- =================================================== -->
 <!-- 1. N A V B A R                                         -->
 <!-- =================================================== -->
@@ -26,7 +30,7 @@
       <!-- Logo DIF Saltillo -->
       <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" 
            alt="Logo DIF Saltillo" 
-           class="w-full h-auto object-contain" />
+           class="w-full h-auto object-contain"/>
     </a>
   </div>
 
@@ -140,7 +144,7 @@
 <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
   <h2 class="text-3xl font-bold text-center mb-10 text-primary">Nuestras Coordinaciones</h2>
   <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');" onclick="openModal('modal1')"></div>
+    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');" onclick="window.open('programas/mujeres.html','_blank')"></div>
     <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');" onclick="openModal('modal2')"></div>
     <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');" onclick="openModal('modal3')"></div>
     <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');" onclick="openModal('modal4')"></div>
@@ -215,7 +219,7 @@ addEventListener('click',e=>{
   text-align: center;
   padding: .5rem;
 }
-</style>
+</style> 
 
 <!-- =================================================== -->
 <!-- 4. P R O G R A M A S                                   -->

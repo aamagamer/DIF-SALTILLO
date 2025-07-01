@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programas - Mujeres | DIF Saltillo</title>
+  <!-- Tailwind CSS + DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <style>
+    .nav-bg{
+      background-image: url('../Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner\ Carrusel\ 3.png');
+      background-size: cover;
+      background-position: 0 -200px;
+    }
+    .nav-overlay{
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style> 
+<!-- =================================================== -->
+<!-- 1. N A V B A R                                         -->
+<!-- =================================================== -->
+<header id="mainNav" class="navbar sticky inset-x-0 top-0 z-50 nav-bg px-4 transition-all duration-300 items-start">
+  <div class="flex-1">
+    <a href="#inicio" class="block w-20 md:w-24">
+      <!-- Logo DIF Saltillo -->
+      <img src="../Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" alt="Logo DIF Saltillo" class="w-full h-auto object-contain" onclick="window.location.href='../index.html'"/>
+    </a>
+  </div>
+
+  <!-- Menú desktop -->
+  <div class="hidden md:flex flex-col items-end gap-2">
+    <nav class="flex gap-4 font-medium">
+      <a class="btn btn-ghost text-white" href="#inicio">Inicio</a>
+      <a class="btn btn-ghost text-white" href="#programas">Programas Sociales</a>
+      <a class="btn btn-ghost text-white" href="#coordinaciones">Coordinaciones</a>
+      <a class="btn btn-ghost text-white" href="#blog">Blog</a>
+      <a class="btn btn-ghost text-white" href="#transparencia">Transparencia</a>
+      <a class="btn btn-ghost text-white" href="#contacto">Contáctanos</a>
+    </nav>
+
+    <!-- Línea blanca horizontal -->
+    <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
+
+
+<!-- Iconos redes sociales desktop -->
+<div class="flex gap-4 mt-2 text-white text-2xl">
+  <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+  </a>
+  <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram hover:scale-110 transition"></i>
+  </a>
+  <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp hover:scale-110 transition"></i>
+  </a>
+  <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube hover:scale-110 transition"></i>
+  </a>
+  <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
+    <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
+  </a>
+  <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+    <i class="fab fa-tiktok hover:scale-110 transition"></i>
+  </a>
+</div>
+
+
+  <!-- Menú móvil -->
+  <div class="md:hidden dropdown dropdown-end">
+    <label tabindex="0" class="btn btn-ghost btn-circle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
+      <li><a href="#inicio"        onclick="closeMobileMenu()">Inicio</a></li>
+      <li><a href="#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
+      <li><a href="#programas"     onclick="closeMobileMenu()">Programas</a></li>
+      <li><a href="#blog"          onclick="closeMobileMenu()">Blog</a></li>
+      <li><a href="#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
+      <li><a href="#contacto"      onclick="closeMobileMenu()">Contáctanos</a></li>
+      <!-- Iconos redes sociales móvil -->
+      <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- =================================================== -->
+  <!-- TÍTULO DE COORDINACIÓN -->
+  <!-- =================================================== -->
+  <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+    <h1 class="text-5xl font-bold text-primary mb-4">Coordinación de Mujeres</h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Programas integrales de apoyo y desarrollo para el empoderamiento femenino</p>
+  </div>
+<!-- =================================================== -->
+<!-- 2. PROGRAMAS                            -->
+<!-- =================================================== -->
+<section id="programas" class="py-14 pt-0 px-4 max-w-[90vw] w-[90vw] mx-auto">
+  <ul class="space-y-4">
+    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition" onclick="openModal('p1')">
+      <h3 class="font-bold text-lg">Programa de Mujeres Emprendedoras</h3>
+      <p class="text-gray-600">Apoyo a emprendimientos femeninos</p>
+    </li>
+    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition" onclick="openModal('p2')">
+      <h3 class="font-bold text-lg">Programa de Salud Integral</h3>
+      <p class="text-gray-600">Atención médica especializada</p>
+    </li>
+    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition" onclick="openModal('p3')">
+      <h3 class="font-bold text-lg">Programa de Capacitación</h3>
+      <p class="text-gray-600">Talleres de desarrollo profesional</p>
+    </li>
+  </ul>
+</section>
+
+<!-- ========== MODALES DE PROGRAMAS ========== -->
+<template id="progModalTemplate">
+  <input type="checkbox" class="modal-toggle dynamic-toggle" />
+  <div class="modal">
+    <div class="modal-box max-w-2xl bg-gradient-to-br from-pink-400 to-purple-500 text-gray-900">
+      <h3 class="font-bold text-lg mb-4 modal-title"></h3>
+      <div class="modal-content text-gray-600">
+        <p class="modal-text mb-4 text-gray-800"></p>
+        <div class="info-detalle mb-4"></div>
+        <div class="tramites-info"></div>
+      </div>
+      <div class="modal-action">
+        <label class="btn close-btn">Cerrar</label>
+      </div>
+    </div>
+    <label class="modal-backdrop close-btn"></label>
+  </div>
+</template>
+
+<script src="mujeresScript.js"></script>
+</body>
+</html>
