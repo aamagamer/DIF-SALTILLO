@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,349 +8,369 @@
   <!-- Tailwind + DaisyUI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" />
   <!-- Font Awesome para iconos sociales -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 scroll-smooth">
-<style>
-  *{
-    scroll-behavior: smooth;
-  }
-</style>
-<!-- =================================================== -->
-<!-- 1. N A V B A R                                         -->
-<!-- =================================================== -->
-<header id="mainNav"
-        class="navbar absolute inset-x-0 top-0 z-50
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <!-- =================================================== -->
+  <!-- 1. N A V B A R                                         -->
+  <!-- =================================================== -->
+  <header id="mainNav" class="navbar absolute inset-x-0 top-0 z-50
                bg-transparent px-4 transition-all duration-300 items-start">
-  <div class="flex-1">
-    <a href="#inicio" class="block w-20 md:w-24">
-      <!-- Logo DIF Saltillo -->
-      <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" 
-           alt="Logo DIF Saltillo" 
-           class="w-full h-auto object-contain"/>
-    </a>
-  </div>
+    <div class="flex-1">
+      <a href="#inicio" class="block w-20 md:w-24">
+        <!-- Logo DIF Saltillo -->
+        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
+          alt="Logo DIF Saltillo" class="w-full h-auto object-contain" />
+      </a>
+    </div>
 
-  <!-- Menú desktop -->
-  <div class="hidden md:flex flex-col items-end gap-2">
-    <nav class="flex gap-4 font-medium">
-      <a class="btn btn-ghost text-white" href="#inicio">Inicio</a>
-      <a class="btn btn-ghost text-white" href="#programas">Programas Sociales</a>
-      <a class="btn btn-ghost text-white" href="#coordinaciones">Coordinaciones</a>
-      <a class="btn btn-ghost text-white" href="#blog">Blog</a>
-      <a class="btn btn-ghost text-white" href="#transparencia">Transparencia</a>
-      <a class="btn btn-ghost text-white" href="#contacto">Contáctanos</a>
-    </nav>
+    <!-- Menú desktop -->
+    <div class="hidden md:flex flex-col items-end gap-2">
+      <nav class="flex gap-4 font-medium">
+        <a class="btn btn-ghost text-white" href="#inicio">Inicio</a>
+        <a class="btn btn-ghost text-white" href="#programas">Programas Sociales</a>
+        <a class="btn btn-ghost text-white" href="#coordinaciones">Coordinaciones</a>
+        <a class="btn btn-ghost text-white" href="#blog">Blog</a>
+        <a class="btn btn-ghost text-white" href="https://transparenciasaltillo.mx/">Transparencia</a>
+        <a class="btn btn-ghost text-white" href="#contacto">Contáctanos</a>
+      </nav>
 
-    <!-- Línea blanca horizontal -->
-    <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
-
-
-<!-- Iconos redes sociales desktop -->
-<div class="flex gap-4 mt-2 text-white text-2xl">
-  <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-  </a>
-  <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram hover:scale-110 transition"></i>
-  </a>
-  <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp hover:scale-110 transition"></i>
-  </a>
-  <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube hover:scale-110 transition"></i>
-  </a>
-  <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
-    <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
-  </a>
-  <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-    <i class="fab fa-tiktok hover:scale-110 transition"></i>
-  </a>
-</div>
+      <!-- Línea blanca horizontal -->
+      <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
 
 
-  <!-- Menú móvil -->
-  <div class="md:hidden dropdown dropdown-end">
-    <label tabindex="0" class="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </label>
-    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
-      <li><a href="#inicio"        onclick="closeMobileMenu()">Inicio</a></li>
-      <li><a href="#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
-      <li><a href="#programas"     onclick="closeMobileMenu()">Programas</a></li>
-      <li><a href="#blog"          onclick="closeMobileMenu()">Blog</a></li>
-      <li><a href="#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
-      <li><a href="#contacto"      onclick="closeMobileMenu()">Contáctanos</a></li>
-      <!-- Iconos redes sociales móvil -->
-      <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
+      <!-- Iconos redes sociales desktop -->
+      <div class="flex gap-4 mt-2 text-white text-2xl">
+        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f hover:scale-110 transition"></i>
         </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram hover:scale-110 transition"></i>
         </a>
         <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
+          <i class="fab fa-whatsapp hover:scale-110 transition"></i>
         </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
+        <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube hover:scale-110 transition"></i>
         </a>
-      </li>
-    </ul>
-  </div>
-</header>
+        <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
+          <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
+        </a>
+        <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok hover:scale-110 transition"></i>
+        </a>
+      </div>
 
 
-<!-- =================================================== -->
-<!-- 2. B A N N E R / I N I C I O                             -->
-<!-- =================================================== -->
-<section id="inicio" class="relative">
-  <div class="carousel w-full">
-    <!-- Banner 1 -->
-    <div id="slide1" class="carousel-item relative w-full">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel.png" alt="Banner 1" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide3" class="btn btn-circle">❮</a>
-        <a href="#slide2" class="btn btn-circle">❯</a>
+      <!-- Menú móvil -->
+      <div class="md:hidden dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
+          <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+          <li><a href="#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
+          <li><a href="#programas" onclick="closeMobileMenu()">Programas</a></li>
+          <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
+          <li><a href="#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
+          <li><a href="#contacto" onclick="closeMobileMenu()">Contáctanos</a></li>
+          <!-- Iconos redes sociales móvil -->
+          <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </header>
+
+
+  <!-- =================================================== -->
+  <!-- 2. B A N N E R / I N I C I O                             -->
+  <!-- =================================================== -->
+  <section id="inicio" class="relative">
+    <div class="carousel w-full">
+      <!-- Banner 1 -->
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel.png" alt="Banner 1" class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <!-- Banner 2 -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 2.png" alt="Banner 2"
+          class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <!-- Banner 3 -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png" alt="Banner 3"
+          class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
       </div>
     </div>
-    <!-- Banner 2 -->
-    <div id="slide2" class="carousel-item relative w-full">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 2.png" alt="Banner 2" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide1" class="btn btn-circle">❮</a>
-        <a href="#slide3" class="btn btn-circle">❯</a>
+  </section>
+
+  <!-- =================================================== -->
+  <!-- 3. C O O R D I N A C I O N E S                             -->
+  <!-- =================================================== -->
+  <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Nuestras Coordinaciones</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"
+        onclick="window.open('coordinaciones/mujeres.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');"
+        onclick="window.open('coordinaciones/medica.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');"
+        onclick="window.open('coordinaciones/salud_mental.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');"
+        onclick="window.open('coordinaciones/fortalecimiento.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Talleres.png');"
+        onclick="window.open('coordinaciones/talleres.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');"
+        onclick="window.open('coordinaciones/niñes.html')"></div>
+      <div class="coord-block"
+        style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');"
+        onclick="window.open('coordinaciones/personas_con_discapacidad.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');"
+        onclick="window.open('coordinaciones/adultos_mayores.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');"
+        onclick="window.open('coordinaciones/voluntariado.html')"></div>
+      <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');"
+        onclick="window.open('coordinaciones/centros_comunitarios.html')"></div>
+    </div>
+  </section>
+
+  <!-- ========== MODALES DE COORDINACIONES ========== -->
+  <template id="coordModalTemplate">
+    <input type="checkbox" class="modal-toggle dynamic-toggle" />
+    <div class="modal">
+      <div class="modal-box max-w-2xl">
+        <h3 class="font-bold text-lg mb-4 modal-title"></h3><img class="rounded mb-4 modal-img" src=""
+          alt="Imagen coordinación" />
+        <p class="modal-text mb-4"></p>
+        <div class="modal-action"><label class="btn close-btn">Cerrar</label></div>
+      </div><label class="modal-backdrop close-btn"></label>
+    </div>
+  </template>
+
+  <script>
+    const coordInfo = [
+      { id: 'modal1', title: 'Coordinación de Mujeres', img: 'Media/IMÁGENES_COORDINACIONES/Mujeres.png', text: 'Programas de prevención y apoyo.' },
+      { id: 'modal2', title: 'Coordinación Médica', img: 'Media/IMÁGENES_COORDINACIONES/Medica.png', text: 'Servicios de salud accesibles.' },
+      { id: 'modal3', title: 'Coordinación de Salud Mental', img: 'Media/IMÁGENES_COORDINACIONES/Salud_Mental.png', text: 'Apoyo psicológico gratuito.' },
+      { id: 'modal4', title: 'Coordinación de Fortalecimiento Social', img: 'Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png', text: 'Programas comunitarios.' },
+      { id: 'modal5', title: 'Coordinación de Talleres', img: 'Media/IMÁGENES_COORDINACIONES/Talleres.png', text: 'Talleres de oficios.' },
+      { id: 'modal6', title: 'Coordinación de Niñas, Niños y Adolescentes', img: 'Media/IMÁGENES_COORDINACIONES/Niñes.png', text: 'Protección de la infancia.' },
+      { id: 'modal7', title: 'Coordinación de Discapacidad', img: 'Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png', text: 'Rehabilitación y apoyos.' },
+      { id: 'modal8', title: 'Coordinación de Adultos Mayores', img: 'Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png', text: 'Envejecimiento activo.' },
+      { id: 'modal9', title: 'Coordinación de Voluntariado', img: 'Media/IMÁGENES_COORDINACIONES/Voluntariado.png', text: 'Sumamos corazones.' },
+      { id: 'modal10', title: 'Coordinación de Centros Comunitarios', img: 'Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png', text: 'Espacios de atención cercana.' }
+    ];
+    coordInfo.forEach(info => {
+      const tpl = document.getElementById('coordModalTemplate').content.cloneNode(true);
+      tpl.querySelector('.modal-toggle').id = info.id;
+      tpl.querySelector('.modal-title').textContent = info.title;
+      tpl.querySelector('.modal-img').src = info.img;
+      tpl.querySelector('.modal-text').textContent = info.text;
+      tpl.querySelectorAll('.close-btn').forEach(btn => btn.setAttribute('for', info.id));
+      document.body.appendChild(tpl);
+    });
+    window.openModal = id => document.getElementById(id).checked = true;
+    // cierre al clicar fuera
+    addEventListener('click', e => {
+      document.querySelectorAll('.dynamic-toggle').forEach(t => {
+        const box = t.nextElementSibling.querySelector('.modal-box');
+        if (t.checked && !box.contains(e.target) && !e.target.closest('.coord-block')) t.checked = false;
+      });
+    });
+  </script>
+
+  <style>
+    .coord-block {
+      position: relative;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: 1 / 1;
+      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .coord-block span {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #fff;
+      pointer-events: none;
+      text-align: center;
+      padding: .5rem;
+    }
+  </style>
+
+  <!-- =================================================== -->
+  <!-- 4. P R O G R A M A S                                   -->
+  <!-- =================================================== -->
+  <section id="programas" class="py-14 px-4 bg-base-200">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 text-primary">Programas Destacados</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+
+        <!-- Tarjetas de programa (6) -->
+        <div class="prog-card" onclick="openModal('p1')">
+          <figure><img src="https://via.placeholder.com/400x240?text=UBR" alt="UBR" /></figure>
+          <div class="card-body">
+            <h3 class="card-title">UBR</h3>
+            <p>Unidad Básica de Rehabilitación</p>
+          </div>
+        </div>
+
+        <div class="prog-card" onclick="openModal('p2')">
+          <figure><img src="https://via.placeholder.com/400x240?text=Abrigando+Corazones" alt="Abrigando Corazones" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Abrigando Corazones</h3>
+            <p>Apoyo emocional y social</p>
+          </div>
+        </div>
+
+        <div class="prog-card" onclick="openModal('p3')">
+          <figure><img src="https://via.placeholder.com/400x240?text=Centro+Grandes" alt="Centro de los Grandes" />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Centro de los Grandes</h3>
+            <p>Atención para adultos mayores</p>
+          </div>
+        </div>
+
+        <div class="prog-card" onclick="openModal('p4')">
+          <figure><img src="https://via.placeholder.com/400x240?text=Lactarios" alt="Lactarios" /></figure>
+          <div class="card-body">
+            <h3 class="card-title">Lactarios</h3>
+            <p>Espacios de lactancia materna</p>
+          </div>
+        </div>
+
+        <div class="prog-card" onclick="openModal('p5')">
+          <figure><img src="https://via.placeholder.com/400x240?text=Farmacias" alt="Farmacias" /></figure>
+          <div class="card-body">
+            <h3 class="card-title">Farmacias</h3>
+            <p>Medicamentos a bajo costo</p>
+          </div>
+        </div>
+
+        <div class="prog-card" onclick="openModal('p6')">
+          <figure><img src="https://via.placeholder.com/400x240?text=Nuevo+Programa" alt="Nuevo Programa" /></figure>
+          <div class="card-body">
+            <h3 class="card-title">Nuevo Programa</h3>
+            <p>Descripción breve del programa.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Banner 3 -->
-    <div id="slide3" class="carousel-item relative w-full">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png" alt="Banner 3" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide2" class="btn btn-circle">❮</a>
-        <a href="#slide1" class="btn btn-circle">❯</a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- =================================================== -->
-<!-- 3. C O O R D I N A C I O N E S                             -->
-<!-- =================================================== -->
-<section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-10 text-primary">Nuestras Coordinaciones</h2>
-  <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');" onclick="openModal('modal2')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');" onclick="openModal('modal3')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');" onclick="openModal('modal4')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Talleres.png');" onclick="openModal('modal5')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');" onclick="openModal('modal6')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');" onclick="openModal('modal7')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');" onclick="openModal('modal8')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');" onclick="openModal('modal9')"></div>
-    <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');" onclick="openModal('modal10')"></div>
-  </div>
-</section>
-
-<!-- ========== MODALES DE COORDINACIONES ========== -->
-<template id="coordModalTemplate">
-  <input type="checkbox" class="modal-toggle dynamic-toggle" />
-  <div class="modal"><div class="modal-box max-w-2xl"><h3 class="font-bold text-lg mb-4 modal-title"></h3><img class="rounded mb-4 modal-img" src="" alt="Imagen coordinación" /><p class="modal-text mb-4"></p><div class="modal-action"><label class="btn close-btn">Cerrar</label></div></div><label class="modal-backdrop close-btn"></label></div>
-</template>
-
-<script>
-const coordInfo=[
- {id:'modal1',title:'Coordinación de Mujeres',img:'Media/IMÁGENES_COORDINACIONES/Mujeres.png',text:'Programas de prevención y apoyo.'},
- {id:'modal2',title:'Coordinación Médica',img:'Media/IMÁGENES_COORDINACIONES/Medica.png',text:'Servicios de salud accesibles.'},
- {id:'modal3',title:'Coordinación de Salud Mental',img:'Media/IMÁGENES_COORDINACIONES/Salud_Mental.png',text:'Apoyo psicológico gratuito.'},
- {id:'modal4',title:'Coordinación de Fortalecimiento Social',img:'Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png',text:'Programas comunitarios.'},
- {id:'modal5',title:'Coordinación de Talleres',img:'Media/IMÁGENES_COORDINACIONES/Talleres.png',text:'Talleres de oficios.'},
- {id:'modal6',title:'Coordinación de Niñas, Niños y Adolescentes',img:'Media/IMÁGENES_COORDINACIONES/Niñes.png',text:'Protección de la infancia.'},
- {id:'modal7',title:'Coordinación de Discapacidad',img:'Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png',text:'Rehabilitación y apoyos.'},
- {id:'modal8',title:'Coordinación de Adultos Mayores',img:'Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png',text:'Envejecimiento activo.'},
- {id:'modal9',title:'Coordinación de Voluntariado',img:'Media/IMÁGENES_COORDINACIONES/Voluntariado.png',text:'Sumamos corazones.'},
- {id:'modal10',title:'Coordinación de Centros Comunitarios',img:'Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png',text:'Espacios de atención cercana.'}
-];
-coordInfo.forEach(info=>{
- const tpl=document.getElementById('coordModalTemplate').content.cloneNode(true);
- tpl.querySelector('.modal-toggle').id=info.id;
- tpl.querySelector('.modal-title').textContent=info.title;
- tpl.querySelector('.modal-img').src=info.img;
- tpl.querySelector('.modal-text').textContent=info.text;
- tpl.querySelectorAll('.close-btn').forEach(btn=>btn.setAttribute('for',info.id));
- document.body.appendChild(tpl);
-});
-window.openModal=id=>document.getElementById(id).checked=true;
-// cierre al clicar fuera
-addEventListener('click',e=>{
- document.querySelectorAll('.dynamic-toggle').forEach(t=>{
-  const box=t.nextElementSibling.querySelector('.modal-box');
-  if(t.checked && !box.contains(e.target) && !e.target.closest('.coord-block')) t.checked=false;
- });
-});
-</script>
-
-<style>
-.coord-block {
-  position: relative;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  aspect-ratio: 1 / 1; /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
-  width: 100%;
-  overflow: hidden;
-}
-
-.coord-block span {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: .9rem;
-  color: #fff;
-  pointer-events: none;
-  text-align: center;
-  padding: .5rem;
-}
-</style> 
-
-<!-- =================================================== -->
-<!-- 4. P R O G R A M A S                                   -->
-<!-- =================================================== -->
-<section id="programas" class="py-14 px-4 bg-base-200">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Programas Destacados</h2>
-    <div class="grid gap-6 md:grid-cols-3">
-
-      <!-- Tarjetas de programa (6) -->
-      <div class="prog-card" onclick="openModal('p1')">
-        <figure><img src="https://via.placeholder.com/400x240?text=UBR" alt="UBR" /></figure>
-        <div class="card-body"><h3 class="card-title">UBR</h3><p>Unidad Básica de Rehabilitación</p></div>
-      </div>
-
-      <div class="prog-card" onclick="openModal('p2')">
-        <figure><img src="https://via.placeholder.com/400x240?text=Abrigando+Corazones" alt="Abrigando Corazones" /></figure>
-        <div class="card-body"><h3 class="card-title">Abrigando Corazones</h3><p>Apoyo emocional y social</p></div>
-      </div>
-
-      <div class="prog-card" onclick="openModal('p3')">
-        <figure><img src="https://via.placeholder.com/400x240?text=Centro+Grandes" alt="Centro de los Grandes" /></figure>
-        <div class="card-body"><h3 class="card-title">Centro de los Grandes</h3><p>Atención para adultos mayores</p></div>
-      </div>
-
-      <div class="prog-card" onclick="openModal('p4')">
-        <figure><img src="https://via.placeholder.com/400x240?text=Lactarios" alt="Lactarios" /></figure>
-        <div class="card-body"><h3 class="card-title">Lactarios</h3><p>Espacios de lactancia materna</p></div>
-      </div>
-
-      <div class="prog-card" onclick="openModal('p5')">
-        <figure><img src="https://via.placeholder.com/400x240?text=Farmacias" alt="Farmacias" /></figure>
-        <div class="card-body"><h3 class="card-title">Farmacias</h3><p>Medicamentos a bajo costo</p></div>
-      </div>
-
-      <div class="prog-card" onclick="openModal('p6')">
-        <figure><img src="https://via.placeholder.com/400x240?text=Nuevo+Programa" alt="Nuevo Programa" /></figure>
-        <div class="card-body"><h3 class="card-title">Nuevo Programa</h3><p>Descripción breve del programa.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <!-- =================================================== -->
-<!-- 5. B L O G                                           -->
-<!-- =================================================== -->
-<section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-10 text-primary">Blog DIF Saltillo</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <!-- Placeholder de entradas -->
-    <div class="card bg-white shadow-md">
-      <div class="card-body">
-        <h3 class="card-title">Entrada de ejemplo</h3>
-        <p>Próximamente aquí encontrarás artículos, noticias y eventos del DIF Saltillo.</p>
-      </div>
-    </div>
-    <div class="card bg-white shadow-md">
-      <div class="card-body">
-        <h3 class="card-title">Otra entrada</h3>
-        <p>Este espacio será editable para publicar información relevante.</p>
-      </div>
-    </div>
-    <div class="card bg-white shadow-md">
-      <div class="card-body">
-        <h3 class="card-title">Más publicaciones</h3>
-        <p>Puedes asignar esta sección a un compañero del equipo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================================================== -->
-<!-- 6. T R A N S P A R E N C I A                         -->
-<!-- =================================================== -->
-<section id="transparencia" class="py-14 px-4 bg-base-200">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Transparencia</h2>
-    <div class="grid md:grid-cols-2 gap-6">
+  <!-- =================================================== -->
+  <!-- 5. B L O G                                           -->
+  <!-- =================================================== -->
+  <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Blog DIF Saltillo</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Placeholder de entradas -->
       <div class="card bg-white shadow-md">
         <div class="card-body">
-          <h3 class="card-title">Informes Financieros</h3>
-          <p>Aquí se incluirán enlaces o documentos descargables sobre el uso de recursos públicos.</p>
+          <h3 class="card-title">Entrada de ejemplo</h3>
+          <p>Próximamente aquí encontrarás artículos, noticias y eventos del DIF Saltillo.</p>
         </div>
       </div>
       <div class="card bg-white shadow-md">
         <div class="card-body">
-          <h3 class="card-title">Obligaciones de Transparencia</h3>
-          <p>Esta sección servirá para cumplir con las normativas del INAI y otros entes.</p>
+          <h3 class="card-title">Otra entrada</h3>
+          <p>Este espacio será editable para publicar información relevante.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md">
+        <div class="card-body">
+          <h3 class="card-title">Más publicaciones</h3>
+          <p>Puedes asignar esta sección a un compañero del equipo.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =================================================== -->
-<!-- 7. C O N T Á C T A N O S                             -->
-<!-- =================================================== -->
-<section id="contacto" class="py-14 px-4 max-w-3xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-10 text-primary">Contáctanos</h2>
-  <form class="space-y-6">
-    <div>
-      <label class="block font-medium mb-1" for="nombre">Nombre</label>
-      <input id="nombre" type="text" placeholder="Tu nombre" class="input input-bordered w-full" />
-    </div>
-    <div>
-      <label class="block font-medium mb-1" for="email">Correo electrónico</label>
-      <input id="email" type="email" placeholder="tucorreo@ejemplo.com" class="input input-bordered w-full" />
-    </div>
-    <div>
-      <label class="block font-medium mb-1" for="mensaje">Mensaje</label>
-      <textarea id="mensaje" rows="4" class="textarea textarea-bordered w-full" placeholder="Escribe tu mensaje..."></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
-</section>
+  <!-- =================================================== -->
+  <!-- 7. C O N T Á C T A N O S                             -->
+  <!-- =================================================== -->
+  <section id="contacto" class="py-14 px-4 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Contáctanos</h2>
+    <form class="space-y-6">
+      <div>
+        <label class="block font-medium mb-1" for="nombre">Nombre</label>
+        <input id="nombre" type="text" placeholder="Tu nombre" class="input input-bordered w-full" />
+      </div>
+      <div>
+        <label class="block font-medium mb-1" for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="tucorreo@ejemplo.com" class="input input-bordered w-full" />
+      </div>
+      <div>
+        <label class="block font-medium mb-1" for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="4" class="textarea textarea-bordered w-full"
+          placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
 
 
-<script>
-const header = document.getElementById('mainNav');
-const triggerHeight = document.getElementById('inicio').offsetHeight - 80;
+  <script>
+    const header = document.getElementById('mainNav');
+    const triggerHeight = document.getElementById('inicio').offsetHeight - 80;
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > triggerHeight) {
-    header.classList.remove('bg-transparent', 'text-white');
-    header.classList.add('bg-white', 'shadow-md', 'text-gray-900');
-  } else {
-    header.classList.add('bg-transparent', 'text-white');
-    header.classList.remove('bg-white', 'shadow-md', 'text-gray-900');
-  }
-});
-</script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > triggerHeight) {
+        header.classList.remove('bg-transparent', 'text-white');
+        header.classList.add('bg-white', 'shadow-md', 'text-gray-900');
+      } else {
+        header.classList.add('bg-transparent', 'text-white');
+        header.classList.remove('bg-white', 'shadow-md', 'text-gray-900');
+      }
+    });
+  </script>
 
 </body>
+
 </html>
