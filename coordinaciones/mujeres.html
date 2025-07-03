@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programas - Mujeres | DIF Saltillo</title>
+    <title>Mujeres | DIF Saltillo</title>
     <!-- Tailwind CSS + DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -23,7 +24,26 @@
         .nav-overlay {
             background-color: rgba(0, 0, 0, 0.5);
         }
+
+        .coord-title {
+            font-family: Gilroy-Black;
+            color: #e20d7b;
+        }
+
+        .program h3 {
+            font-family: Galano-Grotesque;
+            color: #e20d7b; 
+        }
+
+        .program p {
+            font-family: Josefine-Sans;
+        }
+
+        p {
+            font-family: Josefine-Sans;
+        }
     </style>
+
     <!-- =================================================== -->
     <!-- 1. N A V B A R                                         -->
     <!-- =================================================== -->
@@ -51,7 +71,6 @@
             <!-- Línea blanca horizontal -->
             <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
 
-
             <!-- Iconos redes sociales desktop -->
             <div class="flex gap-4 mt-2 text-white text-2xl">
                 <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
@@ -63,17 +82,13 @@
                 <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp hover:scale-110 transition"></i>
                 </a>
-                <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
-                    <i class="fab fa-youtube hover:scale-110 transition"></i>
-                </a>
-                <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
-                    <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
-                </a>
                 <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
                     <i class="fab fa-tiktok hover:scale-110 transition"></i>
                 </a>
+                <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+                    <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                </a>
             </div>
-
 
             <!-- Menú móvil -->
             <div class="md:hidden dropdown dropdown-end">
@@ -114,7 +129,7 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div class="max-w-7xl mx-auto px-4 py-12 text-center">
-        <h1 class="text-5xl font-bold text-primary mb-4">Coordinación de Mujeres</h1>
+        <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Mujeres</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">Brindamos acompañamiento, ayuda y asesoría a las mujeres a
             través de programas de prevención, atención integral y apoyo en
             casos de violencia, promoviendo su autonomía y bienestar.
@@ -125,7 +140,7 @@
     <!-- =================================================== -->
     <section id="programas" class="py-14 pt-0 px-4 max-w-[90vw] w-[90vw] mx-auto">
         <ul class="space-y-4">
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition"
+            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
                 onclick="openModal('p1')">
                 <h3 class="font-bold text-lg">Lactarios Con Amor</h3>
                 <p class="text-gray-600">Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa
@@ -136,7 +151,7 @@
 
                 </p>
             </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition"
+            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition  program"
                 onclick="openModal('p2')">
                 <h3 class="font-bold text-lg">Mujer Escucha</h3>
                 <p class="text-gray-600">Mujer Escucha es un programa de atención psicológica y
@@ -146,7 +161,7 @@
                     apoya a mujeres que viven violencia, duelo, ansiedad, crisis
                     familiares u otras situaciones difíciles.</p>
             </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition"
+            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition  program"
                 onclick="openModal('p3')">
                 <h3 class="font-bold text-lg">Campaña de Recolección de Trenzas</h3>
                 <p class="text-gray-600">A través de la Campaña de Recolección de Trenzas, el DIF
@@ -156,7 +171,7 @@
                     Esta campaña fomenta la solidaridad, el cuidado colectivo y la
                     empatía, transformando un gesto sencillo en un acto de amor.</p>
             </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition"
+            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
                 onclick="openModal('p3')">
                 <h3 class="font-bold text-lg">Entrega de Kits para Pacientes Oncológicas</h3>
                 <p class="text-gray-600">El DIF Saltillo entrega kits especiales a mujeres con diagnóstico
@@ -169,7 +184,7 @@
                     y esperanza.
                 </p>
             </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition"
+            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
                 onclick="openModal('p3')">
                 <h3 class="font-bold text-lg">Apoyos Con Amor</h3>
                 <p class="text-gray-600">Apoyos Con Amor es un programa del DIF Saltillo orientado a
