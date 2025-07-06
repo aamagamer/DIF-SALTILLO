@@ -13,12 +13,43 @@
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/fonts.css">
 </head>
 
 <body class="bg-gray-50 scroll-smooth">
   <style>
     * {
       scroll-behavior: smooth;
+    }
+
+    .coord-block {
+      position: relative;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: 1 / 1;
+      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .coord-block span {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #fff;
+      pointer-events: none;
+      text-align: center;
+      padding: .5rem;
+    }
+
+    .section-title {
+      font-family: Gilroy-Black;
+      color: #e20d7b;
     }
   </style>
   <!-- =================================================== -->
@@ -60,14 +91,11 @@
         <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
           <i class="fab fa-whatsapp hover:scale-110 transition"></i>
         </a>
-        <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
-          <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
-        </a>
         <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
           <i class="fab fa-tiktok hover:scale-110 transition"></i>
+        </a>
+        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+            <i class="fab fa-x-twitter hover:scale-110 transition"></i>
         </a>
       </div>
 
@@ -144,7 +172,7 @@
   <!-- 3. C O O R D I N A C I O N E S                             -->
   <!-- =================================================== -->
   <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Nuestras Coordinaciones</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
       <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"
         onclick="window.open('coordinaciones/mujeres.html')"></div>
@@ -215,39 +243,12 @@
     });
   </script>
 
-  <style>
-    .coord-block {
-      position: relative;
-      cursor: pointer;
-      background-size: cover;
-      background-position: center;
-      aspect-ratio: 1 / 1;
-      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .coord-block span {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: .9rem;
-      color: #fff;
-      pointer-events: none;
-      text-align: center;
-      padding: .5rem;
-    }
-  </style>
-
   <!-- =================================================== -->
   <!-- 4. P R O G R A M A S                                   -->
   <!-- =================================================== -->
   <section id="programas" class="py-14 px-4 bg-base-200">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10 text-primary">Programas Destacados</h2>
+      <h2 class="text-4xl text-center mb-10 text-primary section-title">Programas Destacados</h2>
       <div class="grid gap-6 md:grid-cols-3">
 
         <!-- Tarjetas de programa (6) -->
@@ -308,7 +309,7 @@
   <!-- 5. B L O G                                           -->
   <!-- =================================================== -->
   <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Blog DIF Saltillo</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Blog DIF Saltillo</h2>
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Placeholder de entradas -->
       <div class="card bg-white shadow-md">
@@ -336,7 +337,7 @@
   <!-- 7. C O N T Á C T A N O S                             -->
   <!-- =================================================== -->
   <section id="contacto" class="py-14 px-4 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Contáctanos</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
     <form class="space-y-6">
       <div>
         <label class="block font-medium mb-1" for="nombre">Nombre</label>
