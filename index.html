@@ -13,6 +13,7 @@
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/fonts.css">
 </head>
 
 <body class="bg-gray-50 scroll-smooth">
@@ -20,94 +21,332 @@
     * {
       scroll-behavior: smooth;
     }
+
+    .coord-block {
+      position: relative;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: 1 / 1;
+      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .coord-block span {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #fff;
+      pointer-events: none;
+      text-align: center;
+      padding: .5rem;
+    }
+
+    .section-title {
+      font-family: Gilroy-Black;
+      color: #e20d7b;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      .nav-bg {
+        background-attachment: scroll;
+        background-position: center top;
+      }
+    }
+
+    .nav-overlay {
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .coord-title {
+      font-family: Gilroy-Black, sans-serif;
+      color: #e20d7b;
+    }
+
+    .coord-desc {
+      text-align: center;
+    }
+
+    .program h3 {
+      font-family: Galano-Grotesque, sans-serif;
+      color: #e20d7b;
+    }
+
+    .program p {
+      font-family: Josefine-Sans, sans-serif;
+    }
+
+    p {
+      font-family: Josefine-Sans, sans-serif;
+      text-align: justify;
+    }
+
+    .in-ul {
+      list-style: square;
+      list-style-position: inside;
+    }
+
+    .in-li {
+      font-family: Josefine-Sans, sans-serif;
+      text-align: justify;
+    }
+
+    .modal-card {
+      background-image: url('/Media/IMÁGENES_Y_LOGOTIPOS_COORDINACIONES/degradados/mujeres.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Custom responsive utilities */
+    @media (min-width: 1536px) {
+      .max-w-8xl {
+        max-width: 88rem;
+      }
+    }
+
+    /* Fix for navbar height on mobile */
+    @media (max-width: 768px) {
+      .navbar {
+        min-height: auto;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Improved button hover effects */
+    .btn-ghost:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Better text scaling */
+    .coord-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .coord-desc {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .submenu.active {
+      max-height: 500px;
+      transition: max-height 0.3s ease-in;
+    }
+
+    .submenu-item {
+      padding-left: 2rem;
+      border-left: 2px solid #f3f4f6;
+    }
+
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+
+    .chevron.rotated {
+      transform: rotate(180deg);
+    }
   </style>
   <!-- =================================================== -->
-  <!-- 1. N A V B A R                                         -->
+  <!-- 1. N A V B A R                                                             -->
   <!-- =================================================== -->
-  <header id="mainNav" class="navbar absolute inset-x-0 top-0 z-50
-               bg-transparent px-4 transition-all duration-300 items-start">
-    <div class="flex-1">
-      <a href="#inicio" class="block w-20 md:w-24">
-        <!-- Logo DIF Saltillo -->
-        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
-          alt="Logo DIF Saltillo" class="w-full h-auto object-contain" />
-      </a>
-    </div>
+  <header id="mainNav" class="navbar absolute inset-x-0 top-0 z-50 bg-transparent transition-all duration-300">
+        <div class="nav-overlay absolute inset-0"></div>
+        <div class="w-full px-4 relative z-10">
+            <div class="flex justify-between w-full">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="block w-16 sm:w-20 md:w-24">
+                        <img src="../Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
+                            alt="Logo DIF Saltillo" class="w-full h-auto object-contain cursor-pointer"
+                            onclick="window.location.href='../index.html'" />
+                    </a>
+                </div>
 
-    <!-- Menú desktop -->
-    <div class="hidden md:flex flex-col items-end gap-2">
-      <nav class="flex gap-4 font-medium">
-        <a class="btn btn-ghost text-white" href="#inicio">Inicio</a>
-        <a class="btn btn-ghost text-white" href="#programas">Programas Sociales</a>
-        <a class="btn btn-ghost text-white" href="#coordinaciones">Coordinaciones</a>
-        <a class="btn btn-ghost text-white" href="#blog">Blog</a>
-        <a class="btn btn-ghost text-white" href="https://transparenciasaltillo.mx/">Transparencia</a>
-        <a class="btn btn-ghost text-white" href="#contacto">Contáctanos</a>
-      </nav>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex flex-col items-end gap-3">
+                    <nav class="flex gap-2 xl:gap-4 font-medium">
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#inicio">Inicio</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#programas">Programas Sociales</a>
 
-      <!-- Línea blanca horizontal -->
-      <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
+                        <!-- Desktop Coordinaciones Dropdown -->
+                        <div class="dropdown dropdown-hover dropdown-bottom">
+                            <label tabindex="0"
+                                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                                Coordinaciones
+                                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </label>
+                            <ul tabindex="0"
+                                class="dropdown-content menu p-3 shadow-lg bg-white rounded-xl w-64 mt-0 border border-gray-200 z-[1000]">
+                                <li><a href="../coordinaciones/mujeres.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Mujeres</a>
+                                </li>
+                                <li><a href="../coordinaciones/medica.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Médica</a>
+                                </li>
+                                <li><a href="../coordinaciones/salud_mental.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Salud
+                                        Mental</a></li>
+                                <li><a href="../coordinaciones/fortalecimiento.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Fortalecimiento
+                                        Social</a></li>
+                                <li><a href="../coordinaciones/talleres.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Talleres</a>
+                                </li>
+                                <li><a href="../coordinaciones/niñes.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Niños,
+                                        Niñas y Adolescentes</a></li>
+                                <li><a href="../coordinaciones/personas_con_discapacidad.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Personas
+                                        con Discapacidad</a></li>
+                                <li><a href="../coordinaciones/adultos_mayores.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Adultos
+                                        Mayores</a></li>
+                                <li><a href="../coordinaciones/voluntariado.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Voluntariado</a>
+                                </li>
+                                <li><a href="../coordinaciones/atencion_ciudadana.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Atención
+                                        Ciudadana</a></li>
+                                <li><a href="../coordinaciones/asuntos_juridicos.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Asuntos
+                                        Jurídicos</a></li>
+                            </ul>
+                        </div>
 
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#blog">Blog</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="https://transparenciasaltillo.mx/">Transparencia</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#contacto">Contáctanos</a>
+                    </nav>
 
-      <!-- Iconos redes sociales desktop -->
-      <div class="flex gap-4 mt-2 text-white text-2xl">
-        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram hover:scale-110 transition"></i>
-        </a>
-        <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.youtube.com/@DIFSaltillo" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.pinterest.com/difsaltillo/" target="_blank" aria-label="Pinterest">
-          <i class="fab fa-pinterest-p hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-          <i class="fab fa-tiktok hover:scale-110 transition"></i>
-        </a>
-      </div>
+                    <!-- Responsive white line -->
+                    <div class="w-96 xl:w-160 border-t-4 border-white ml-auto"></div>
 
+                    <!-- Social media icons desktop -->
+                    <div class="flex gap-3 xl:gap-4 mt-2 text-white text-xl xl:text-2xl">
+                        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        </a>
+                        <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp hover:scale-110 transition"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        </a>
+                        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+                            <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        </a>
+                    </div>
+                </div>
 
-      <!-- Menú móvil -->
-      <div class="md:hidden dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
-          <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
-          <li><a href="#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
-          <li><a href="#programas" onclick="closeMobileMenu()">Programas</a></li>
-          <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
-          <li><a href="#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
-          <li><a href="#contacto" onclick="closeMobileMenu()">Contáctanos</a></li>
-          <!-- Iconos redes sociales móvil -->
-          <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-  </header>
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-white mt-3 p-4 shadow-lg rounded-xl w-64 z-[1000] border border-gray-200">
+                            <li><a href="../index.html#inicio" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
+                            </li>
+                            <li>
+                                <button onclick="toggleSubmenu('mobile-coordinaciones')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+                                    Coordinaciones
+                                    <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
+                                </button>
+                                <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/mujeres.html">Mujeres</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/medica.html">Médica</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/talleres.html">Talleres</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="../index.html#programas" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Programas</a>
+                            </li>
+                            <li><a href="../index.html#blog" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Blog</a>
+                            </li>
+                            <li><a href="https://transparenciasaltillo.mx/" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Transparencia</a>
+                            </li>
+                            <li><a href="../index.html#contacto" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Contáctanos</a>
+                            </li>
+
+                            <!-- Separator line -->
+                            <div class="divider my-3"></div>
+
+                            <!-- Mobile social media icons -->
+                            <li class="pointer-events-none">
+                                <div class="flex justify-center gap-4 text-xl">
+                                    <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
+                                        aria-label="Facebook"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank"
+                                        aria-label="Instagram"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                    <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
   <!-- =================================================== -->
-  <!-- 2. B A N N E R / I N I C I O                             -->
+  <!-- 2. B A N N E R / I N I C I O                                           -->
   <!-- =================================================== -->
   <section id="inicio" class="relative">
     <div class="carousel w-full">
@@ -141,10 +380,10 @@
   </section>
 
   <!-- =================================================== -->
-  <!-- 3. C O O R D I N A C I O N E S                             -->
+  <!-- 3. C O O R D I N A C I O N E S                                           -->
   <!-- =================================================== -->
   <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Nuestras Coordinaciones</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
       <div class="coord-block" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"
         onclick="window.open('coordinaciones/mujeres.html')"></div>
@@ -215,39 +454,12 @@
     });
   </script>
 
-  <style>
-    .coord-block {
-      position: relative;
-      cursor: pointer;
-      background-size: cover;
-      background-position: center;
-      aspect-ratio: 1 / 1;
-      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .coord-block span {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: .9rem;
-      color: #fff;
-      pointer-events: none;
-      text-align: center;
-      padding: .5rem;
-    }
-  </style>
-
   <!-- =================================================== -->
-  <!-- 4. P R O G R A M A S                                   -->
+  <!-- 4. P R O G R A M A S                                                    -->
   <!-- =================================================== -->
   <section id="programas" class="py-14 px-4 bg-base-200">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10 text-primary">Programas Destacados</h2>
+      <h2 class="text-4xl text-center mb-10 text-primary section-title">Programas Destacados</h2>
       <div class="grid gap-6 md:grid-cols-3">
 
         <!-- Tarjetas de programa (6) -->
@@ -305,10 +517,10 @@
   </section>
 
   <!-- =================================================== -->
-  <!-- 5. B L O G                                           -->
+  <!-- 5. B L O G                                                                -->
   <!-- =================================================== -->
   <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Blog DIF Saltillo</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Blog DIF Saltillo</h2>
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Placeholder de entradas -->
       <div class="card bg-white shadow-md">
@@ -333,10 +545,10 @@
   </section>
 
   <!-- =================================================== -->
-  <!-- 7. C O N T Á C T A N O S                             -->
+  <!-- 7. C O N T Á C T A N O S                                           -->
   <!-- =================================================== -->
   <section id="contacto" class="py-14 px-4 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Contáctanos</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
     <form class="space-y-6">
       <div>
         <label class="block font-medium mb-1" for="nombre">Nombre</label>
@@ -357,18 +569,35 @@
 
 
   <script>
-    const header = document.getElementById('mainNav');
-    const triggerHeight = document.getElementById('inicio').offsetHeight - 80;
+    function toggleSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = document.getElementById(menuId + '-chevron');
+            
+            if (submenu.classList.contains('active')) {
+                submenu.classList.remove('active');
+                chevron.classList.remove('rotated');
+            } else {
+                submenu.classList.add('active');
+                chevron.classList.add('rotated');
+            }
+        }
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > triggerHeight) {
-        header.classList.remove('bg-transparent', 'text-white');
-        header.classList.add('bg-white', 'shadow-md', 'text-gray-900');
-      } else {
-        header.classList.add('bg-transparent', 'text-white');
-        header.classList.remove('bg-white', 'shadow-md', 'text-gray-900');
-      }
-    });
+        function closeMobileMenu() {
+            // Close the dropdown by removing focus
+            document.activeElement.blur();
+            
+            // Also close any open submenus
+            const submenus = document.querySelectorAll('.submenu');
+            const chevrons = document.querySelectorAll('.chevron');
+            
+            submenus.forEach(submenu => submenu.classList.remove('active'));
+            chevrons.forEach(chevron => chevron.classList.remove('rotated'));
+        }
+
+        // Close submenu when clicking on a submenu item
+        document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
+            item.addEventListener('click', closeMobileMenu);
+        });
   </script>
 
 </body>

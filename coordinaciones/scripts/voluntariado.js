@@ -3,41 +3,25 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Corazones Voluntarios",
+    "objetivo": "Invitar a la comunidad a sumarse al voluntariado del DIF Saltillo, fomentando la participación ciudadana en acciones que transforman vidas.",
+    "descripcion": "Corazones Voluntarios es un espacio abierto para todas las personas que desean aportar un poco de su tiempo y energía para hacer la diferencia en la vida de quienes más lo necesitan. Ya sea colaborando en campañas, eventos o actividades diarias, cada voluntario es una pieza fundamental que impulsa el bienestar social en Saltillo. Si tienes el deseo de ayudar y quieres ser parte de algo que transforma, en DIF Saltillo encontrarás un lugar para crecer y contribuir con amor y compromiso. ¡Tu apoyo puede cambiar muchas historias!"
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
+    "titulo": "Servicio Social Comunitario",
+    "objetivo": "Facilitar espacios para que estudiantes de preparatoria y universidad realicen su servicio social, promoviendo el aprendizaje práctico y la responsabilidad social.",
+    "descripcion": "El programa de Servicio Social Comunitario del DIF Saltillo ofrece a estudiantes la oportunidad de cumplir con su requisito académico mientras contribuyen activamente al bienestar de la comunidad. Participar aquí significa involucrarse en proyectos sociales que fortalecen habilidades y valores, además de crear redes de apoyo y solidaridad en Saltillo. Si eres estudiante y buscas una experiencia significativa que complemente tu formación, este programa es ideal para ti."
 }
 ,
 
 {
     "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
-}
-,
-
-{
-    "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
-}
-,
-
-{
-    "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Vinculación Empresarial",
+    "objetivo": "Establecer alianzas con empresas locales para sumar esfuerzos y recursos en beneficio de los programas sociales del DIF Saltillo.",
+    "descripcion": "La Coordinación de Vinculación Empresarial conecta a empresas comprometidas con la responsabilidad social con las iniciativas del DIF Saltillo. A través de colaboraciones estratégicas, se potencian recursos y se amplifica el impacto positivo en la comunidad, especialmente en sectores vulnerables. Buscamos a empresas que deseen ser parte de un movimiento que transforma vidas en Saltillo. ¡Aquí encontrarás la oportunidad perfecta para contribuir con tu apoyo y compromiso social!"
 }
 
 ];

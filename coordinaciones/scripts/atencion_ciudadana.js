@@ -3,41 +3,17 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Apoyos Económicos",
+    "objetivo": "Brindar apoyos económicos a personas que requieren cubrir gastos médicos, medicamentos o servicios funerarios.",
+    "descripcion": "Este programa está diseñado para apoyar a quienes enfrentan dificultades para costear servicios relacionados con la salud o emergencias familiares. Se otorgan apoyos económicos parciales para estudios de laboratorio, medicamentos, atención médica o gastos funerarios, de acuerdo con un estudio socioeconómico."
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
-}
-,
-
-{
-    "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
-}
-,
-
-{
-    "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
-}
-,
-
-{
-    "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Apoyos En Especie",
+    "objetivo": "Entregar insumos básicos a personas y familias en situación de vulnerabilidad a través de donaciones.",
+    "descripcion": "A través de Apoyos en Especie, el DIF Saltillo entrega artículos esenciales como ropa, alimentos no perecederos, pañales (infantiles y de adulto), productos de higiene personal, leche, pan, juguetes y más. Estas donaciones representan un alivio inmediato para quienes atraviesan momentos difíciles."
 }
 
 ];

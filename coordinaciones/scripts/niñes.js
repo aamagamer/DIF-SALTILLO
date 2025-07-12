@@ -3,41 +3,33 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Centros De Atención Infantil (Cai)",
+    "objetivo": "Brindar atención integral, cuidado y educación inicial a niñas y niños en etapa preescolar, priorizando el bienestar y desarrollo de hijos e hijas de madres, padres o tutores que trabajan o estudian en Saltillo.",
+    "descripcion": "El DIF Saltillo cuenta con cinco Centros de Atención Infantil (CAI) distribuidos estratégicamente en la ciudad, donde se atiende a niñas y niños de entre 1 y 5 años. Estos centros ofrecen servicios de cuidado diario, alimentación balanceada, estimulación temprana, actividades pedagógicas y atención emocional, en un entorno seguro y afectivo. Los CAI están pensados para apoyar a familias, promoviendo un desarrollo integral en la primera infancia bajo un modelo de atención cálido y profesional."
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
+    "titulo": "Programa Alimentario Para Niñas Y Niños De 1 A 5 Años",
+    "objetivo": "Garantizar el acceso a una alimentación nutritiva y adecuada para niñas y niños de 1 a 5 años en situación de vulnerabilidad en Saltillo.",
+    "descripcion": "Este programa alimentario del DIF Saltillo busca combatir la desnutrición infantil y mejorar la calidad de vida de las niñas y los niños en la primera infancia. A través de la entrega de dotaciones alimenticias diseñadas por personal capacitado en nutrición, se apoya directamente a familias que requieren apoyo para cubrir las necesidades básicas de sus hijas e hijos. El programa también promueve hábitos de alimentación saludable y brinda seguimiento nutricional para asegurar un crecimiento adecuado en los primeros años de vida."
 }
 ,
 
 {
     "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
+    "titulo": "Juego Y Aprendo Con Amor",
+    "objetivo": "Fortalecer el desarrollo emocional, social y cognitivo de niñas y niños a través del juego guiado y actividades afectivas.",
+    "descripcion": "Juego y Aprendo Con Amor es un programa del DIF Saltillo que reconoce al juego como una herramienta esencial en el desarrollo de niñas y niños. A través de dinámicas lúdicas, actividades sensoriales y ejercicios de estimulación, se refuerzan habilidades como la comunicación, la motricidad, la empatía y la autoestima. Este programa está dirigido principalmente a madres, padres y cuidadores, quienes también reciben orientación sobre cómo promover el juego significativo en casa. Todo bajo un enfoque de crianza con amor, respeto y participación."
 }
 ,
 
 {
     "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
-}
-,
-
-{
-    "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Crianza Con Amor",
+    "objetivo": "Ofrecer espacios de formación emocional, familiar y social para niñas, niños, adolescentes y sus familias a través de pláticas, talleres y actividades participativas.",
+    "descripcion": "Cultivando Con Amor es una estrategia educativa del DIF Saltillo que promueve la reflexión y el crecimiento personal en infancias y juventudes. Mediante pláticas, talleres, dinámicas grupales y actividades vivenciales: ○  Pláticas y Talleres de Sensibilización ○  Amor Responsable ○  Unidos Somos Útiles ○  Crianza Con Amor ○  Niños Seguros, No en la Calle ○ Este programa también trabaja con madres, padres y docentes para fortalecer entornos afectivos, seguros y participativos."
 }
 
 ];

@@ -3,41 +3,41 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Atención Psicológica",
+    "objetivo": "Brindar atención psicológica gratuita a personas de todas las edades que necesiten acompañamiento emocional, contención o canalización especializada.",
+    "descripcion": "En DIF Saltillo creemos que la salud mental es tan importante como la salud física. Por eso ofrecemos atención psicológica gratuita con profesionales capacitados, en espacios seguros, empáticos y confidenciales. Este servicio está abierto a niñas, niños, adolescentes, personas adultas y adultas mayores que estén atravesando situaciones emocionales complejas, crisis familiares, ansiedad, tristeza, duelo o cualquier otro reto emocional."
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
+    "titulo": "Justicia Cívica",
+    "objetivo": "Promover la reinserción social, el desarrollo personal y la responsabilidad comunitaria de jóvenes que han cometido una falta administrativa o delito menor.",
+    "descripcion": "Justicia Cívica es un programa del DIF Saltillo enfocado en brindar atención psicosocial a adolescentes y jóvenes. A través de trabajo social, acompañamiento psicológico y actividades formativas, se busca que los jóvenes reconozcan sus acciones, fortalezcan su autoestima y construyan un nuevo proyecto de vida. Este programa se enfoca en el aprendizaje y crecimiento porque creemos que toda persona merece una segunda oportunidad, y que el cambio es posible con apoyo, orientación y escucha."
 }
 ,
 
 {
     "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
+    "titulo": "Cerca De Ti",
+    "objetivo": "Acercar los servicios de salud mental del DIF Saltillo a las colonias y comunidades, para que más personas puedan recibir atención sin importar dónde vivan.",
+    "descripcion": "Cerca de Ti es un programa de brigadas itinerantes que lleva servicios de salud mental y bienestar emocional directamente a la comunidad. En estas jornadas se ofrece atención psicológica, orientación, canalización y actividades de autocuidado para personas de todas las edades. Con este programa, DIF Saltillo busca romper barreras de acceso y estigmas en torno a la salud mental, construyendo una ciudad más empática, solidaria y consciente."
 }
 ,
 
 {
     "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
+    "titulo": "Espacio Seguro",
+    "objetivo": "Brindar un entorno protegido y confidencial donde las personas puedan expresarse, ser escuchadas y recibir apoyo emocional.",
+    "descripcion": "Espacio Seguro es una iniciativa de la Coordinación de Salud Mental del DIF Saltillo que busca crear lugares de contención emocional y escucha activa, especialmente para personas que viven momentos de vulnerabilidad, ansiedad o estrés. Está abierto a todas las personas, con un enfoque especial en adolescentes y jóvenes. Aquí se privilegia la empatía, la dignidad y la protección emocional. Porque sentirse en paz, acompañado y respetado... es una forma de sanar."
 }
 ,
 
 {
     "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Talleres Y Pláticas De Bienestar Emocional",
+    "objetivo": "Promover la prevención en salud mental y fortalecer el bienestar emocional a través de herramientas prácticas, dinámicas y accesibles para toda la población.",
+    "descripcion": "En DIF Saltillo creemos que prevenir es cuidar, y por eso organizamos talleres y pláticas de bienestar emocional en escuelas, centros comunitarios, espacios públicos y colonias de la ciudad. Estos espacios están pensados para ofrecer información, ejercicios y estrategias para gestionar emociones, manejar el estrés, fomentar la autoestima y fortalecer los vínculos familiares. Todo desde un enfoque accesible, cálido y adaptado a cada grupo de edad."
 }
 
 ];

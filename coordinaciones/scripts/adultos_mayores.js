@@ -3,41 +3,33 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Centro De Los Grandes Con Amor A Saltillo",
+    "objetivo": "Brindar un espacio integral de atención, desarrollo y convivencia para adultos mayores de Saltillo, donde se promueve el bienestar físico, emocional y social.",
+    "descripcion": "El Centro de los Grandes Con Amor a Saltillo es un lugar diseñado especialmente para personas adultas mayores, donde se ofrecen actividades recreativas, talleres, servicios de salud y espacios de convivencia diaria. Este centro del DIF Saltillo busca que las y los adultos mayores se mantengan activos, acompañados y valorados. Con un enfoque de respeto y dignidad, el centro promueve el envejecimiento activo, el aprendizaje continuo y la inclusión de los adultos mayores en la vida comunitaria."
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
+    "titulo": "Grupos Cercanos Con Amor",
+    "objetivo": "Fomentar la integración social y emocional de adultos mayores a través de grupos de convivencia y apoyo comunitario en diferentes sectores de Saltillo.",
+    "descripcion": "Grupos Cercanos Con Amor es una red de grupos comunitarios para adultos mayores organizada por el DIF Saltillo en distintas colonias y comunidades. En estos espacios se realizan actividades culturales, recreativas, deportivas y de reflexión, fortaleciendo el sentido de pertenencia, la autoestima y los vínculos afectivos. Los grupos son liderados por promotores voluntarios y forman parte de una estrategia de prevención del aislamiento social en las personas mayores, promoviendo la empatía, el cuidado mutuo y la cercanía intergeneracional."
 }
 ,
 
 {
     "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
+    "titulo": "Recorridos Con Amor: Rutas Culturales",
+    "objetivo": "Acercar a los adultos mayores a la riqueza cultural de la ciudad y el estado, mediante visitas guiadas y recorridos organizados por espacios históricos, culturales y naturales.",
+    "descripcion": "Recorridos Con Amor: Rutas Culturales es una experiencia organizada por el DIF Saltillo para que los adultos mayores disfruten de visitas culturales a museos, parques, teatros, sitios históricos y eventos artísticos. Además de promover el derecho al esparcimiento, estos recorridos contribuyen al aprendizaje, la socialización y la construcción de memorias compartidas entre los participantes. Es una forma de reconocer la vida, la historia y la presencia activa de las personas mayores en la comunidad."
 }
 ,
 
 {
     "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
-}
-,
-
-{
-    "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Jornadas Con Amor En Los Asilos Y Comedores",
+    "objetivo": "Llevar acompañamiento, servicios, entretenimiento y cuidado a personas adultas mayores que viven en asilos o que asisten a comedores comunitarios en Saltillo.",
+    "descripcion": "Con las Jornadas Con Amor, el DIF Saltillo visita asilos y comedores comunitarios para ofrecer actividades recreativas, sesiones informativas, atención médica y emocional, así como momentos de compañía y alegría a quienes más lo necesitan. Estas jornadas fortalecen la dignidad y calidad de vida de las personas adultas mayores, especialmente de aquellas que viven en situación de vulnerabilidad o soledad. Cada jornada es un recordatorio de que en Saltillo nadie envejece solo."
 }
 
 ];

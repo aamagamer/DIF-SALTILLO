@@ -3,41 +3,17 @@ const progInfo = [
     
 {
     "id": "m0",
-    "titulo": "Lactarios Con Amor",
-    "objetivo": "Promover, proteger y apoyar la lactancia materna como un derecho de las mujeres y sus bebés, ofreciendo espacios seguros y dignos en Saltillo.",
-    "descripcion": "Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad."
+    "titulo": "Amor Por Aprender",
+    "objetivo": "Ofrecer talleres prácticos y accesibles que permitan a personas adultas adquirir o fortalecer habilidades en distintos oficios, con el fin de mejorar sus oportunidades de empleo o emprendimiento.",
+    "descripcion": "El programa Amor por Aprender es una iniciativa del DIF Saltillo que brinda talleres para todas las personas que deseen aprender, desarrollarse o iniciar un proyecto laboral propio. Se imparten cursos como corte y confección, cocina, repostería, belleza, cartonería y más. Los talleres están pensados para impulsar la autonomía para personas en situación de vulnerabilidad, brindándoles herramientas reales para generar ingresos, crecer profesionalmente y transformar su realidad.<br><ul class=\"in-ul\"><li class=\"in-li text-gray-600\">Belleza – $385.00</li><li class=\"in-li text-gray-600\">Colorimetría – $640.00</li><li class=\"in-li text-gray-600\">Maquillaje – $385.00</li><li class=\"in-li text-gray-600\">Uñas – $640.00</li><li class=\"in-li text-gray-600\">Barbería – $385.00</li><li class=\"in-li text-gray-600\">Carpintería – $395.00</li><li class=\"in-li text-gray-600\">Chocolatería – $385.00</li><li class=\"in-li text-gray-600\">Pastelería – $640.00</li><li class=\"in-li text-gray-600\">Dulces regionales – $385.00</li><li class=\"in-li text-gray-600\">Postres – $385.00</li><li class=\"in-li text-gray-600\">Guitarra – $125.00</li><li class=\"in-li text-gray-600\">Cartonería – $125.00</li><li class=\"in-li text-gray-600\">Electricidad – $260.00</li><li class=\"in-li text-gray-600\">Soldadura – $260.00</li><li class=\"in-li text-gray-600\">Computación – $260.00</li><li class=\"in-li text-gray-600\">Pintura – $385.0</li><li class=\"in-li text-gray-600\">Pincelada – $125.00</li><li class=\"in-li text-gray-600\">Vitromosaico – $640.00</li><li class=\"in-li text-gray-600\">Corte y confección – $385.00</li><li class=\"in-li text-gray-600\">Mecánica – $385.00</li><li class=\"in-li text-gray-600\">Bisutería – $385.00</li><li class=\"in-li text-gray-600\">Reciclado – $260.00</li><li class=\"in-li text-gray-600\">Huertos familiares – $260.00</li></ul>"
 }
 ,
 
 {
     "id": "m1",
-    "titulo": "Mujer Escucha",
-    "objetivo": "Brindar atención emocional, orientación y acompañamiento a mujeres en situación de vulnerabilidad o que enfrentan problemáticas personales, familiares o sociales.",
-    "descripcion": "Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo."
-}
-,
-
-{
-    "id": "m2",
-    "titulo": "Campaña De Recolección De Trenzas",
-    "objetivo": "Reunir donaciones de trenzas para la elaboración de pelucas oncológicas que beneficien a mujeres y niñas en tratamiento contra el cáncer.",
-    "descripcion": "A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor."
-}
-,
-
-{
-    "id": "m3",
-    "titulo": "Entrega De Kits Para Pacientes Oncológicas",
-    "objetivo": "Ofrecer apoyo emocional y práctico a mujeres diagnosticadas con cáncer, mediante la entrega de kits personalizados que acompañan su tratamiento.",
-    "descripcion": "El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza."
-}
-,
-
-{
-    "id": "m4",
-    "titulo": "Apoyos Con Amor",
-    "objetivo": "Apoyar a mujeres en situación vulnerable mediante la entrega de cheques y recursos económicos directos, como parte de una estrategia integral de bienestar y autonomía.",
-    "descripcion": "Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas."
+    "titulo": "Estética Dif",
+    "objetivo": "Ofrecer cortes de cabello a bajo costo para las familias saltillenses y dignificar la imagen personal de quienes más lo necesitan.",
+    "descripcion": "La Estética DIF es un programa social que brinda cortes de cabello gratuitos en las instalaciones del DIF Saltillo, así como en diferentes colonias de la ciudad mediante las Jornadas DIF en tu colonia. Este servicio es atendido por personas capacitadas en nuestros talleres y forma parte de una red de apoyo pensada para ayudar, cuidar y acompañar."
 }
 
 ];
