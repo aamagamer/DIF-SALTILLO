@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mujeres | DIF Saltillo</title>
+    <title>DIF Saltillo | Mujeres</title>
     <!-- Tailwind CSS + DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,113 +17,297 @@
 <body class="bg-gray-50 min-h-screen">
     <style>
         .nav-bg {
-            background-image: url('../Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner\ Carrusel\ 3.png');
+            background-image: url('../Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png');
             background-size: cover;
-            background-position: 0 -200px;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bg {
+                background-attachment: scroll;
+                background-position: center top;
+            }
         }
 
         .nav-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .coord-title {
-            font-family: Gilroy-Black;
+            font-family: Gilroy-Black, sans-serif;
             color: #e20d7b;
         }
 
+        .coord-desc {
+            text-align: center;
+        }
+
         .program h3 {
-            font-family: Galano-Grotesque;
-            color: #e20d7b; 
+            font-family: Galano-Grotesque, sans-serif;
+            color: #e20d7b;
         }
 
         .program p {
-            font-family: Josefine-Sans;
+            font-family: Josefine-Sans, sans-serif;
         }
 
         p {
-            font-family: Josefine-Sans;
+            font-family: Josefine-Sans, sans-serif;
+            text-align: justify;
+        }
+
+        .in-ul {
+            list-style: square;
+            list-style-position: inside;
+        }
+
+        .in-li {
+            font-family: Josefine-Sans, sans-serif;
+            text-align: justify;
+        }
+
+        .modal-card {
+            background-image: url('/Media/IMÁGENES_Y_LOGOTIPOS_COORDINACIONES/degradados/mujeres.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Custom responsive utilities */
+        @media (min-width: 1536px) {
+            .max-w-8xl {
+                max-width: 88rem;
+            }
+        }
+
+        /* Fix for navbar height on mobile */
+        @media (max-width: 768px) {
+            .navbar {
+                min-height: auto;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Improved button hover effects */
+        .btn-ghost:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Better text scaling */
+        .coord-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .coord-desc {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+        }
+        
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .submenu.active {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+        .submenu-item {
+            padding-left: 2rem;
+            border-left: 2px solid #f3f4f6;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.rotated {
+            transform: rotate(180deg);
         }
     </style>
 
     <!-- =================================================== -->
-    <!-- 1. N A V B A R                                         -->
+    <!-- 1. N A V B A R                                      -->
     <!-- =================================================== -->
-    <header id="mainNav" class="navbar sticky inset-x-0 top-0 z-50 nav-bg px-4 transition-all duration-300 items-start">
-        <div class="flex-1">
-            <a href="#inicio" class="block w-20 md:w-24">
-                <!-- Logo DIF Saltillo -->
-                <img src="../Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
-                    alt="Logo DIF Saltillo" class="w-full h-auto object-contain"
-                    onclick="window.location.href='../index.html'" />
-            </a>
-        </div>
+    <header id="mainNav" class="navbar sticky inset-x-0 top-0 z-50 nav-bg transition-all duration-300">
+        <div class="nav-overlay absolute inset-0"></div>
+        <div class="w-full px-4 relative z-10">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="block w-16 sm:w-20 md:w-24">
+                        <img src="../Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
+                            alt="Logo DIF Saltillo" class="w-full h-auto object-contain cursor-pointer"
+                            onclick="window.location.href='../index.html'" />
+                    </a>
+                </div>
 
-        <!-- Menú desktop -->
-        <div class="hidden md:flex flex-col items-end gap-2">
-            <nav class="flex gap-4 font-medium">
-                <a class="btn btn-ghost text-white" href="../index.html#inicio">Inicio</a>
-                <a class="btn btn-ghost text-white" href="../index.html#programas">Programas Sociales</a>
-                <a class="btn btn-ghost text-white" href="../index.html#coordinaciones">Coordinaciones</a>
-                <a class="btn btn-ghost text-white" href="../index.html#blog">Blog</a>
-                <a class="btn btn-ghost text-white" href="https://transparenciasaltillo.mx/">Transparencia</a>
-                <a class="btn btn-ghost text-white" href="../index.html#contacto">Contáctanos</a>
-            </nav>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex flex-col items-end gap-3">
+                    <nav class="flex gap-2 xl:gap-4 font-medium">
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#inicio">Inicio</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#programas">Programas Sociales</a>
 
-            <!-- Línea blanca horizontal -->
-            <div class="w-82 md:w-120 border-t-4 border-white mx-auto"></div>
+                        <!-- Desktop Coordinaciones Dropdown -->
+                        <div class="dropdown dropdown-hover dropdown-bottom">
+                            <label tabindex="0"
+                                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                                Coordinaciones
+                                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </label>
+                            <ul tabindex="0"
+                                class="dropdown-content menu p-3 shadow-lg bg-white rounded-xl w-64 mt-0 border border-gray-200 z-[1000]">
+                                <li><a href="../coordinaciones/mujeres.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Mujeres</a>
+                                </li>
+                                <li><a href="../coordinaciones/medica.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Médica</a>
+                                </li>
+                                <li><a href="../coordinaciones/salud_mental.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Salud
+                                        Mental</a></li>
+                                <li><a href="../coordinaciones/fortalecimiento.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Fortalecimiento
+                                        Social</a></li>
+                                <li><a href="../coordinaciones/talleres.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Talleres</a>
+                                </li>
+                                <li><a href="../coordinaciones/niñes.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Niños,
+                                        Niñas y Adolescentes</a></li>
+                                <li><a href="../coordinaciones/personas_con_discapacidad.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Personas
+                                        con Discapacidad</a></li>
+                                <li><a href="../coordinaciones/adultos_mayores.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Adultos
+                                        Mayores</a></li>
+                                <li><a href="../coordinaciones/voluntariado.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Voluntariado</a>
+                                </li>
+                                <li><a href="../coordinaciones/atencion_ciudadana.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Atención
+                                        Ciudadana</a></li>
+                                <li><a href="../coordinaciones/asuntos_juridicos.html"
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Asuntos
+                                        Jurídicos</a></li>
+                            </ul>
+                        </div>
 
-            <!-- Iconos redes sociales desktop -->
-            <div class="flex gap-4 mt-2 text-white text-2xl">
-                <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-                </a>
-                <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram hover:scale-110 transition"></i>
-                </a>
-                <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp hover:scale-110 transition"></i>
-                </a>
-                <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                    <i class="fab fa-tiktok hover:scale-110 transition"></i>
-                </a>
-                <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                    <i class="fab fa-x-twitter hover:scale-110 transition"></i>
-                </a>
-            </div>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#blog">Blog</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="https://transparenciasaltillo.mx/">Transparencia</a>
+                        <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                            href="../index.html#contacto">Contáctanos</a>
+                    </nav>
 
-            <!-- Menú móvil -->
-            <div class="md:hidden dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 mt-3 p-2 shadow rounded-box w-52">
-                    <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
-                    <li><a href="#coordinaciones" onclick="closeMobileMenu()">Coordinaciones</a></li>
-                    <li><a href="#programas" onclick="closeMobileMenu()">Programas</a></li>
-                    <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
-                    <li><a href="#transparencia" onclick="closeMobileMenu()">Transparencia</a></li>
-                    <li><a href="#contacto" onclick="closeMobileMenu()">Contáctanos</a></li>
-                    <!-- Iconos redes sociales móvil -->
-                    <li class="flex justify-center gap-4 mt-2 text-primary text-lg">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
+                    <!-- Responsive white line -->
+                    <div class="w-96 xl:w-160 border-t-4 border-white ml-auto"></div>
+
+                    <!-- Social media icons desktop -->
+                    <div class="flex gap-3 xl:gap-4 mt-2 text-white text-xl xl:text-2xl">
+                        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f hover:scale-110 transition"></i>
                         </a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram hover:scale-110 transition"></i>
                         </a>
                         <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                            <i class="fab fa-whatsapp hover:scale-110 transition"></i>
                         </a>
-                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
+                        <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok hover:scale-110 transition"></i>
                         </a>
-                    </li>
-                </ul>
+                        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+                            <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-white mt-3 p-4 shadow-lg rounded-xl w-64 z-[1000] border border-gray-200">
+                            <li><a href="../index.html#inicio" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
+                            </li>
+                            <li>
+                                <button onclick="toggleSubmenu('mobile-coordinaciones')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+                                    Coordinaciones
+                                    <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
+                                </button>
+                                <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/mujeres.html">Mujeres</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/medica.html">Médica</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/talleres.html">Talleres</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
+                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="../index.html#programas" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Programas</a>
+                            </li>
+                            <li><a href="../index.html#blog" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Blog</a>
+                            </li>
+                            <li><a href="https://transparenciasaltillo.mx/" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Transparencia</a>
+                            </li>
+                            <li><a href="../index.html#contacto" onclick="closeMobileMenu()"
+                                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Contáctanos</a>
+                            </li>
+
+                            <!-- Separator line -->
+                            <div class="divider my-3"></div>
+
+                            <!-- Mobile social media icons -->
+                            <li class="pointer-events-none">
+                                <div class="flex justify-center gap-4 text-xl">
+                                    <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
+                                        aria-label="Facebook"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank"
+                                        aria-label="Instagram"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                    <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X"
+                                        class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
     </header>
 
     <!-- =================================================== -->
@@ -130,87 +315,58 @@
     <!-- =================================================== -->
     <div class="max-w-7xl mx-auto px-4 py-12 text-center">
         <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Mujeres</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Brindamos acompañamiento, ayuda y asesoría a las mujeres a
-            través de programas de prevención, atención integral y apoyo en
-            casos de violencia, promoviendo su autonomía y bienestar.
-        </p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Brindamos acompañamiento, ayuda y asesoría a las mujeres a través de programas de prevención, atención integral y apoyo en casos de violencia, promoviendo su autonomía y bienestar. </p>
     </div>
     <!-- =================================================== -->
-    <!-- 2. PROGRAMAS                            -->
+    <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="py-14 pt-0 px-4 max-w-[90vw] w-[90vw] mx-auto">
-        <ul class="space-y-4">
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-                onclick="openModal('p1')">
-                <h3 class="font-bold text-lg">Lactarios Con Amor</h3>
-                <p class="text-gray-600">Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa
-                    la instalación de espacios de lactancia materna en lugares
-                    públicos y centros de trabajo. Estos espacios están diseñados
-                    para que las mujeres puedan amamantar o extraer leche en
-                    condiciones de higiene, comodidad y privacidad.
+    <section id="programas" class="py-8 sm:py-12 lg:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <div class="max-w-6xl mx-auto">
+                <ul class="space-y-4">
+                    
+<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+    onclick="openModal('m0')">
+    <h3 class="font-bold text-lg">Lactarios Con Amor</h3>
+    <p class="text-gray-600">Lactarios Con Amor es una iniciativa del DIF Saltillo que impulsa la instalación de espacios de lactancia materna en lugares públicos y centros de trabajo. Estos espacios están diseñados para que las mujeres puedan amamantar o extraer leche en condiciones de higiene, comodidad y privacidad.</p>
+</li>
 
-                </p>
-            </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition  program"
-                onclick="openModal('p2')">
-                <h3 class="font-bold text-lg">Mujer Escucha</h3>
-                <p class="text-gray-600">Mujer Escucha es un programa de atención psicológica y
-                    emocional que ofrece el DIF Saltillo como parte de su
-                    compromiso con la salud mental de las mujeres. A través de
-                    espacios de escucha activa, contención emocional y asesoría, se
-                    apoya a mujeres que viven violencia, duelo, ansiedad, crisis
-                    familiares u otras situaciones difíciles.</p>
-            </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition  program"
-                onclick="openModal('p3')">
-                <h3 class="font-bold text-lg">Campaña de Recolección de Trenzas</h3>
-                <p class="text-gray-600">A través de la Campaña de Recolección de Trenzas, el DIF
-                    Saltillo convoca a la comunidad a donar su cabello para la
-                    elaboración de pelucas, para ayudar a mujeres y niñas que
-                    enfrentan la pérdida capilar derivada de tratamientos oncológicos.
-                    Esta campaña fomenta la solidaridad, el cuidado colectivo y la
-                    empatía, transformando un gesto sencillo en un acto de amor.</p>
-            </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-                onclick="openModal('p3')">
-                <h3 class="font-bold text-lg">Entrega de Kits para Pacientes Oncológicas</h3>
-                <p class="text-gray-600">El DIF Saltillo entrega kits especiales a mujeres con diagnóstico
-                    oncológico como una forma de acompañar su proceso de
-                    tratamiento con empatía y cuidado. Cada kit contiene artículos de
-                    higiene, productos de cuidado personal y materiales pensados
-                    para brindar confort durante su recuperación.
-                    Este programa refuerza el mensaje de que ninguna mujer
-                    enfrenta sola su proceso de sanación, generando redes de apoyo
-                    y esperanza.
-                </p>
-            </li>
-            <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-                onclick="openModal('p3')">
-                <h3 class="font-bold text-lg">Apoyos Con Amor</h3>
-                <p class="text-gray-600">Apoyos Con Amor es un programa del DIF Saltillo orientado a
-                    mujeres que enfrentan condiciones económicas adversas,
-                    brindándoles apoyos económicos para cubrir necesidades
-                    básicas, gastos médicos, educación, transporte u otras
-                    situaciones prioritarias.
-                    <br>
-                    A través de la entrega directa de cheques y el seguimiento
-                    personalizado de cada caso, se busca fortalecer la autonomía,
-                    seguridad y calidad de vida de las mujeres beneficiadas.
-                </p>
-            </li>
-        </ul>
+<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+    onclick="openModal('m1')">
+    <h3 class="font-bold text-lg">Mujer Escucha</h3>
+    <p class="text-gray-600">Mujer Escucha es un programa de atención psicológica y emocional que ofrece el DIF Saltillo como parte de su compromiso con la salud mental de las mujeres. A través de espacios de escucha activa, contención emocional y asesoría, se apoya a mujeres que viven violencia, duelo, ansiedad, crisis familiares u otras situaciones difíciles. El programa también canaliza a otras instituciones o programas cuando se requiere atención especializada. Es un espacio de confianza, empatía y respeto para las mujeres de Saltillo.</p>
+</li>
+
+<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+    onclick="openModal('m2')">
+    <h3 class="font-bold text-lg">Campaña De Recolección De Trenzas</h3>
+    <p class="text-gray-600">A través de la Campaña de Recolección de Trenzas, el DIF Saltillo convoca a la comunidad a donar su cabello para la elaboración de pelucas, para ayudar a mujeres y niñas que enfrentan la pérdida capilar derivada de tratamientos oncológicos. Esta campaña fomenta la solidaridad, el cuidado colectivo y la empatía, transformando un gesto sencillo en un acto de amor.</p>
+</li>
+
+<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+    onclick="openModal('m3')">
+    <h3 class="font-bold text-lg">Entrega De Kits Para Pacientes Oncológicas</h3>
+    <p class="text-gray-600">El DIF Saltillo entrega kits especiales a mujeres con diagnóstico oncológico como una forma de acompañar su proceso de tratamiento con empatía y cuidado. Cada kit contiene artículos de higiene, productos de cuidado personal y materiales pensados para brindar confort durante su recuperación. Este programa refuerza el mensaje de que ninguna mujer enfrenta sola su proceso de sanación, generando redes de apoyo y esperanza.</p>
+</li>
+
+<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+    onclick="openModal('m4')">
+    <h3 class="font-bold text-lg">Apoyos Con Amor</h3>
+    <p class="text-gray-600">Apoyos Con Amor es un programa del DIF Saltillo orientado a mujeres que enfrentan condiciones económicas adversas, brindándoles apoyos económicos para cubrir necesidades básicas, gastos médicos, educación, transporte u otras situaciones prioritarias. A través de la entrega directa de cheques y el seguimiento personalizado de cada caso, se busca fortalecer la autonomía, seguridad y calidad de vida de las mujeres beneficiadas.</p>
+</li>
+
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!-- ========== MODALES DE PROGRAMAS ========== -->
     <template id="progModalTemplate">
         <input type="checkbox" class="modal-toggle dynamic-toggle" />
         <div class="modal">
-            <div class="modal-box max-w-2xl bg-gradient-to-br from-pink-400 to-purple-500 text-gray-900">
-                <h3 class="font-bold text-lg mb-4 modal-title"></h3>
+            <div class="modal-box w-11/12 max-w-2xl lg:max-w-4xl modal-card text-gray-900">
                 <div class="modal-content text-gray-600">
-                    <p class="modal-text mb-4 text-gray-800"></p>
-                    <div class="info-detalle mb-4"></div>
-                    <div class="tramites-info"></div>
+                    <div class="info-detalle mb-4 p-4 sm:p-6"></div>
                 </div>
                 <div class="modal-action">
                     <label class="btn close-btn">Cerrar</label>
