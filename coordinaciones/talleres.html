@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -102,23 +101,27 @@
         .coord-desc {
             font-size: clamp(1rem, 2.5vw, 1.25rem);
         }
-        
+
         .submenu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .submenu.active {
             max-height: 500px;
             transition: max-height 0.3s ease-in;
         }
+
         .submenu-item {
             padding-left: 2rem;
             border-left: 2px solid #f3f4f6;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .chevron.rotated {
             transform: rotate(180deg);
         }
@@ -241,22 +244,47 @@
                                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
                             </li>
                             <li>
-                                <button onclick="toggleSubmenu('mobile-coordinaciones')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+                                <button onclick="toggleSubmenu('mobile-coordinaciones')"
+                                    class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
                                     Coordinaciones
-                                    <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
+                                    <i id="mobile-coordinaciones-chevron"
+                                        class="fas fa-chevron-down text-xs chevron ml-2"></i>
                                 </button>
                                 <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/mujeres.html">Mujeres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/medica.html">Médica</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/talleres.html">Talleres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/mujeres.html">Mujeres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/medica.html">Médica</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/talleres.html">Talleres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/personas_con_discapacidad.html">Personas con
+                                            Discapacidad</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
                                 </ul>
                             </li>
 
@@ -315,7 +343,9 @@
     <!-- =================================================== -->
     <div class="max-w-7xl mx-auto px-4 py-12 text-center">
         <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Talleres</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Ofrecemos talleres de capacitación a la comunidad saltillense en oficios, arte, desarrollo personal y habilidades prácticas, abriendo puertas a nuevas oportunidades y mejores condiciones de vida. </p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Ofrecemos talleres de capacitación a la comunidad
+            saltillense en oficios, arte, desarrollo personal y habilidades prácticas, abriendo puertas a nuevas
+            oportunidades y mejores condiciones de vida. </p>
     </div>
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
@@ -324,43 +354,52 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div class="max-w-6xl mx-auto">
                 <ul class="space-y-4">
-                    
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m0')">
-    <h3 class="font-bold text-lg">Amor Por Aprender</h3>
-    <p class="text-gray-600">El programa Amor por Aprender es una iniciativa del DIF Saltillo que brinda talleres para todas las personas que deseen aprender, desarrollarse o iniciar un proyecto laboral propio. Se imparten cursos como corte y confección, cocina, repostería, belleza, cartonería y más. Los talleres están pensados para impulsar la autonomía para personas en situación de vulnerabilidad, brindándoles herramientas reales para generar ingresos, crecer profesionalmente y transformar su realidad.</p>
-        <ul class="in-ul">
-            <li class="in-li text-gray-600">Belleza – $385.00</li>
-            <li class="in-li text-gray-600">Colorimetría – $640.00</li>
-            <li class="in-li text-gray-600">Maquillaje – $385.00</li>
-            <li class="in-li text-gray-600">Uñas – $640.00</li>
-            <li class="in-li text-gray-600">Barbería – $385.00</li>
-            <li class="in-li text-gray-600">Carpintería – $395.00</li>
-            <li class="in-li text-gray-600">Chocolatería – $385.00</li>
-            <li class="in-li text-gray-600">Pastelería – $640.00</li>
-            <li class="in-li text-gray-600">Dulces regionales – $385.00</li>
-            <li class="in-li text-gray-600">Postres – $385.00</li>
-            <li class="in-li text-gray-600">Guitarra – $125.00</li>
-            <li class="in-li text-gray-600">Cartonería – $125.00</li>
-            <li class="in-li text-gray-600">Electricidad – $260.00</li>
-            <li class="in-li text-gray-600">Soldadura – $260.00</li>
-            <li class="in-li text-gray-600">Computación – $260.00</li>
-            <li class="in-li text-gray-600">Pintura – $385.0</li>
-            <li class="in-li text-gray-600">Pincelada – $125.00</li>
-            <li class="in-li text-gray-600">Vitromosaico – $640.00</li>
-            <li class="in-li text-gray-600">Corte y confección – $385.00</li>
-            <li class="in-li text-gray-600">Mecánica – $385.00</li>
-            <li class="in-li text-gray-600">Bisutería – $385.00</li>
-            <li class="in-li text-gray-600">Reciclado – $260.00</li>
-            <li class="in-li text-gray-600">Huertos familiares – $260.00</li>
-        </ul>
-</li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m1')">
-    <h3 class="font-bold text-lg">Estética Dif</h3>
-    <p class="text-gray-600">La Estética DIF es un programa social que brinda cortes de cabello gratuitos en las instalaciones del DIF Saltillo, así como en diferentes colonias de la ciudad mediante las Jornadas DIF en tu colonia. Este servicio es atendido por personas capacitadas en nuestros talleres y forma parte de una red de apoyo pensada para ayudar, cuidar y acompañar.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m0')">
+                        <h3 class="font-bold text-lg">Amor Por Aprender</h3>
+                        <p class="text-gray-600">El programa Amor por Aprender es una iniciativa del DIF Saltillo que
+                            brinda talleres para todas las personas que deseen aprender, desarrollarse o iniciar un
+                            proyecto laboral propio. Se imparten cursos como corte y confección, cocina, repostería,
+                            belleza, cartonería y más. Los talleres están pensados para impulsar la autonomía para
+                            personas en situación de vulnerabilidad, brindándoles herramientas reales para generar
+                            ingresos, crecer profesionalmente y transformar su realidad.</p>
+                        <ul class="in-ul">
+                            <li class="in-li text-gray-600">Belleza – $385.00</li>
+                            <li class="in-li text-gray-600">Colorimetría – $640.00</li>
+                            <li class="in-li text-gray-600">Maquillaje – $385.00</li>
+                            <li class="in-li text-gray-600">Uñas – $640.00</li>
+                            <li class="in-li text-gray-600">Barbería – $385.00</li>
+                            <li class="in-li text-gray-600">Carpintería – $395.00</li>
+                            <li class="in-li text-gray-600">Chocolatería – $385.00</li>
+                            <li class="in-li text-gray-600">Pastelería – $640.00</li>
+                            <li class="in-li text-gray-600">Dulces regionales – $385.00</li>
+                            <li class="in-li text-gray-600">Postres – $385.00</li>
+                            <li class="in-li text-gray-600">Guitarra – $125.00</li>
+                            <li class="in-li text-gray-600">Cartonería – $125.00</li>
+                            <li class="in-li text-gray-600">Electricidad – $260.00</li>
+                            <li class="in-li text-gray-600">Soldadura – $260.00</li>
+                            <li class="in-li text-gray-600">Computación – $260.00</li>
+                            <li class="in-li text-gray-600">Pintura – $385.0</li>
+                            <li class="in-li text-gray-600">Pincelada – $125.00</li>
+                            <li class="in-li text-gray-600">Vitromosaico – $640.00</li>
+                            <li class="in-li text-gray-600">Corte y confección – $385.00</li>
+                            <li class="in-li text-gray-600">Mecánica – $385.00</li>
+                            <li class="in-li text-gray-600">Bisutería – $385.00</li>
+                            <li class="in-li text-gray-600">Reciclado – $260.00</li>
+                            <li class="in-li text-gray-600">Huertos familiares – $260.00</li>
+                        </ul>
+                    </li>
+
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m1')">
+                        <h3 class="font-bold text-lg">Estética Dif</h3>
+                        <p class="text-gray-600">La Estética DIF es un programa social que brinda cortes de cabello
+                            gratuitos en las instalaciones del DIF Saltillo, así como en diferentes colonias de la
+                            ciudad mediante las Jornadas DIF en tu colonia. Este servicio es atendido por personas
+                            capacitadas en nuestros talleres y forma parte de una red de apoyo pensada para ayudar,
+                            cuidar y acompañar.</p>
+                    </li>
 
                 </ul>
             </div>
