@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -102,23 +101,27 @@
         .coord-desc {
             font-size: clamp(1rem, 2.5vw, 1.25rem);
         }
-        
+
         .submenu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .submenu.active {
             max-height: 500px;
             transition: max-height 0.3s ease-in;
         }
+
         .submenu-item {
             padding-left: 2rem;
             border-left: 2px solid #f3f4f6;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .chevron.rotated {
             transform: rotate(180deg);
         }
@@ -241,22 +244,47 @@
                                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
                             </li>
                             <li>
-                                <button onclick="toggleSubmenu('mobile-coordinaciones')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+                                <button onclick="toggleSubmenu('mobile-coordinaciones')"
+                                    class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
                                     Coordinaciones
-                                    <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
+                                    <i id="mobile-coordinaciones-chevron"
+                                        class="fas fa-chevron-down text-xs chevron ml-2"></i>
                                 </button>
                                 <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/mujeres.html">Mujeres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/medica.html">Médica</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/talleres.html">Talleres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/mujeres.html">Mujeres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/medica.html">Médica</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/talleres.html">Talleres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/personas_con_discapacidad.html">Personas con
+                                            Discapacidad</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
                                 </ul>
                             </li>
 
@@ -315,7 +343,9 @@
     <!-- =================================================== -->
     <div class="max-w-7xl mx-auto px-4 py-12 text-center">
         <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Personas Con Discapacidad</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Trabajamos por la inclusión y el bienestar de las personas con discapacidad, ofreciendo apoyos, terapias y programas que les permitan desarrollar su máximo potencial en un entorno accesible y digno. </p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Trabajamos por la inclusión y el bienestar de las
+            personas con discapacidad, ofreciendo apoyos, terapias y programas que les permitan desarrollar su máximo
+            potencial en un entorno accesible y digno. </p>
     </div>
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
@@ -324,56 +354,86 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div class="max-w-6xl mx-auto">
                 <ul class="space-y-4">
-                    
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m0')">
-    <h3 class="font-bold text-lg">Jornadas De Accesibilidad Para Personas Con Discapacidad</h3>
-    <p class="text-gray-600">Las Jornadas de Accesibilidad para Personas con Discapacidad son una iniciativa del DIF Saltillo que busca sensibilizar a la comunidad y promover espacios físicos y sociales más inclusivos. A través de talleres, actividades culturales, capacitaciones y ejercicios vivenciales, estas jornadas acercan a la ciudadanía a una visión más empática sobre la discapacidad. Este programa está dirigido a escuelas, empresas, instituciones públicas y privadas, y a toda persona interesada en aprender sobre accesibilidad e inclusión en Saltillo.</p>
-</li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m1')">
-    <h3 class="font-bold text-lg">Apoyos Para Personas Con Discapacidad</h3>
-    <p class="text-gray-600">El programa de Apoyos para Personas con Discapacidad del DIF Saltillo tiene
-        como finalidad mejorar la calidad de vida de niñas, niños, adolescentes, personas adultas y personas
-        mayores con alguna discapacidad. A través de este programa se otorgan diversos apoyos, que pueden
-        incluir: 
-        <ul class="in-ul">
-            <li class="in-li text-gray-600">Sillas de ruedas</li>
-            <li class="in-li text-gray-600">Bastones</li>
-            <li class="in-li text-gray-600">Andaderas</li>
-            <li class="in-li text-gray-600">Aparatos auditivos</li>
-            <li class="in-li text-gray-600">Valoraciones médicas y canalizaciones </li>
-        </ul>
-    </p>
-    <p class="text-gray-600">
-        Este servicio está disponible para personas con discapacidad que residan en Saltillo.
-    </p> 
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m0')">
+                        <h3 class="font-bold text-lg">Jornadas De Accesibilidad Para Personas Con Discapacidad</h3>
+                        <p class="text-gray-600">Las Jornadas de Accesibilidad para Personas con Discapacidad son una
+                            iniciativa del DIF Saltillo que busca sensibilizar a la comunidad y promover espacios
+                            físicos y sociales más inclusivos. A través de talleres, actividades culturales,
+                            capacitaciones y ejercicios vivenciales, estas jornadas acercan a la ciudadanía a una visión
+                            más empática sobre la discapacidad. Este programa está dirigido a escuelas, empresas,
+                            instituciones públicas y privadas, y a toda persona interesada en aprender sobre
+                            accesibilidad e inclusión en Saltillo.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m2')">
-    <h3 class="font-bold text-lg">Programa Ponte Las Pilas</h3>
-    <p class="text-gray-600">El programa Ponte las Pilas del DIF Saltillo está enfocado en formar a personas con discapacidad para que puedan integrarse activamente en puestos de trabajo. A través de cursos, talleres y capacitaciones, las y los participantes adquieren habilidades laborales, conocimientos técnicos y herramientas de desarrollo humano que les permiten mejorar su autonomía y empleabilidad. Este programa busca reducir barreras de acceso al empleo formal, promoviendo la inclusión laboral y la igualdad de oportunidades para personas con discapacidad en Saltillo. También se vincula con empresas socialmente responsables que abren espacios de trabajo inclusivos.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m1')">
+                        <h3 class="font-bold text-lg">Apoyos Para Personas Con Discapacidad</h3>
+                        <p class="text-gray-600">El programa de Apoyos para Personas con Discapacidad del DIF Saltillo
+                            tiene
+                            como finalidad mejorar la calidad de vida de niñas, niños, adolescentes, personas adultas y
+                            personas
+                            mayores con alguna discapacidad. A través de este programa se otorgan diversos apoyos, que
+                            pueden
+                            incluir:
+                        <ul class="in-ul">
+                            <li class="in-li text-gray-600">Sillas de ruedas</li>
+                            <li class="in-li text-gray-600">Bastones</li>
+                            <li class="in-li text-gray-600">Andaderas</li>
+                            <li class="in-li text-gray-600">Aparatos auditivos</li>
+                            <li class="in-li text-gray-600">Valoraciones médicas y canalizaciones </li>
+                        </ul>
+                        </p>
+                        <p class="text-gray-600">
+                            Este servicio está disponible para personas con discapacidad que residan en Saltillo.
+                        </p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m3')">
-    <h3 class="font-bold text-lg">Programa Para Cirugía De Implantes Cocleares</h3>
-    <p class="text-gray-600">El Programa de Implantes Cocleares del DIF Saltillo está diseñado para beneficiar a menores con pérdida auditiva severa que no pueden ser beneficiados con auxiliares convencionales. El implante coclear les permite acceder a sonidos, desarrollarse emocional y socialmente, y facilitar su proceso de aprendizaje. A través de este programa, se brinda acompañamiento médico, canalización a instancias especializadas y apoyo en los trámites necesarios para acceder a la cirugía. El objetivo es lograr una inclusión auditiva y educativa efectiva.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m2')">
+                        <h3 class="font-bold text-lg">Programa Ponte Las Pilas</h3>
+                        <p class="text-gray-600">El programa Ponte las Pilas del DIF Saltillo está enfocado en formar a
+                            personas con discapacidad para que puedan integrarse activamente en puestos de trabajo. A
+                            través de cursos, talleres y capacitaciones, las y los participantes adquieren habilidades
+                            laborales, conocimientos técnicos y herramientas de desarrollo humano que les permiten
+                            mejorar su autonomía y empleabilidad. Este programa busca reducir barreras de acceso al
+                            empleo formal, promoviendo la inclusión laboral y la igualdad de oportunidades para personas
+                            con discapacidad en Saltillo. También se vincula con empresas socialmente responsables que
+                            abren espacios de trabajo inclusivos.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m4')">
-    <h3 class="font-bold text-lg">Sumando Con Amor</h3>
-    <p class="text-gray-600">Sumando Con Amor es una iniciativa del DIF Saltillo que busca involucrar a la ciudadanía en acciones de concientización, voluntariado y apadrinamiento de personas con discapacidad. El programa genera puentes de solidaridad a través de eventos especiales, campañas de sensibilización y actividades donde el amor y el compromiso social son el eje principal. Está abierto a familias, estudiantes, empresas y toda persona que quiera contribuir al bienestar de quienes viven con discapacidad en Saltillo.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m3')">
+                        <h3 class="font-bold text-lg">Programa Para Cirugía De Implantes Cocleares</h3>
+                        <p class="text-gray-600">El Programa de Implantes Cocleares del DIF Saltillo está diseñado para
+                            beneficiar a menores con pérdida auditiva severa que no pueden ser beneficiados con
+                            auxiliares convencionales. El implante coclear les permite acceder a sonidos, desarrollarse
+                            emocional y socialmente, y facilitar su proceso de aprendizaje. A través de este programa,
+                            se brinda acompañamiento médico, canalización a instancias especializadas y apoyo en los
+                            trámites necesarios para acceder a la cirugía. El objetivo es lograr una inclusión auditiva
+                            y educativa efectiva.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m5')">
-    <h3 class="font-bold text-lg">Deporte Para Personas Con Discapacidad</h3>
-    <p class="text-gray-600">El programa Deporte para Personas con Discapacidad del DIF Saltillo fomenta la inclusión a través del ejercicio físico. Ofrece espacios seguros y actividades deportivas adaptadas a las necesidades de niñas, niños, adolescentes y personas adultas con discapacidad.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m4')">
+                        <h3 class="font-bold text-lg">Sumando Con Amor</h3>
+                        <p class="text-gray-600">Sumando Con Amor es una iniciativa del DIF Saltillo que busca
+                            involucrar a la ciudadanía en acciones de concientización, voluntariado y apadrinamiento de
+                            personas con discapacidad. El programa genera puentes de solidaridad a través de eventos
+                            especiales, campañas de sensibilización y actividades donde el amor y el compromiso social
+                            son el eje principal. Está abierto a familias, estudiantes, empresas y toda persona que
+                            quiera contribuir al bienestar de quienes viven con discapacidad en Saltillo.</p>
+                    </li>
+
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m5')">
+                        <h3 class="font-bold text-lg">Deporte Para Personas Con Discapacidad</h3>
+                        <p class="text-gray-600">El programa Deporte para Personas con Discapacidad del DIF Saltillo
+                            fomenta la inclusión a través del ejercicio físico. Ofrece espacios seguros y actividades
+                            deportivas adaptadas a las necesidades de niñas, niños, adolescentes y personas adultas con
+                            discapacidad.</p>
+                    </li>
 
                 </ul>
             </div>

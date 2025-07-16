@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -102,23 +101,27 @@
         .coord-desc {
             font-size: clamp(1rem, 2.5vw, 1.25rem);
         }
-        
+
         .submenu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .submenu.active {
             max-height: 500px;
             transition: max-height 0.3s ease-in;
         }
+
         .submenu-item {
             padding-left: 2rem;
             border-left: 2px solid #f3f4f6;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .chevron.rotated {
             transform: rotate(180deg);
         }
@@ -241,22 +244,47 @@
                                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
                             </li>
                             <li>
-                                <button onclick="toggleSubmenu('mobile-coordinaciones')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+                                <button onclick="toggleSubmenu('mobile-coordinaciones')"
+                                    class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
                                     Coordinaciones
-                                    <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
+                                    <i id="mobile-coordinaciones-chevron"
+                                        class="fas fa-chevron-down text-xs chevron ml-2"></i>
                                 </button>
                                 <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/mujeres.html">Mujeres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/medica.html">Médica</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/talleres.html">Talleres</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
-                                    <li class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"><a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/mujeres.html">Mujeres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/medica.html">Médica</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/salud_mental.html">Salud Mental</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/talleres.html">Talleres</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/personas_con_discapacidad.html">Personas con
+                                            Discapacidad</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/voluntariado.html">Voluntariado</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a></li>
+                                    <li
+                                        class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
+                                        <a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a></li>
                                 </ul>
                             </li>
 
@@ -315,7 +343,9 @@
     <!-- =================================================== -->
     <div class="max-w-7xl mx-auto px-4 py-12 text-center">
         <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Médica</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Brindamos servicios de salud accesibles y de calidad para la comunidad, asegurando atención médica, dental, oftalmológica y de rehabilitación para quienes más lo necesitan. </p>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Brindamos servicios de salud accesibles y de
+            calidad para la comunidad, asegurando atención médica, dental, oftalmológica y de rehabilitación para
+            quienes más lo necesitan. </p>
     </div>
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
@@ -324,42 +354,69 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div class="max-w-6xl mx-auto">
                 <ul class="space-y-4">
-                    
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m0')">
-    <h3 class="font-bold text-lg">Farmacias Dif Saltillo</h3>
-    <p class="text-gray-600">Las Farmacias DIF Saltillo están ubicadas estratégicamente en distintos sectores de la ciudad para brindar acceso a medicamentos a precios bajos para todas las familias. Estas farmacias forman parte del compromiso del DIF Saltillo con el bienestar y la salud de la población, especialmente para quienes más lo necesitan. Además de ofrecer medicamentos genéricos y de patente, las farmacias cuentan con personal capacitado para brindar orientación y un trato digno a cada persona.</p>
-</li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m1')">
-    <h3 class="font-bold text-lg">Te Cuidamos Con Amor</h3>
-    <p class="text-gray-600">Te Cuidamos Con Amor es un programa integral del DIF Saltillo que brinda atención óptica y dental accesible. A través de nuestras clínicas, las personas pueden acceder a estudios de la vista, lentes a bajo costo, limpiezas dentales, extracciones, resinas, entre otros servicios, con enfoque preventivo y humano. Este programa busca que más personas puedan cuidar su salud sin barreras económicas.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m0')">
+                        <h3 class="font-bold text-lg">Farmacias Dif Saltillo</h3>
+                        <p class="text-gray-600">Las Farmacias DIF Saltillo están ubicadas estratégicamente en distintos
+                            sectores de la ciudad para brindar acceso a medicamentos a precios bajos para todas las
+                            familias. Estas farmacias forman parte del compromiso del DIF Saltillo con el bienestar y la
+                            salud de la población, especialmente para quienes más lo necesitan. Además de ofrecer
+                            medicamentos genéricos y de patente, las farmacias cuentan con personal capacitado para
+                            brindar orientación y un trato digno a cada persona.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m2')">
-    <h3 class="font-bold text-lg">Con Amor A Las Sonrisas Sanas</h3>
-    <p class="text-gray-600">El programa Con Amor a las Sonrisas Sanas está enfocado en la atención dental infantil. A través de brigadas y visitas a centros educativos, se realizan revisiones, limpiezas, talleres de higiene bucal y actividades para promover el cuidado dental desde la infancia. Esta iniciativa del DIF Saltillo busca generar hábitos de prevención, reducir la incidencia de enfermedades bucales en niñas y niños, y sembrar la importancia del autocuidado en la salud.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m1')">
+                        <h3 class="font-bold text-lg">Te Cuidamos Con Amor</h3>
+                        <p class="text-gray-600">Te Cuidamos Con Amor es un programa integral del DIF Saltillo que
+                            brinda atención óptica y dental accesible. A través de nuestras clínicas, las personas
+                            pueden acceder a estudios de la vista, lentes a bajo costo, limpiezas dentales,
+                            extracciones, resinas, entre otros servicios, con enfoque preventivo y humano. Este programa
+                            busca que más personas puedan cuidar su salud sin barreras económicas.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m3')">
-    <h3 class="font-bold text-lg">Visión Con Amor: Cirugía De Cataratas</h3>
-    <p class="text-gray-600">Visión Con Amor es un programa del DIF Saltillo que brinda acceso gratuito a cirugías de cataratas para adultos mayores. A través de un proceso de valoración médica, se identifican candidatos aptos y se les brinda seguimiento hasta su operación y recuperación. Recuperar la vista es recuperar independencia, dignidad y esperanza. Por eso, este programa es una forma de ver la vida con nuevos ojos y con amor.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m2')">
+                        <h3 class="font-bold text-lg">Con Amor A Las Sonrisas Sanas</h3>
+                        <p class="text-gray-600">El programa Con Amor a las Sonrisas Sanas está enfocado en la atención
+                            dental infantil. A través de brigadas y visitas a centros educativos, se realizan
+                            revisiones, limpiezas, talleres de higiene bucal y actividades para promover el cuidado
+                            dental desde la infancia. Esta iniciativa del DIF Saltillo busca generar hábitos de
+                            prevención, reducir la incidencia de enfermedades bucales en niñas y niños, y sembrar la
+                            importancia del autocuidado en la salud.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m4')">
-    <h3 class="font-bold text-lg">Operación De Labio Y Paladar Hendido</h3>
-    <p class="text-gray-600">A través de alianzas con especialistas y hospitales, el DIF Saltillo impulsa este programa que brinda atención médica integral, cirugías y acompañamiento a familias con niñas y niños que presentan labio y/o paladar hendido. Además del procedimiento quirúrgico, se acompaña a cada caso con seguimiento emocional, terapias del lenguaje y orientación médica, en un proceso lleno de empatía y compromiso.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m3')">
+                        <h3 class="font-bold text-lg">Visión Con Amor: Cirugía De Cataratas</h3>
+                        <p class="text-gray-600">Visión Con Amor es un programa del DIF Saltillo que brinda acceso
+                            gratuito a cirugías de cataratas para adultos mayores. A través de un proceso de valoración
+                            médica, se identifican candidatos aptos y se les brinda seguimiento hasta su operación y
+                            recuperación. Recuperar la vista es recuperar independencia, dignidad y esperanza. Por eso,
+                            este programa es una forma de ver la vida con nuevos ojos y con amor.</p>
+                    </li>
 
-<li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
-    onclick="openModal('m5')">
-    <h3 class="font-bold text-lg">Unidad Básica De Rehabilitación (Ubr)</h3>
-    <p class="text-gray-600">La Unidad Básica de Rehabilitación (UBR) es parte fundamental del sistema DIF Saltillo. En ella se ofrecen servicios de fisioterapia, estimulación temprana, mecanoterapia, electroterapia, terapia ocupacional y más. Está dirigida a personas con discapacidad o en procesos de recuperación física, incluyendo infancias, adultos y adultos mayores. La atención es profesional, accesible y siempre enfocada en mejorar la autonomía y calidad de vida de cada paciente.</p>
-</li>
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m4')">
+                        <h3 class="font-bold text-lg">Operación De Labio Y Paladar Hendido</h3>
+                        <p class="text-gray-600">A través de alianzas con especialistas y hospitales, el DIF Saltillo
+                            impulsa este programa que brinda atención médica integral, cirugías y acompañamiento a
+                            familias con niñas y niños que presentan labio y/o paladar hendido. Además del procedimiento
+                            quirúrgico, se acompaña a cada caso con seguimiento emocional, terapias del lenguaje y
+                            orientación médica, en un proceso lleno de empatía y compromiso.</p>
+                    </li>
+
+                    <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
+                        onclick="openModal('m5')">
+                        <h3 class="font-bold text-lg">Unidad Básica De Rehabilitación (Ubr)</h3>
+                        <p class="text-gray-600">La Unidad Básica de Rehabilitación (UBR) es parte fundamental del
+                            sistema DIF Saltillo. En ella se ofrecen servicios de fisioterapia, estimulación temprana,
+                            mecanoterapia, electroterapia, terapia ocupacional y más. Está dirigida a personas con
+                            discapacidad o en procesos de recuperación física, incluyendo infancias, adultos y adultos
+                            mayores. La atención es profesional, accesible y siempre enfocada en mejorar la autonomía y
+                            calidad de vida de cada paciente.</p>
+                    </li>
 
                 </ul>
             </div>
