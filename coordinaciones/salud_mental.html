@@ -16,9 +16,9 @@
 <body class="bg-gray-50 min-h-screen">
     <style>
         .nav-bg {
-            background-image: url('../Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png');
+            background-image: url('../Media/IMÁGENES_COORDINACIONES_BANNERS/Sitio\ Web\ CoordDIF25-04.png');
             background-size: cover;
-            background-position: center;
+            background-position: 0px -1660px;
             background-attachment: fixed;
         }
 
@@ -35,7 +35,12 @@
 
         .coord-title {
             font-family: Gilroy-Black, sans-serif;
-            color: #e20d7b;
+            color: #BDCD00;
+        }
+
+        .programas-title{
+            font-family: Gilroy-Black, sans-serif;
+            color: #bbb;
         }
 
         .coord-desc {
@@ -44,7 +49,7 @@
 
         .program h3 {
             font-family: Galano-Grotesque, sans-serif;
-            color: #e20d7b;
+            color: #BDCD00;
         }
 
         .program p {
@@ -67,10 +72,10 @@
         }
 
         .modal-card {
-            background-image: url('/Media/IMÁGENES_Y_LOGOTIPOS_COORDINACIONES/degradados/salud_mental.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(to bottom, rgba(234, 242, 80, 0.909), rgba(177, 246, 66, 0.712));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
         /* Custom responsive utilities */
@@ -96,6 +101,12 @@
         /* Better text scaling */
         .coord-title {
             font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .programas-title{
+            font-size: clamp(1rem, 4vw, 2rem);
+            text-align: center;
+            margin: 0 auto 1rem;
         }
 
         .coord-desc {
@@ -124,6 +135,30 @@
 
         .chevron.rotated {
             transform: rotate(180deg);
+        }
+        
+        /* Detalles Background*/
+        .body-bg{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 10;
+        }
+
+        #programas{
+            position: relative;
+            z-index: 50;
+        }
+
+        #coordinacion-title{
+            position: relative;
+            z-index: 50;
+        }
+
+        .navbar{
+            position: fixed;
+            z-index: 100;
         }
     </style>
 
@@ -205,7 +240,7 @@
                     </nav>
 
                     <!-- Responsive white line -->
-                    <div class="w-96 xl:w-160 border-t-4 border-white ml-auto"></div>
+                    <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
 
                     <!-- Social media icons desktop -->
                     <div class="flex gap-3 xl:gap-4 mt-2 text-white text-xl xl:text-2xl">
@@ -338,10 +373,12 @@
         </div>
     </header>
 
+    <main class="mt-[130px]">
+    <div class="body-bg"></div>
     <!-- =================================================== -->
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
-    <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+    <div id="coordinacion-title" class="max-w-7xl mx-auto px-4 pt-16 py-12 text-center z-50">
         <h1 class="text-5xl text-primary mb-4 coord-title">Coordinación de Salud Mental</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Ofrecemos apoyo psicológico y emocional gratuito
             para personas y familias en situación de vulnerabilidad, promoviendo el bienestar mental a través de
@@ -350,9 +387,11 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="py-8 sm:py-12 lg:py-16">
+    <section id="programas" class="py-8 sm:py-12 lg:py-16 lg:pt-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div class="max-w-6xl mx-auto">
+            <h2 class="programas-title">Programas Sociales</h2>
+            <div class="h-1 w-[80%] m-auto mb-5 bg-[linear-gradient(90deg,transparent,#ddd,transparent)]"></div>
                 <ul class="space-y-4">
 
                     <li class="programas-item p-4 bg-white rounded-lg shadow-md cursor-pointer hover:bg-gray-100 transition program"
@@ -430,7 +469,7 @@
             <label class="modal-backdrop close-btn"></label>
         </div>
     </template>
-
+    </main>
     <script src="../coordinaciones/scripts/salud_mental.js"></script>
 </body>
 

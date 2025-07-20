@@ -1,0 +1,18 @@
+.nav-bg{
+    background-image: url('../Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner\ Carrusel\ 3.png');
+    background-size: cover;
+    background-position: 0 -200px;
+}
+
+.nav-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-list{
+    flex-grow: 1;
+    border: 1px solid #000;
+}
+
+.nav-list div a{
+    font-size: clamp(10px, 2vw, 24px);
+}

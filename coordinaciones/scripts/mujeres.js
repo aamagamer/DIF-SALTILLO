@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="bg-gray-100 p-4 rounded-lg mb-4">
                 <h3 class="font-bold mb-2">${info.titulo}</h4>
                 <br>
-                <p>Objetivo:</p>
+                <p class="font-bold">Objetivo:</p>
                 <p>${info.objetivo}</p>
                 <br>
-                <p>Descripción:</p>
+                <p class="font-bold">Descripción:</p>
                 <p>${info.descripcion}</p>
             </div>
         `;
