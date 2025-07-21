@@ -12,8 +12,12 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script> 
   <link rel="stylesheet" href="/fonts.css">
+  <link rel="preload" as="image" href="/imagenes/carrusel1.webp">
+  <link rel="preload" as="image" href="/imagenes/carrusel2.webp">
+  <link rel="preload" as="image" href="/imagenes/carrusel3.webp">
+
 </head>
 
 <body class="scroll-smooth">
@@ -512,66 +516,214 @@
   </script>
 
   <!-- =================================================== -->
-  <!-- 4. P R O G R A M A S                                -->
-  <!-- =================================================== -->
-  <section id="programas" class="py-14 px-4 bg-base-200">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl text-center mb-10 text-primary section-title">Programas Destacados</h2>
-      <div class="grid gap-6 md:grid-cols-3">
+<!-- 4. P R O G R A M A S                                -->
+<!-- =================================================== -->
+<section id="programas" class="py-14 px-4 bg-base-200">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Programas Destacados</h2>
+    
+    <!-- Contenedor centrado para tarjetas -->
+    <div class="flex justify-center">
+      <div class="grid gap-6 md:grid-cols-2 max-w-4xl">
 
-        <!-- Tarjetas de programa (6) -->
+        <!-- Tarjeta de programa 1 -->
         <div class="prog-card" onclick="openModal('p1')">
-          <figure><img src="https://via.placeholder.com/400x240?text=UBR" alt="UBR" /></figure>
+          <figure>
+            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" />
+          </figure>
           <div class="card-body">
-            <h3 class="card-title">UBR</h3>
-            <p>Unidad Básica de Rehabilitación</p>
+            <h3 class="card-title">Espacios DIF</h3>
+            <p>Acércate a nuestros espacios de atención</p>
           </div>
         </div>
 
+        <!-- Tarjeta de programa 2 -->
         <div class="prog-card" onclick="openModal('p2')">
-          <figure><img src="https://via.placeholder.com/400x240?text=Abrigando+Corazones" alt="Abrigando Corazones" />
+          <figure>
+            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor en Movimiento" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title">Abrigando Corazones</h3>
-            <p>Apoyo emocional y social</p>
+            <h3 class="card-title">Amor En Movimiento</h3>
+            <p>Unidad móvil de salud</p>
           </div>
         </div>
 
+        <!-- Tarjeta de programa 3 -->
         <div class="prog-card" onclick="openModal('p3')">
-          <figure><img src="https://via.placeholder.com/400x240?text=Centro+Grandes" alt="Centro de los Grandes" />
+          <figure>
+            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompaño.png" alt="TEAcompaño" />
           </figure>
           <div class="card-body">
-            <h3 class="card-title">Centro de los Grandes</h3>
-            <p>Atención para adultos mayores</p>
+            <h3 class="card-title">TEAcompaño Con Amor</h3>
+            <p>Para niñas y niños con autismo</p>
           </div>
         </div>
 
+        <!-- Tarjeta de programa 4 -->
         <div class="prog-card" onclick="openModal('p4')">
-          <figure><img src="https://via.placeholder.com/400x240?text=Lactarios" alt="Lactarios" /></figure>
+          <figure>
+            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro de los grandes" />
+          </figure>
           <div class="card-body">
-            <h3 class="card-title">Lactarios</h3>
-            <p>Espacios de lactancia materna</p>
+            <h3 class="card-title">Centro Internacional de los Grandes</h3>
+            <p>Personas mayores y nuevas generaciones</p>
           </div>
         </div>
 
-        <div class="prog-card" onclick="openModal('p5')">
-          <figure><img src="https://via.placeholder.com/400x240?text=Farmacias" alt="Farmacias" /></figure>
-          <div class="card-body">
-            <h3 class="card-title">Farmacias</h3>
-            <p>Medicamentos a bajo costo</p>
-          </div>
-        </div>
-
-        <div class="prog-card" onclick="openModal('p6')">
-          <figure><img src="https://via.placeholder.com/400x240?text=Nuevo+Programa" alt="Nuevo Programa" /></figure>
-          <div class="card-body">
-            <h3 class="card-title">Nuevo Programa</h3>
-            <p>Descripción breve del programa.</p>
-          </div>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+<!-- ========== MODALES DE PROGRAMAS ========== -->
+<template id="programModalTemplate">
+  <input type="checkbox" class="modal-toggle prog-toggle" />
+  <div class="modal">
+    <div class="modal-box max-w-2xl">
+      <h3 class="font-bold text-lg mb-4 prog-title"></h3>
+      <img class="rounded mb-4 prog-img" src="" alt="Imagen programa" />
+      <p class="prog-text mb-4"></p>
+      <div class="modal-action"><label class="btn close-btn">Cerrar</label></div>
+    </div>
+    <label class="modal-backdrop close-btn"></label>
+  </div>
+</template>
+
+<script>
+  const programInfo = [
+    {
+      id: 'p1',
+      title: 'Espacios DIF',
+      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
+      text: `Objetivo del proyecto:
+Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.
+
+Descripción:
+Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.
+
+Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
+    },
+    {
+      id: 'p2',
+      title: 'Amor En Movimiento',
+      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
+      text: `Objetivo del proyecto:
+Brindar servicios de salud especializados y gratuitos a las
+colonias y comunidades de Saltillo mediante una unidad móvil
+equipada y con personal profesional.
+Descripción:
+Amor en Movimiento: Unidad Móvil de Salud recorre las calles de
+Saltillo para llevar salud gratuita, humana y cercana. A bordo
+viajan médicos, dentistas, optometristas y especialistas que
+brindan servicios gratuitos como:
+
+●Atención médica general
+●Evaluación dental y limpieza
+●Audiometría y entrega de aparatos auditivos
+●Optometría y entrega de lentes
+●Tamizaje de glucosa
+
+Este proyecto está pensado para quienes no pueden trasladarse,
+para quienes han postergado su salud por falta de recursos, y
+para quienes necesitan saber que alguien se preocupa por ellos.
+En Amor en Movimiento, cada visita es`
+    },
+  {
+      id: 'p3',
+      title: 'TEAcompaño Con Amor',
+      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompaño.png',
+      text: `Objetivo del proyecto:
+Ofrecer acompañamiento integral, especializado y accesible a
+niñas y niños con Trastorno del Espectro Autista (TEA), y
+orientación cercana a sus familias y entornos.
+Descripción:
+TEAcompaño Con Amor es un proyecto pionero en Saltillo: el
+primer centro de atención del gobierno municipal pensado
+exclusivamente para niñas y niños con autismo, accesible y
+diseñado con perspectiva de inclusión.
+Aquí se brindan evaluaciones, terapias psicopedagógicas y de
+lenguaje, asesoría para madres, padres y cuidadores, además de
+acompañamiento directo a escuelas para promover la integración
+escolar. TEAcompaño promueve una visión profesional y un
+enfoque humano: cada familia es acogida, orientada y
+acompañada.`
+    },{
+      id: 'p4',
+      title: 'Centro Internacional de los Grandes',
+      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
+      text: `Objetivo del proyecto:
+Crear un espacio de convivencia activa, formación, atención y
+encuentro entre personas mayores y nuevas generaciones.
+Descripción:
+El Centro Intergeneracional de los Grandes será un espacio sin
+precedentes en Saltillo: un lugar donde las personas mayores
+reciben atención, aportan, enseñan, comparten y conviven.
+Este proyecto contempla áreas para la salud preventiva, talleres
+formativos, actividades recreativas, atención psicológica y
+espacios de encuentro entre generaciones. Se busca que niñas,
+niños y adolescentes participen junto a las personas mayores en
+dinámicas que fortalezcan los lazos comunitarios, el respeto y el
+aprendizaje mutuo. Este será un centro vivo, donde envejecer se
+celebre y se valore la experiencia. Porque en Saltillo, las
+personas mayores son los grandes de nuestra historia.`
+    },];
+
+  programInfo.forEach(info => {
+    const tpl = document.getElementById('programModalTemplate').content.cloneNode(true);
+    tpl.querySelector('.modal-toggle').id = info.id;
+    tpl.querySelector('.prog-title').textContent = info.title;
+    tpl.querySelector('.prog-img').src = info.img;
+    tpl.querySelector('.prog-text').textContent = info.text;
+    tpl.querySelectorAll('.close-btn').forEach(btn => btn.setAttribute('for', info.id));
+    document.body.appendChild(tpl);
+  });
+
+  // Cierre al hacer click fuera
+  addEventListener('click', e => {
+    document.querySelectorAll('.prog-toggle').forEach(t => {
+      const box = t.nextElementSibling.querySelector('.modal-box');
+      if (t.checked && !box.contains(e.target) && !e.target.closest('.prog-card')) t.checked = false;
+    });
+  });
+</script>
+
+  <!-- =================================================== -->
+<!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
+<!-- =================================================== -->
+<section id="quienes-somos" class="py-16 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary section-title">¿Quiénes Somos?</h2>
+      <p class="mt-4 max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
+        Somos una organización gubernamental donde trabajamos con el <span class="font-semibold text-primary">corazón</span> para construir una comunidad más solidaria, inclusiva y justa. Estamos dedicados a brindar asistencia social a quienes más lo necesitan, fortaleciendo a las familias y protegiendo a los sectores más vulnerables de nuestra sociedad.
+      </p>
+    </div>
+
+    <!-- Grid Principal -->
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <!-- Imagen de referencia -->
+      <div class="relative">
+        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/DIF.png" alt="DIF Saltillo" 
+          class="rounded-2xl shadow-xl w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
+      </div>
+
+      <!-- Texto descriptivo -->
+      <div>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          A través de programas de bienestar, salud, educación y asistencia, buscamos mejorar la calidad de vida de niñas, niños, adolescentes, adultos mayores y personas con discapacidad. Nuestro compromiso es claro: estar siempre cerca de la gente, ofreciendo apoyo, esperanza y oportunidades para un mejor futuro.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li><strong>Misión:</strong> Promover el desarrollo humano de la población saltillense, a través de políticas públicas que trascienden a favor del bienestar social.</li>
+          <li><strong>Visión:</strong> Ser un referente nacional con el diseño de modelos de intervención innovadores que respondan, de manera congruente, a las demandas y necesidades de la sociedad saltillense.</li>
+          <li><strong>Política de gestión de calidad:</strong> En el DIF Saltillo estamos comprometidos con las necesidades de nuestros clientes, mejorando continuamente la efectividad del sistema de gestión de calidad y cumpliendo con los programas de atención a la población vulnerable.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- =================================================== -->
   <!-- 5. B L O G                                          -->
