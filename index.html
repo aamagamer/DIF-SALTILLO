@@ -575,7 +575,6 @@
   </div>
 </section>
 
-
 <!-- ========== MODALES DE PROGRAMAS ========== -->
 <template id="programModalTemplate">
   <input type="checkbox" class="modal-toggle prog-toggle" />
@@ -855,5 +854,17 @@
       item.addEventListener('click', closeMobileMenu);
     });
   </script>
+
+  <script>
+  // Carrusel automático para banners
+  let bannerIndex = 1;
+  const bannerSlides = ['#slide1', '#slide2', '#slide3'];
+
+  setInterval(() => {
+    bannerIndex = (bannerIndex % bannerSlides.length) + 1;
+    window.location.hash = 'slide' + bannerIndex;
+  }, 4000);
+</script>
+
 </body>
 </html>
