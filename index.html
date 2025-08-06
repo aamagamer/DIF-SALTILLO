@@ -518,168 +518,162 @@
   <!-- =================================================== -->
 <!-- 4. P R O G R A M A S                                -->
 <!-- =================================================== -->
-<section id="programas" class="py-14 px-4 bg-base-200">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Programas Destacados</h2>
-    
-    <!-- Contenedor centrado para tarjetas -->
-    <div class="flex justify-center">
-      <div class="grid gap-6 md:grid-cols-2 max-w-4xl">
-
-        <!-- Tarjeta de programa 1 -->
-        <div class="prog-card" onclick="openModal('p1')">
-          <figure>
-            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" />
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title">Espacios DIF</h3>
-            <p>Acércate a nuestros espacios de atención</p>
-          </div>
+<section id="inicio" class="relative">
+    <div class="carousel w-full">
+      <!-- Programa 1 -->
+      <div id="p1" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios DIF.png" alt="Espacios DIF"
+          class="w-full object-cover cursor-pointer" onclick="openModal('programa1')" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#p4" class="btn btn-circle">❮</a>
+          <a href="#p2" class="btn btn-circle">❯</a>
         </div>
+      </div>
 
-        <!-- Tarjeta de programa 2 -->
-        <div class="prog-card" onclick="openModal('p2')">
-          <figure>
-            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor en Movimiento" />
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title">Amor En Movimiento</h3>
-            <p>Unidad móvil de salud</p>
-          </div>
+      <!-- Programa 2 -->
+      <div id="p2" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor en movimiento.png" alt="Amor en Movimiento"
+          class="w-full object-cover cursor-pointer" onclick="openModal('programa2')" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#p1" class="btn btn-circle">❮</a>
+          <a href="#p3" class="btn btn-circle">❯</a>
         </div>
+      </div>
 
-        <!-- Tarjeta de programa 3 -->
-        <div class="prog-card" onclick="openModal('p3')">
-          <figure>
-            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompaño.png" alt="TEAcompaño" />
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title">TEAcompaño Con Amor</h3>
-            <p>Para niñas y niños con autismo</p>
-          </div>
+      <!-- Programa 3 -->
+      <div id="p3" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño"
+          class="w-full object-cover cursor-pointer" onclick="openModal('programa3')" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#p2" class="btn btn-circle">❮</a>
+          <a href="#p4" class="btn btn-circle">❯</a>
         </div>
+      </div>
 
-        <!-- Tarjeta de programa 4 -->
-        <div class="prog-card" onclick="openModal('p4')">
-          <figure>
-            <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro de los grandes" />
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title">Centro Internacional de los Grandes</h3>
-            <p>Personas mayores y nuevas generaciones</p>
-          </div>
+      <!-- Programa 4 -->
+      <div id="p4" class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro de los grandes.png" alt="Centro de los Grandes"
+          class="w-full object-cover cursor-pointer" onclick="openModal('programa4')" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#p3" class="btn btn-circle">❮</a>
+          <a href="#p1" class="btn btn-circle">❯</a>
         </div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========== MODALES DE PROGRAMAS ========== -->
-<template id="programModalTemplate">
-  <input type="checkbox" class="modal-toggle prog-toggle" />
-  <div class="modal">
-    <div class="modal-box max-w-2xl">
-      <h3 class="font-bold text-lg mb-4 prog-title"></h3>
-      <img class="rounded mb-4 prog-img" src="" alt="Imagen programa" />
-      <p class="prog-text mb-4"></p>
-      <div class="modal-action"><label class="btn close-btn">Cerrar</label></div>
+  <!-- ========== MODALES DE PROGRAMAS ========== -->
+  <template id="programModalTemplate">
+    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box max-w-2xl">
+        <h3 class="font-bold text-lg mb-4 prog-title"></h3>
+        <img class="rounded mb-4 prog-img" src="" alt="Imagen programa" />
+        <p class="prog-text mb-4"></p>
+        <div class="modal-action">
+          <label for="modal-toggle" class="btn close-btn">Cerrar</label>
+        </div>
+      </div>
+      <label for="modal-toggle" class="modal-backdrop"></label>
     </div>
-    <label class="modal-backdrop close-btn"></label>
-  </div>
-</template>
+  </template>
 
-<script>
-  const programInfo = [
-    {
-      id: 'p1',
-    title: 'Espacios DIF',
-    img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
-    text: `<strong>Objetivo del proyecto:</strong><br>
-    Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br><br>
-    <strong>Descripción:</strong><br>
-    Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br><br>
-    Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
-    },
-    {
-       id: 'p2',
-    title: 'Amor En Movimiento',
-    img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
-    text: `<strong>Objetivo del proyecto:</strong><br>
-    Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br><br>
-    <strong>Descripción:</strong><br>
-    Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br><br>
-    <ul class="list-disc list-inside">
-      <li>Atención médica general</li>
-      <li>Evaluación dental y limpieza</li>
-      <li>Audiometría y entrega de aparatos auditivos</li>
-      <li>Optometría y entrega de lentes</li>
-      <li>Tamizaje de glucosa</li>
-    </ul><br>
-    Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
-    },
-  {
-      id: 'p3',
-  title: 'TEAcompaño Con Amor',
-  img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompaño.png',
-  text: `<strong>Objetivo del proyecto:</strong><br>
-  Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br><br>
+  <script>
+    const programInfo = [
+      {
+        id: 'programa1',
+        title: 'Espacios DIF',
+        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios DIF.png'),
+        text: `<strong>Objetivo del proyecto:</strong><br>
+        Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br><br>
+        <strong>Descripción:</strong><br>
+        Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br><br>
+        Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
+      },
+      {
+        id: 'programa2',
+        title: 'Amor En Movimiento',
+        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor en movimiento.png'),
+        text: `<strong>Objetivo del proyecto:</strong><br>
+        Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br><br>
+        <strong>Descripción:</strong><br>
+        Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br><br>
+        <ul class="list-disc list-inside">
+          <li>Atención médica general</li>
+          <li>Evaluación dental y limpieza</li>
+          <li>Audiometría y entrega de aparatos auditivos</li>
+          <li>Optometría y entrega de lentes</li>
+          <li>Tamizaje de glucosa</li>
+        </ul><br>
+      Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
+      },
+      {
+        id: 'programa3',
+        title: 'TEAcompaño Con Amor',
+        img: encodeURI('Media\IMÁGENES_PROGRAMAS_INSIGNIA\TEAcompaño.png'),
+        text: `<strong>Objetivo del proyecto:</strong><br>
+        Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br><br>
 
-  <strong>Descripción:</strong><br>
-  TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br><br>
+        <strong>Descripción:</strong><br>
+        TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br><br>
 
-  Aquí se brindan:<br>
-  <ul class="list-disc list-inside">
-    <li>Evaluaciones</li>
-    <li>Terapias psicopedagógicas y de lenguaje</li>
-    <li>Asesoría para madres, padres y cuidadores</li>
-    <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
-  </ul><br>
+        Aquí se brindan:<br>
+        <ul class="list-disc list-inside">
+          <li>Evaluaciones</li>
+          <li>Terapias psicopedagógicas y de lenguaje</li>
+          <li>Asesoría para madres, padres y cuidadores</li>
+          <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
+        </ul><br>
 
-  TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
-    },{
-      id: 'p4',
-  title: 'Centro Internacional de los Grandes',
-  img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
-  text: `<strong>Objetivo del proyecto:</strong><br>
-  Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br><br>
+        TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
+      },
+      {
+        id: 'programa4',
+        title: 'Centro Internacional de los Grandes',
+        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro de los grandes.png'),
+        text: `<strong>Objetivo del proyecto:</strong><br>
+        Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br><br>
 
-  <strong>Descripción:</strong><br>
-  El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br><br>
+        <strong>Descripción:</strong><br>
+        El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br><br>
 
-  Este proyecto contempla:<br>
-  <ul class="list-disc list-inside">
-    <li>Áreas para la salud preventiva</li>
-    <li>Talleres formativos</li>
-    <li>Actividades recreativas</li>
-    <li>Atención psicológica</li>
-    <li>Espacios de encuentro entre generaciones</li>
-  </ul><br>
+        Este proyecto contempla:<br>
+        <ul class="list-disc list-inside">
+          <li>Áreas para la salud preventiva</li>
+          <li>Talleres formativos</li>
+          <li>Actividades recreativas</li>
+          <li>Atención psicológica</li>
+          <li>Espacios de encuentro entre generaciones</li>
+        </ul><br>
 
-  Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br><br>
+        Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br><br>
 
-  Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
-    },];
+      Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
+      }
+    ];
 
- programInfo.forEach(info => {
-  const tpl = document.getElementById('programModalTemplate').content.cloneNode(true);
-  tpl.querySelector('.modal-toggle').id = info.id;
-  tpl.querySelector('.prog-title').textContent = info.title;
-  tpl.querySelector('.prog-img').src = info.img;
-  tpl.querySelector('.prog-text').innerHTML = info.text; // CAMBIO AQUÍ
-  tpl.querySelectorAll('.close-btn').forEach(btn => btn.setAttribute('for', info.id));
-  document.body.appendChild(tpl);
-});
+    // Crear modales
+    programInfo.forEach(info => {
+      const modalTemplate = document.getElementById('programModalTemplate').content.cloneNode(true);
+      const modal = modalTemplate.querySelector('.modal-toggle');
+      modal.id = info.id;
 
+      modalTemplate.querySelector('.prog-title').textContent = info.title;
+      modalTemplate.querySelector('.prog-img').src = info.img;
+      modalTemplate.querySelector('.prog-text').innerHTML = info.text;
 
-  // Cierre al hacer click fuera
-  addEventListener('click', e => {
-    document.querySelectorAll('.prog-toggle').forEach(t => {
-      const box = t.nextElementSibling.querySelector('.modal-box');
-      if (t.checked && !box.contains(e.target) && !e.target.closest('.prog-card')) t.checked = false;
+      modalTemplate.querySelectorAll('.close-btn, .modal-backdrop').forEach(el => {
+        el.setAttribute('for', info.id);
+      });
+
+      document.body.appendChild(modalTemplate);
     });
-  });
-</script>
+
+    // Función para abrir modales
+    function openModal(modalId) {
+      document.getElementById(modalId).checked = true;
+    }
+  </script>
 
   <!-- =================================================== -->
 <!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
