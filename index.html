@@ -539,41 +539,41 @@
   <!-- =================================================== -->
 <!-- 4. P R O G R A M A S                                -->
 <!-- =================================================== -->
-<section id="inicio" class="relative w-full overflow-hidden p-4 max-w-4xl mx-auto">
+<section id="inicio" class="relative w-full overflow-hidden p-4 max-w-6xl mx-auto">
   <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300">
     <div class="carousel-slide flex transition-transform duration-700 ease-in-out">
       <!-- Slide 1 -->
-      <div class="relative w-full flex-shrink-0" style="height: 400px;">
+      <div class="relative w-full flex-shrink-0" style="height: 450px;">
         <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" class="w-full h-full object-cover cursor-pointer"
-          onclick="openModal('programa1')" />
+          data-id="programa1" />
       </div>
 
       <!-- Slide 2 -->
-      <div class="relative w-full flex-shrink-0" style="height: 400px;">
+      <div class="relative w-full flex-shrink-0" style="height: 450px;">
         <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento" class="w-full h-full object-cover cursor-pointer"
-          onclick="openModal('programa2')" />
+          data-id="programa2" />
       </div>
 
       <!-- Slide 3 -->
-      <div class="relative w-full flex-shrink-0" style="height: 400px;">
+      <div class="relative w-full flex-shrink-0" style="height: 450px;">
         <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor" class="w-full h-full object-cover cursor-pointer"
-          onclick="openModal('programa3')" />
+          data-id="programa3" />
       </div>
 
       <!-- Slide 4 -->
-      <div class="relative w-full flex-shrink-0" style="height: 400px;">
+      <div class="relative w-full flex-shrink-0" style="height: 450px;">
         <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover cursor-pointer"
-          onclick="openModal('programa4')" />
+          data-id="programa4" />
       </div>
     </div>
 
     <!-- Flechas -->
     <button id="prevBtn" aria-label="Previous Slide"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-10">
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
       ❮
     </button>
     <button id="nextBtn" aria-label="Next Slide"
-      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-10">
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
       ❯
     </button>
   </div>
@@ -581,7 +581,7 @@
 
 <!-- MODAL -->
 <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-  <div class="bg-white rounded-lg shadow-lg max-w-2xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
+  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
     <button id="modalClose" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
     <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3>
     <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-64 object-contain" />
@@ -612,10 +612,21 @@
   });
 
   // Auto slide cada 5 segundos
-  setInterval(() => {
+  let slideInterval = setInterval(() => {
     counter = (counter === slides.length - 1) ? 0 : counter + 1;
     updateSlide();
   }, 5000);
+
+  // Pausar y reiniciar auto slide al usar flechas
+  [prevBtn, nextBtn].forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        counter = (counter === slides.length - 1) ? 0 : counter + 1;
+        updateSlide();
+      }, 5000);
+    });
+  });
 
   // Modal elements
   const modal = document.getElementById('modal');
@@ -690,6 +701,14 @@
     }
   ];
 
+  // Abre modal al hacer click en la imagen
+  slideContainer.addEventListener('click', (e) => {
+    const id = e.target.getAttribute('data-id');
+    if (id) {
+      openModal(id);
+    }
+  });
+
   window.openModal = function(id) {
     const programa = programInfo.find(p => p.id === id);
     if (!programa) return;
@@ -702,26 +721,18 @@
   };
 
   modalClose.addEventListener('click', () => {
-    modal.classList.add('opacity-0');
+    modal.classList.add('opacity-0', 'pointer-events-none');
     modal.classList.remove('opacity-100');
   });
 
   modal.addEventListener('click', e => {
     if (e.target === modal) {
-      modal.classList.add('opacity-0');
+      modal.classList.add('opacity-0', 'pointer-events-none');
       modal.classList.remove('opacity-100');
     }
   });
 })();
 </script>
-
-<style>
-  @media (max-width: 768px) {
-    .carousel-slide > div {
-      height: 60vh !important;
-    }
-  }
-</style>
 
 
   <!-- =================================================== -->
