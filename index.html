@@ -382,36 +382,60 @@
   <!-- =================================================== -->
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
-  <section id="inicio" class="relative">
-    <div class="carousel w-full max-h-screen">
-      <!-- Banner 1 -->
-      <div id="slide1" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel.png" alt="Banner 1" class="w-full object-cover" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      <!-- Banner 2 -->
-      <div id="slide2" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 2.png" alt="Banner 2"
-          class="w-full object-cover" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide3" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      <!-- Banner 3 -->
-      <div id="slide3" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png" alt="Banner 3"
-          class="w-full object-cover" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" class="btn btn-circle">❮</a>
-          <a href="#slide1" class="btn btn-circle">❯</a>
-        </div>
+<section id="inicio" class="relative">
+  <div class="w-full max-h-screen relative overflow-hidden">
+    <!-- Banner 1 -->
+    <div class="carousel-item relative w-full">
+      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full object-cover" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
       </div>
     </div>
-  </section>
+    <!-- Banner 2 -->
+    <div class="carousel-item relative w-full hidden">
+      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_2.png" alt="Banner 2" class="w-full object-cover" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+    <!-- Banner 3 -->
+    <div class="carousel-item relative w-full hidden">
+      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_3.png" alt="Banner 3" class="w-full object-cover" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let bannerIndex = 0;
+  const slides = document.querySelectorAll('#inicio .carousel-item');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('hidden', i !== index);
+    });
+  }
+
+  function nextSlide() {
+    bannerIndex = (bannerIndex + 1) % totalSlides;
+    showSlide(bannerIndex);
+  }
+
+  function prevSlide() {
+    bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
+    showSlide(bannerIndex);
+  }
+
+  setInterval(nextSlide, 4000);
+  showSlide(bannerIndex);
+</script>
+
 
 
   <!-- =================================================== -->
@@ -841,17 +865,6 @@
       item.addEventListener('click', closeMobileMenu);
     });
   </script>
-
-  <script>
-  // Carrusel automático para banners
-  let bannerIndex = 1;
-  const bannerSlides = ['#slide1', '#slide2', '#slide3'];
-
-  setInterval(() => {
-    bannerIndex = (bannerIndex % bannerSlides.length) + 1;
-    window.location.hash = 'slide' + bannerIndex;
-  }, 4000);
-</script>
 
 </body>
 </html>
