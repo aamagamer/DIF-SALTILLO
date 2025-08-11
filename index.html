@@ -539,31 +539,27 @@
   <!-- =================================================== -->
 <!-- 4. P R O G R A M A S                                -->
 <!-- =================================================== -->
-<section id="inicio" class="relative w-full overflow-hidden p-4 max-w-6xl mx-auto">
-  <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300">
-    <div class="carousel-slide flex transition-transform duration-700 ease-in-out">
+<section id="inicio" class="relative w-full overflow-hidden p-4 max-w-[900px] mx-auto">
+  <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300" style="aspect-ratio: 16 / 9;">
+    <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
       <!-- Slide 1 -->
-      <div class="relative w-full flex-shrink-0" style="height: 450px;">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" class="w-full h-full object-cover cursor-pointer"
-          data-id="programa1" />
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa1">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" class="w-full h-full object-cover" />
       </div>
 
       <!-- Slide 2 -->
-      <div class="relative w-full flex-shrink-0" style="height: 450px;">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento" class="w-full h-full object-cover cursor-pointer"
-          data-id="programa2" />
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa2">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento" class="w-full h-full object-cover" />
       </div>
 
       <!-- Slide 3 -->
-      <div class="relative w-full flex-shrink-0" style="height: 450px;">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor" class="w-full h-full object-cover cursor-pointer"
-          data-id="programa3" />
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa3">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor" class="w-full h-full object-cover" />
       </div>
 
       <!-- Slide 4 -->
-      <div class="relative w-full flex-shrink-0" style="height: 450px;">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover cursor-pointer"
-          data-id="programa4" />
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa4">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover" />
       </div>
     </div>
 
@@ -703,37 +699,51 @@
 
   // Abre modal al hacer click en la imagen
   slideContainer.addEventListener('click', (e) => {
-    const id = e.target.getAttribute('data-id');
-    if (id) {
-      openModal(id);
+    let target = e.target;
+    // En caso de click en contenedor div y no en img
+    if (!target.dataset.id) {
+      target = target.closest('[data-id]');
+    }
+    if (target && target.dataset.id) {
+      openModal(target.dataset.id);
     }
   });
 
   window.openModal = function(id) {
-    const programa = programInfo.find(p => p.id === id);
-    if (!programa) return;
-    modalTitle.innerHTML = programa.title;
-    modalImg.src = programa.img;
-    modalImg.alt = programa.title;
-    modalText.innerHTML = programa.text;
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-    modal.classList.add('opacity-100');
-  };
+  const programa = programInfo.find(p => p.id === id);
+  if (!programa) return;
+  modalTitle.innerHTML = programa.title;
+  modalImg.src = programa.img;
+  modalImg.alt = programa.title;
+  modalText.innerHTML = programa.text;
+  modal.classList.remove('opacity-0', 'pointer-events-none');
+  modal.classList.add('opacity-100');
 
-  modalClose.addEventListener('click', () => {
+  // Bloquear scroll
+  document.body.style.overflow = 'hidden';
+};
+
+modalClose.addEventListener('click', () => {
+  modal.classList.add('opacity-0', 'pointer-events-none');
+  modal.classList.remove('opacity-100');
+
+  // Liberar scroll
+  document.body.style.overflow = '';
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
     modal.classList.add('opacity-0', 'pointer-events-none');
     modal.classList.remove('opacity-100');
-  });
 
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      modal.classList.remove('opacity-100');
-    }
-  });
+    // Liberar scroll
+    document.body.style.overflow = '';
+  }
+});
+
 })();
-</script>
 
+</script>
 
   <!-- =================================================== -->
 <!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
@@ -751,7 +761,7 @@
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <!-- Imagen de referencia -->
       <div class="relative">
-        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/DIF.png" alt="DIF Saltillo" 
+        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" alt="DIF Saltillo" 
           class="rounded-2xl shadow-xl w-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
       </div>
