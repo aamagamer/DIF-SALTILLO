@@ -12,7 +12,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
-  <script src="https://cdn.tailwindcss.com"></script> 
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/fonts.css">
   <link rel="preload" as="image" href="/imagenes/carrusel1.webp">
   <link rel="preload" as="image" href="/imagenes/carrusel2.webp">
@@ -26,6 +26,19 @@
   <style>
     * {
       scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(30deg,
+          #b21177 0%,
+          #fefdf9 20%,
+          #f7e8ac 40%,
+          #a2b93f 60%,
+          #76aed5 80%,
+          #b21177 100%);
+      background-attachment: fixed;
     }
 
     .coord-block {
@@ -382,59 +395,61 @@
   <!-- =================================================== -->
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
-<section id="inicio" class="relative">
-  <div class="w-full max-h-screen relative overflow-hidden">
-    <!-- Banner 1 -->
-    <div class="carousel-item relative w-full">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+  <section id="inicio" class="relative">
+    <div class="w-full max-h-screen relative overflow-hidden">
+      <!-- Banner 1 -->
+      <div class="carousel-item relative w-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+        </div>
+      </div>
+      <!-- Banner 2 -->
+      <div class="carousel-item relative w-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_2.png" alt="Banner 2"
+          class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+        </div>
+      </div>
+      <!-- Banner 3 -->
+      <div class="carousel-item relative w-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_3.png" alt="Banner 3"
+          class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+        </div>
       </div>
     </div>
-    <!-- Banner 2 -->
-    <div class="carousel-item relative w-full hidden">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_2.png" alt="Banner 2" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
-      </div>
-    </div>
-    <!-- Banner 3 -->
-    <div class="carousel-item relative w-full hidden">
-      <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_3.png" alt="Banner 3" class="w-full object-cover" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-        <button class="btn btn-circle" onclick="nextSlide()">❯</button>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  let bannerIndex = 0;
-  const slides = document.querySelectorAll('#inicio .carousel-item');
-  const totalSlides = slides.length;
+  <script>
+    let bannerIndex = 0;
+    const slides = document.querySelectorAll('#inicio .carousel-item');
+    const totalSlides = slides.length;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('hidden', i !== index);
-    });
-  }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('hidden', i !== index);
+      });
+    }
 
-  function nextSlide() {
-    bannerIndex = (bannerIndex + 1) % totalSlides;
+    function nextSlide() {
+      bannerIndex = (bannerIndex + 1) % totalSlides;
+      showSlide(bannerIndex);
+    }
+
+    function prevSlide() {
+      bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
+      showSlide(bannerIndex);
+    }
+
+    setInterval(nextSlide, 4000);
     showSlide(bannerIndex);
-  }
-
-  function prevSlide() {
-    bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
-    showSlide(bannerIndex);
-  }
-
-  setInterval(nextSlide, 4000);
-  showSlide(bannerIndex);
-</script>
+  </script>
 
 
 
@@ -444,50 +459,58 @@
   <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
     <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
-      <div class="coord-block"onclick="window.location.href='coordinaciones/mujeres.html'">
+      <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
         <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/medica.html'">
         <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/salud_mental.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/fortalecimiento.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/talleres.html'">
         <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Talleres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/niñes.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');" ></div>
+        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/personas_con_discapacidad.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');"></div>
+        <div class="coord-block-img"
+          style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/adultos_mayores.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/voluntariado.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/centros_comunitarios.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');"></div>
+        <div class="coord-block-img"
+          style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');"></div>
       </div>
     </div>
   </section>
   <!-- Scale Effect -->
   <style>
-    .coord-block{
+    .coord-block {
       overflow: hidden;
     }
+
     .coord-block-img {
       height: 100%;
       background-size: cover;
       background-position: center;
       transition: transform 0.3s ease-in-out;
     }
-    .coord-block:hover .coord-block-img{
+
+    .coord-block:hover .coord-block-img {
       transform: scale(1.06) translateY(-2px);
     }
   </style>
@@ -537,116 +560,123 @@
   </script>
 
   <!-- =================================================== -->
-<!-- 4. P R O G R A M A S                                -->
-<!-- =================================================== -->
-<section id="inicio" class="relative w-full overflow-hidden p-4 max-w-[900px] mx-auto">
-  <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300" style="aspect-ratio: 16 / 9;">
-    <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
-      <!-- Slide 1 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa1">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF" class="w-full h-full object-cover" />
+  <!-- 4. P R O G R A M A S                                -->
+  <!-- =================================================== -->
+  <section id="inicio" class="relative w-full overflow-hidden p-4 max-w-[900px] mx-auto">
+    <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300"
+      style="aspect-ratio: 16 / 9;">
+      <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
+        <!-- Slide 1 -->
+        <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa1">
+          <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF"
+            class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa2">
+          <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento"
+            class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa3">
+          <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor"
+            class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa4">
+          <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png"
+            alt="Centro Internacional de los Grandes" class="w-full h-full object-cover" />
+        </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa2">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa3">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer" data-id="programa4">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover" />
-      </div>
+      <!-- Flechas -->
+      <button id="prevBtn" aria-label="Previous Slide"
+        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
+        ❮
+      </button>
+      <button id="nextBtn" aria-label="Next Slide"
+        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
+        ❯
+      </button>
     </div>
+  </section>
 
-    <!-- Flechas -->
-    <button id="prevBtn" aria-label="Previous Slide"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
-      ❮
-    </button>
-    <button id="nextBtn" aria-label="Next Slide"
-      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
-      ❯
-    </button>
+  <!-- MODAL -->
+  <div id="modal"
+    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
+      <button id="modalClose"
+        class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
+      <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3>
+      <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-64 object-contain" />
+      <div id="modalText" class="text-gray-700 whitespace-pre-wrap"></div>
+    </div>
   </div>
-</section>
 
-<!-- MODAL -->
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
-    <button id="modalClose" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
-    <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3>
-    <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-64 object-contain" />
-    <div id="modalText" class="text-gray-700 whitespace-pre-wrap"></div>
-  </div>
-</div>
+  <script>
+    (() => {
+      const slideContainer = document.querySelector('.carousel-slide');
+      const slides = document.querySelectorAll('.carousel-slide > div');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let counter = 0;
 
-<script>
-(() => {
-  const slideContainer = document.querySelector('.carousel-slide');
-  const slides = document.querySelectorAll('.carousel-slide > div');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  let counter = 0;
+      function updateSlide() {
+        slideContainer.style.transform = `translateX(${-counter * 100}%)`;
+      }
 
-  function updateSlide() {
-    slideContainer.style.transform = `translateX(${-counter * 100}%)`;
-  }
+      prevBtn.addEventListener('click', () => {
+        counter = (counter === 0) ? slides.length - 1 : counter - 1;
+        updateSlide();
+      });
 
-  prevBtn.addEventListener('click', () => {
-    counter = (counter === 0) ? slides.length - 1 : counter - 1;
-    updateSlide();
-  });
+      nextBtn.addEventListener('click', () => {
+        counter = (counter === slides.length - 1) ? 0 : counter + 1;
+        updateSlide();
+      });
 
-  nextBtn.addEventListener('click', () => {
-    counter = (counter === slides.length - 1) ? 0 : counter + 1;
-    updateSlide();
-  });
-
-  // Auto slide cada 5 segundos
-  let slideInterval = setInterval(() => {
-    counter = (counter === slides.length - 1) ? 0 : counter + 1;
-    updateSlide();
-  }, 5000);
-
-  // Pausar y reiniciar auto slide al usar flechas
-  [prevBtn, nextBtn].forEach(btn => {
-    btn.addEventListener('click', () => {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(() => {
+      // Auto slide cada 5 segundos
+      let slideInterval = setInterval(() => {
         counter = (counter === slides.length - 1) ? 0 : counter + 1;
         updateSlide();
       }, 5000);
-    });
-  });
 
-  // Modal elements
-  const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalImg = document.getElementById('modalImg');
-  const modalText = document.getElementById('modalText');
-  const modalClose = document.getElementById('modalClose');
+      // Pausar y reiniciar auto slide al usar flechas
+      [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          slideInterval = setInterval(() => {
+            counter = (counter === slides.length - 1) ? 0 : counter + 1;
+            updateSlide();
+          }, 5000);
+        });
+      });
 
-  const programInfo = [
-    {
-      id: 'programa1',
-      title: 'Espacios DIF',
-      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
-      text: `<strong>Objetivo del proyecto:</strong><br>
+      // Modal elements
+      const modal = document.getElementById('modal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalImg = document.getElementById('modalImg');
+      const modalText = document.getElementById('modalText');
+      const modalClose = document.getElementById('modalClose');
+
+      const programInfo = [
+        {
+          id: 'programa1',
+          title: 'Espacios DIF',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
+          text: `<strong>Objetivo del proyecto:</strong><br>
         Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br><br>
         <strong>Descripción:</strong><br>
         Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br><br>
         Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
-    },
-    {
-      id: 'programa2',
-      title: 'Amor En Movimiento',
-      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
-      text: `<strong>Objetivo del proyecto:</strong><br>
+        },
+        {
+          id: 'programa2',
+          title: 'Amor En Movimiento',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
+          text: `<strong>Objetivo del proyecto:</strong><br>
         Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br><br>
         <strong>Descripción:</strong><br>
         Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br><br>
@@ -658,12 +688,12 @@
           <li>Tamizaje de glucosa</li>
         </ul><br>
         Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
-    },
-    {
-      id: 'programa3',
-      title: 'TEAcompaño Con Amor',
-      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png',
-      text: `<strong>Objetivo del proyecto:</strong><br>
+        },
+        {
+          id: 'programa3',
+          title: 'TEAcompaño Con Amor',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png',
+          text: `<strong>Objetivo del proyecto:</strong><br>
         Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br><br>
         <strong>Descripción:</strong><br>
         TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br><br>
@@ -675,12 +705,12 @@
           <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
         </ul><br>
         TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
-    },
-    {
-      id: 'programa4',
-      title: 'Centro Internacional de los Grandes',
-      img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
-      text: `<strong>Objetivo del proyecto:</strong><br>
+        },
+        {
+          id: 'programa4',
+          title: 'Centro Internacional de los Grandes',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
+          text: `<strong>Objetivo del proyecto:</strong><br>
         Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br><br>
         <strong>Descripción:</strong><br>
         El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br><br>
@@ -694,92 +724,101 @@
         </ul><br>
         Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br><br>
         Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
-    }
-  ];
+        }
+      ];
 
-  // Abre modal al hacer click en la imagen
-  slideContainer.addEventListener('click', (e) => {
-    let target = e.target;
-    // En caso de click en contenedor div y no en img
-    if (!target.dataset.id) {
-      target = target.closest('[data-id]');
-    }
-    if (target && target.dataset.id) {
-      openModal(target.dataset.id);
-    }
-  });
+      // Abre modal al hacer click en la imagen
+      slideContainer.addEventListener('click', (e) => {
+        let target = e.target;
+        // En caso de click en contenedor div y no en img
+        if (!target.dataset.id) {
+          target = target.closest('[data-id]');
+        }
+        if (target && target.dataset.id) {
+          openModal(target.dataset.id);
+        }
+      });
 
-  window.openModal = function(id) {
-  const programa = programInfo.find(p => p.id === id);
-  if (!programa) return;
-  modalTitle.innerHTML = programa.title;
-  modalImg.src = programa.img;
-  modalImg.alt = programa.title;
-  modalText.innerHTML = programa.text;
-  modal.classList.remove('opacity-0', 'pointer-events-none');
-  modal.classList.add('opacity-100');
+      window.openModal = function (id) {
+        const programa = programInfo.find(p => p.id === id);
+        if (!programa) return;
+        modalTitle.innerHTML = programa.title;
+        modalImg.src = programa.img;
+        modalImg.alt = programa.title;
+        modalText.innerHTML = programa.text;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
 
-  // Bloquear scroll
-  document.body.style.overflow = 'hidden';
-};
+        // Bloquear scroll
+        document.body.style.overflow = 'hidden';
+      };
 
-modalClose.addEventListener('click', () => {
-  modal.classList.add('opacity-0', 'pointer-events-none');
-  modal.classList.remove('opacity-100');
+      modalClose.addEventListener('click', () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
 
-  // Liberar scroll
-  document.body.style.overflow = '';
-});
+        // Liberar scroll
+        document.body.style.overflow = '';
+      });
 
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    modal.classList.remove('opacity-100');
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          modal.classList.remove('opacity-100');
 
-    // Liberar scroll
-    document.body.style.overflow = '';
-  }
-});
+          // Liberar scroll
+          document.body.style.overflow = '';
+        }
+      });
 
-})();
+    })();
 
-</script>
+  </script>
 
   <!-- =================================================== -->
-<!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
-<!-- =================================================== -->
-<section id="quienes-somos" class="py-16 px-4 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-primary section-title">¿Quiénes Somos?</h2>
-      <p class="mt-4 max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-        Somos una organización gubernamental donde trabajamos con el <span class="font-semibold text-primary">corazón</span> para construir una comunidad más solidaria, inclusiva y justa. Estamos dedicados a brindar asistencia social a quienes más lo necesitan, fortaleciendo a las familias y protegiendo a los sectores más vulnerables de nuestra sociedad.
-      </p>
-    </div>
-
-    <!-- Grid Principal -->
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <!-- Imagen de referencia -->
-      <div class="relative">
-        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png" alt="DIF Saltillo" 
-          class="rounded-2xl shadow-xl w-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
-      </div>
-
-      <!-- Texto descriptivo -->
-      <div>
-        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-          A través de programas de bienestar, salud, educación y asistencia, buscamos mejorar la calidad de vida de niñas, niños, adolescentes, adultos mayores y personas con discapacidad. Nuestro compromiso es claro: estar siempre cerca de la gente, ofreciendo apoyo, esperanza y oportunidades para un mejor futuro.
+  <!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
+  <!-- =================================================== -->
+  <section id="quienes-somos" class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-primary section-title">¿Quiénes Somos?</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
+          Somos una organización gubernamental donde trabajamos con el <span
+            class="font-semibold text-primary">corazón</span> para construir una comunidad más solidaria, inclusiva y
+          justa. Estamos dedicados a brindar asistencia social a quienes más lo necesitan, fortaleciendo a las familias
+          y protegiendo a los sectores más vulnerables de nuestra sociedad.
         </p>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li><strong>Misión:</strong> Promover el desarrollo humano de la población saltillense, a través de políticas públicas que trascienden a favor del bienestar social.</li>
-          <li><strong>Visión:</strong> Ser un referente nacional con el diseño de modelos de intervención innovadores que respondan, de manera congruente, a las demandas y necesidades de la sociedad saltillense.</li>
-          <li><strong>Política de gestión de calidad:</strong> En el DIF Saltillo estamos comprometidos con las necesidades de nuestros clientes, mejorando continuamente la efectividad del sistema de gestión de calidad y cumpliendo con los programas de atención a la población vulnerable.</li>
-        </ul>
+      </div>
+
+      <!-- Grid Principal -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Imagen de referencia -->
+        <div class="relative">
+          <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
+            alt="DIF Saltillo" class="rounded-2xl shadow-xl w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
+        </div>
+
+        <!-- Texto descriptivo -->
+        <div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            A través de programas de bienestar, salud, educación y asistencia, buscamos mejorar la calidad de vida de
+            niñas, niños, adolescentes, adultos mayores y personas con discapacidad. Nuestro compromiso es claro: estar
+            siempre cerca de la gente, ofreciendo apoyo, esperanza y oportunidades para un mejor futuro.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>Misión:</strong> Promover el desarrollo humano de la población saltillense, a través de
+              políticas públicas que trascienden a favor del bienestar social.</li>
+            <li><strong>Visión:</strong> Ser un referente nacional con el diseño de modelos de intervención innovadores
+              que respondan, de manera congruente, a las demandas y necesidades de la sociedad saltillense.</li>
+            <li><strong>Política de gestión de calidad:</strong> En el DIF Saltillo estamos comprometidos con las
+              necesidades de nuestros clientes, mejorando continuamente la efectividad del sistema de gestión de calidad
+              y cumpliendo con los programas de atención a la población vulnerable.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- =================================================== -->
@@ -916,4 +955,5 @@ modal.addEventListener('click', e => {
   </script>
 
 </body>
+
 </html>
