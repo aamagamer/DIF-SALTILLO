@@ -18,28 +18,30 @@
   <link rel="preload" as="image" href="/imagenes/carrusel2.webp">
   <link rel="preload" as="image" href="/imagenes/carrusel3.webp">
 
-</head>
-
-<body class="scroll-smooth">
-
-
-  <style>
+    <style>
     * {
       scroll-behavior: smooth;
     }
 
     body {
-      min-height: 100vh;
-      margin: 0;
-      background: linear-gradient(30deg,
-          #b21177 0%,
-          #fefdf9 20%,
-          #f7e8ac 40%,
-          #a2b93f 60%,
-          #76aed5 80%,
-          #b21177 100%);
-      background-attachment: scroll;
-    }
+  background: none; /* o un color base neutro */
+}
+
+.main-bg-gradient {
+  background: linear-gradient(200deg,
+      #b21177 0%,
+      #b21177 0%,
+      #b21177 0%,
+      #fefdf9 20%,
+      #f7e8ac 40%,
+      #a2b93f 60%,
+      #76aed5 80%,
+      #b21177 100%);
+  background-attachment: scroll;
+  /* Opcional: */
+  min-height: 100vh;
+}
+
 
     .coord-block {
       position: relative;
@@ -68,12 +70,12 @@
 
     .section-title {
       font-family: Gilroy-Black;
-      color: #e20d7b;
+      color: #ffffff;
     }
 
     .section-subtitle {
       font-family: Galano-Grotesque, sans-serif;
-      color: #e20d7b;
+      color: #ffffff;
     }
 
     @media (max-width: 768px) {
@@ -179,7 +181,31 @@
     .chevron.rotated {
       transform: rotate(180deg);
     }
+
+    /* Para que el formulario crezca lo necesario y no tenga scroll interno */
+.contact-form {
+  max-height: none; /* Sin límite de alto */
+  overflow: visible; /* Nada de scroll interno */
+}
+
+/* Hacer que el mapa iguale el alto del formulario */
+.contact-map {
+  height: 100%; /* Depende del contenedor padre */
+  min-height: auto; /* Evitar que quede más chico */
+}
+
+/* Si están en un grid o flex */
+.contact-section {
+  display: flex;
+  align-items: stretch; /* Esto iguala las alturas */
+}
+
   </style>
+
+</head>
+
+<body class="scroll-smooth">
+
   <!-- =================================================== -->
   <!-- 1. N A V B A R                                      -->
   <!-- =================================================== -->
@@ -391,7 +417,8 @@
     </div>
   </header>
 
-
+   <div class="main-bg-gradient">
+    <main>
   <!-- =================================================== -->
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
@@ -825,7 +852,7 @@
   <!-- 5. B L O G                                          -->
   <!-- =================================================== -->
   <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Blog DIF Saltillo</h2>
+    <h2 class="text-4xl text-center font-bold text-primary section-title">Blog DIF Saltillo</h2>
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Placeholder de entradas -->
       <div class="card bg-white shadow-md">
@@ -868,57 +895,47 @@
     </div>
   </section>
 
-  <!-- =================================================== -->
-  <!-- 7. C O N T Á C T A N O S                            -->
-  <!-- =================================================== -->
-  <section id="contacto" class="py-20 px-4 bg-transparent">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
+<!-- =================================================== -->
+<!-- 7. C O N T Á C T A N O S                            -->
+<!-- =================================================== -->
+<section id="contacto" class="py-20 px-4 bg-transparent">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
 
-      <div class="flex flex-col lg:flex-row gap-10">
-        <div
-          class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-          <div class="p-6 border-b">
-            <h3 class="text-2xl font-semibold text-primary section-subtitle">Formulario de contacto</h3>
-          </div>
-          <div class="w-full aspect-video">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
-              class="w-full h-full border-0" allowfullscreen></iframe>
-          </div>
+    <div class="flex flex-col lg:flex-row gap-10">
+      <div
+        class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+        <div class="p-6 border-b">
+          <h3 class="text-2xl font-semibold text-primary section-subtitle">Formulario de contacto</h3>
         </div>
+        <div class="w-full h-[800px]"> <!-- altura fija más alta -->
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
+            class="w-full h-full border-0" allowfullscreen></iframe>
+        </div>
+      </div>
 
-        <div
-          class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-          <div class="p-6 border-b">
-            <h3 class="text-2xl font-semibold text-primary section-subtitle">Ubicación DIF Saltillo</h3>
-          </div>
-          <div class="w-full aspect-video">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
-              class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+      <div
+        class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+        <div class="p-6 border-b">
+          <h3 class="text-2xl font-semibold text-primary section-subtitle">Ubicación DIF Saltillo</h3>
+        </div>
+        <div class="w-full h-[800px]"> <!-- misma altura para el mapa -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
+            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-
-  </section>
 
   <!-- =================================================== -->
   <!--  REDES SOCIALES                                     -->
   <!-- =================================================== -->
   <div class="flex justify-center gap-8 mt-6 text-6xl">
-    <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook"
-      class="text-[#1877F2] hover:scale-110 transition">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram"
-      class="text-[#E4405F] hover:scale-110 transition">
-      <i class="fab fa-instagram"></i>
-    </a>
-
   </div>
 
 
@@ -952,8 +969,8 @@
     document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
       item.addEventListener('click', closeMobileMenu);
     });
-  </script>
-
-</body>
-
+        </script>
+      </main>
+    </div>
+  </body>
 </html>
