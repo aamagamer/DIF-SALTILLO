@@ -33,6 +33,12 @@ DIF SALTILLO/
 └── ...
 ```
 
+# 📂 Carpeta Media
+
+¡¡¡ UPDATE IMPORTANTE !!!
+
+La carpeta Media ya está incluida en el repositorio, ya no necesita agregarse manualmente.
+
 # 👥 Colaboradores
 * Alejandro (aamagamer)
 * Fernando (FerGem33)
