@@ -28,12 +28,11 @@
 }
 
 .main-bg-gradient {
-  background: linear-gradient(200deg,
-      #b21177 0%,
-      #b21177 0%,
-      #b21177 0%,
-      #fefdf9 20%,
-      #f7e8ac 40%,
+  background: linear-gradient(180deg,
+      #D70172 0%,
+      #D70172 15%,
+      #fff 30%,
+      #fff 50%,
       #a2b93f 60%,
       #76aed5 80%,
       #b21177 100%);
@@ -423,28 +422,28 @@
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
   <section id="inicio" class="relative">
-    <div class="w-full max-h-screen relative overflow-hidden">
+    <div class="w-full h-full h-[50vh] md:h-[60vh] lg:h-[100vh] relative overflow-hidden">
       <!-- Banner 1 -->
-      <div class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full object-cover" />
+      <div class="carousel-item relative w-full h-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full h-full object-cover md:object-bottom" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
           <button class="btn btn-circle" onclick="nextSlide()">❯</button>
         </div>
       </div>
       <!-- Banner 2 -->
-      <div class="carousel-item relative w-full hidden">
+      <div class="carousel-item relative w-full h-full hidden">
         <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_2.png" alt="Banner 2"
-          class="w-full object-cover" />
+          class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
           <button class="btn btn-circle" onclick="nextSlide()">❯</button>
         </div>
       </div>
       <!-- Banner 3 -->
-      <div class="carousel-item relative w-full hidden">
+      <div class="carousel-item relative w-full h-full hidden">
         <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_3.png" alt="Banner 3"
-          class="w-full object-cover" />
+          class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
           <button class="btn btn-circle" onclick="nextSlide()">❯</button>
@@ -483,9 +482,9 @@
   <!-- =================================================== -->
   <!-- 3. C O O R D I N A C I O N E S                      -->
   <!-- =================================================== -->
-  <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
+  <section id="coordinaciones" class="py-14 px-4 w-9/10 max-w-7xl mx-auto">
     <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
       <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
         <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"></div>
       </div>
@@ -517,10 +516,6 @@
       <div class="coord-block" onclick="window.location.href='coordinaciones/voluntariado.html'">
         <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');">
         </div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/centros_comunitarios.html'">
-        <div class="coord-block-img"
-          style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');"></div>
       </div>
     </div>
   </section>
