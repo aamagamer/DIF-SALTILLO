@@ -572,7 +572,7 @@
       document.body.appendChild(tpl);
     });
     window.openModal = id => document.getElementById(id).checked = true;
-    // cierre al clicar fuera
+    // cierre al click fuera
     addEventListener('click', e => {
       document.querySelectorAll('.dynamic-toggle').forEach(t => {
         const box = t.nextElementSibling.querySelector('.modal-box');
