@@ -499,7 +499,9 @@
   <!-- 3. C O O R D I N A C I O N E S                      -->
   <!-- =================================================== -->
   <section id="coordinaciones" class="py-14 px-4 w-9/10 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Conoce nuestras Coordinaciones</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-10 text-primary section-title">
+  Conoce nuestras Coordinaciones
+</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
       <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
         <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Mujeres.png');"></div>
@@ -604,7 +606,9 @@
 <!-- 4. P R O G R A M A S -->
 <!-- =================================================== -->
 <section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1200px] mx-auto">
-  <h4 class="text-4xl text-center mb-10 text-primary section-title"><i>Estamos más cerca de ti a través de </i></h4>
+  <h4 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-10 text-primary section-title">
+  <i>Estamos más cerca de ti a través de</i>
+</h4>
   <div class="carousel-container relative overflow-hidden"
     style="aspect-ratio: 16 / 9;">
     <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
@@ -866,6 +870,7 @@
     <div class="flex justify-end">
       <img src="Media/quienes/Somos.png" alt="Somos"
            class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
+      
     </div>
 
     <!-- Imagen 2: Misión (izquierda) -->
@@ -1032,7 +1037,7 @@ I
   <section id="transparencia" class="py-16 px-4 bg-transparent">
     <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden">
       <div class="p-6 md:p-10">
-        <h2 class="text-4xl text-center mb-10 text-primary section-title">Espacios DIF</h2>
+        <h2 class="text-3xl text-center font-extrabold text-[#e20d7b] mb-10">Espacios DIF</h2>
 
         <div class="rounded-xl overflow-hidden border border-gray-300 shadow-md">
           <iframe
@@ -1052,11 +1057,13 @@ I
     <h2 class="text-4xl text-center mb-10 text-primary section-title">¡Contáctanos!</h2>
 
     <div class="flex flex-col lg:flex-row gap-10">
-      <!-- Formulario limpio -->
-      <div class="flex-1 w-full overflow-hidden">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
-          class="w-full h-[800px] border-0" allowfullscreen></iframe>
+      <!-- Formulario con fondo blanco -->
+      <div class="flex-1 w-full bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="w-full h-[800px] p-4">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
+            class="w-full h-full border-0 rounded-lg bg-white" allowfullscreen></iframe>
+        </div>
       </div>
 
       <!-- Mapa limpio -->
@@ -1112,5 +1119,58 @@ I
         </script>
       </main>
     </div>
+    <!-- =================================================== -->
+<!-- F O O T E R                                         -->
+<!-- =================================================== -->
+<footer class="relative bg-white">
+<footer class="relative bg-white overflow-hidden">
+  <!-- Fondo de arcos invertidos -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <!-- degradado sutil -->
+    <defs>
+      <linearGradient id="softFade" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#000" stop-opacity="0.06"/>
+        <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1440" height="260" fill="url(#softFade)" opacity="0.05"></rect>
+
+    <!-- Arcos invertidos (extremos arriba, centro abajo) -->
+    <path d="M -120 60 Q 720 200 1560 60"  fill="none" stroke="#e5e7eb" stroke-width="14" opacity="0.65"/>
+    <path d="M -120 80 Q 720 220 1560 80"  fill="none" stroke="#eceff1" stroke-width="10" opacity="0.7"/>
+    <path d="M -120 100 Q 720 240 1560 100" fill="none" stroke="#f1f5f9" stroke-width="8"  opacity="0.8"/>
+    <path d="M -120 120 Q 720 255 1560 120" fill="none" stroke="#e5e7eb" stroke-width="6"  opacity="0.7"/>
+    <path d="M -120 140 Q 720 270 1560 140" fill="none" stroke="#eceff1" stroke-width="4"  opacity="0.75"/>
+  </svg>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+  
+  <!-- Logos juntos -->
+  <div class="flex items-center gap-4">
+    <img src="Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24">
+    <img src="Media/PorAmorLogo.png" alt="Por Amor a Saltillo" class="h-20 md:h-24">
+  </div>
+
+  <!-- Contacto y redes -->
+  <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
+    <p class="text-[#602F89] font-bold uppercase">Contacto</p>
+    <p class="text-[#602F89] font-semibold">
+      <i class="fas fa-phone-alt"></i> 844 412 1264
+    </p>
+
+    <p class="text-[#602F89] font-bold uppercase mt-4">
+      Síguenos en nuestras redes sociales
+    </p>
+
+    <div class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </div>
+</div>
+</footer>
+
   </body>
 </html>
