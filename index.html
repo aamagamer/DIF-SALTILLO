@@ -28,18 +28,14 @@
 }
 
 .main-bg-gradient {
-  background: linear-gradient(180deg,
-      #D70172 0%,
-      #D70172 15%,
-      #fff 30%,
-      #fff 50%,
-      #a2b93f 60%,
-      #76aed5 80%,
-      #b21177 100%);
-  background-attachment: scroll;
-  /* Opcional: */
+  background-image: url("Media/Degradado.png");
+  background-repeat: no-repeat;
+  background-position: top center;   /* empieza pegado arriba */
+  background-size: 1920px auto;      /* ancho fijo */
+  background-attachment: scroll;     /* se mueve con el scroll */
   min-height: 100vh;
 }
+
 
 
     .coord-block {
@@ -199,27 +195,37 @@
   align-items: stretch; /* Esto iguala las alturas */
 }
 
+
+.section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700; /* Esto lo hace más "gordito" */
+    }
   </style>
 
 </head>
 
 <body class="scroll-smooth">
 
+<!-- Logo fijo en esquina -->
+<div class="absolute top-0 left-0 z-50">
+  <a href="#inicio" class="block w-24 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+    <img src="Media/LogoEsquina.png" 
+         alt="Logo DIF Saltillo" 
+         class="w-full h-auto cursor-pointer"
+         onclick="window.location.href='index.html'" />
+  </a>
+</div>
+
+
+
   <!-- =================================================== -->
   <!-- 1. N A V B A R                                      -->
   <!-- =================================================== -->
-  <header id="mainNav" class="navbar absolute inset-x-0 top-5 z-50 transition-all duration-300">
-    <div class="nav-overlay absolute inset-0"></div>
-    <div class="w-full px-8 relative z-10">
-      <div class="flex justify-between w-full">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <a href="#inicio" class="block w-16 sm:w-20 md:w-24">
-            <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
-              alt="Logo DIF Saltillo" class="w-full h-auto object-contain cursor-pointer"
-              onclick="window.location.href='../index.html'" />
-          </a>
-        </div>
+<header id="mainNav" class="navbar absolute inset-x-0 top-0 z-40 transition-all duration-300">
+  <div class="nav-overlay absolute inset-0"></div>
+  <div class="w-full px-8 relative z-10">
+    <div class="flex justify-end w-full">
+
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex flex-col items-end gap-3">
@@ -416,8 +422,6 @@
     </div>
   </header>
 
-   <div class="main-bg-gradient">
-    <main>
   <!-- =================================================== -->
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
@@ -425,7 +429,7 @@
     <div class="w-full h-full h-[50vh] md:h-[60vh] lg:h-[100vh] relative overflow-hidden">
       <!-- Banner 1 -->
       <div class="carousel-item relative w-full h-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel.png" alt="Banner 1" class="w-full h-full object-cover md:object-bottom" />
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel.png" alt="Banner 1" class="w-full h-full object-cover md:object-bottom" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
           <button class="btn btn-circle" onclick="nextSlide()">❯</button>
@@ -433,7 +437,7 @@
       </div>
       <!-- Banner 2 -->
       <div class="carousel-item relative w-full h-full hidden">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_2.png" alt="Banner 2"
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel2.png" alt="Banner 2"
           class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
@@ -442,7 +446,16 @@
       </div>
       <!-- Banner 3 -->
       <div class="carousel-item relative w-full h-full hidden">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner_Carrusel_3.png" alt="Banner 3"
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel3.png" alt="Banner 3"
+          class="w-full h-full object-cover md:object-bottom"/>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+        </div>
+      </div>
+      <!-- Banner 4 -->
+      <div class="carousel-item relative w-full h-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel4.png" alt="Banner 4"
           class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <button class="btn btn-circle" onclick="prevSlide()">❮</button>
@@ -478,43 +491,50 @@
   </script>
 
 
+   <div class="main-bg-gradient">
+    
+    <main>
 
   <!-- =================================================== -->
   <!-- 3. C O O R D I N A C I O N E S                      -->
   <!-- =================================================== -->
   <section id="coordinaciones" class="py-14 px-4 w-9/10 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">Conoce nuestras Coordinaciones</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
       <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Mujeres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/medica.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Medica.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/salud_mental.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/SaludMental.png');">
         </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/fortalecimiento.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Fortalecimiento.png');">
         </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/talleres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Talleres.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Talleres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/niñes.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Niños.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/personas_con_discapacidad.html'">
         <div class="coord-block-img"
-          style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');"></div>
+          style="background-image:url('Media/COORDINACIONES/Discapacidad.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/adultos_mayores.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/AdultoMayor.png');">
         </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/voluntariado.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Voluntariado.png');">
+        </div>
+      </div>
+      <div class="coord-block" onclick="window.location.href='coordinaciones/juridico.html'">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Juridico.png');">
         </div>
       </div>
     </div>
@@ -583,7 +603,8 @@
 <!-- =================================================== -->
 <!-- 4. P R O G R A M A S -->
 <!-- =================================================== -->
-<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[900px] mx-auto">
+<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1000px] mx-auto">
+  <h2 class="text-4xl text-center mb-10 text-primary section-title"><i>Estamos más cerca de ti a través de </i></h2>
   <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300"
     style="aspect-ratio: 16 / 9;">
     <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
@@ -835,50 +856,39 @@
 
   </script>
 
-  <!-- =================================================== -->
-  <!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
-  <!-- =================================================== -->
-  <section id="quienes-somos" class="py-16 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-primary section-title">¿Quiénes Somos?</h2>
-        <p class="mt-4 max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Somos una organización gubernamental donde trabajamos con el <span
-            class="font-semibold text-primary">corazón</span> para construir una comunidad más solidaria, inclusiva y
-          justa. Estamos dedicados a brindar asistencia social a quienes más lo necesitan, fortaleciendo a las familias
-          y protegiendo a los sectores más vulnerables de nuestra sociedad.
-        </p>
-      </div>
-
-      <!-- Grid Principal -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <!-- Imagen de referencia -->
-        <div class="relative">
-          <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
-            alt="DIF Saltillo" class="rounded-2xl shadow-xl w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
-        </div>
-
-        <!-- Texto descriptivo -->
-        <div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            A través de programas de bienestar, salud, educación y asistencia, buscamos mejorar la calidad de vida de
-            niñas, niños, adolescentes, adultos mayores y personas con discapacidad. Nuestro compromiso es claro: estar
-            siempre cerca de la gente, ofreciendo apoyo, esperanza y oportunidades para un mejor futuro.
-          </p>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li><strong>Misión:</strong> Promover el desarrollo humano de la población saltillense, a través de
-              políticas públicas que trascienden a favor del bienestar social.</li>
-            <li><strong>Visión:</strong> Ser un referente nacional con el diseño de modelos de intervención innovadores
-              que respondan, de manera congruente, a las demandas y necesidades de la sociedad saltillense.</li>
-            <li><strong>Política de gestión de calidad:</strong> En el DIF Saltillo estamos comprometidos con las
-              necesidades de nuestros clientes, mejorando continuamente la efectividad del sistema de gestión de calidad
-              y cumpliendo con los programas de atención a la población vulnerable.</li>
-          </ul>
-        </div>
-      </div>
+<!-- =================================================== -->
+<!-- 4.5 ¿ Q U I É N E S   S O M O S ? (solo imágenes sobre gradient) -->
+<!-- =================================================== -->
+<section id="quienes-somos" class="py-20">
+  <div class="flex flex-col gap-6"> <!-- antes gap-20 -->
+    
+    <!-- Imagen 1: Somos (derecha) -->
+    <div class="flex justify-end">
+      <img src="Media/quienes/Somos.png" alt="Somos"
+           class="w-[700px] sm:w-[900px] md:w-[1100px]">
     </div>
-  </section>
+
+    <!-- Imagen 2: Misión (izquierda) -->
+    <div class="flex justify-start">
+      <img src="Media/quienes/Mision.png" alt="Misión"
+           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+    </div>
+
+    <!-- Imagen 3: Visión (derecha) -->
+    <div class="flex justify-end">
+      <img src="Media/quienes/Vision.png" alt="Visión"
+           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+    </div>
+
+    <!-- Imagen 4: Política (izquierda) -->
+    <div class="flex justify-start">
+      <img src="Media/quienes/Politica.png" alt="Política"
+           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+    </div>
+
+  </div>
+</section>
+
 
 
   <!-- =================================================== -->
