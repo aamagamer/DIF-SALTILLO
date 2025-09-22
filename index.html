@@ -603,9 +603,9 @@
 <!-- =================================================== -->
 <!-- 4. P R O G R A M A S -->
 <!-- =================================================== -->
-<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1000px] mx-auto">
-  <h2 class="text-4xl text-center mb-10 text-primary section-title"><i>Estamos más cerca de ti a través de </i></h2>
-  <div class="carousel-container relative rounded-lg shadow-lg overflow-hidden border border-gray-300"
+<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1200px] mx-auto">
+  <h4 class="text-4xl text-center mb-10 text-primary section-title"><i>Estamos más cerca de ti a través de </i></h4>
+  <div class="carousel-container relative overflow-hidden"
     style="aspect-ratio: 16 / 9;">
     <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
       
@@ -860,65 +860,171 @@
 <!-- 4.5 ¿ Q U I É N E S   S O M O S ? (solo imágenes sobre gradient) -->
 <!-- =================================================== -->
 <section id="quienes-somos" class="py-20">
-  <div class="flex flex-col gap-6"> <!-- antes gap-20 -->
+  <div class="flex flex-col gap-4"> <!-- antes gap-20 -->
     
     <!-- Imagen 1: Somos (derecha) -->
     <div class="flex justify-end">
       <img src="Media/quienes/Somos.png" alt="Somos"
-           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
     </div>
 
     <!-- Imagen 2: Misión (izquierda) -->
     <div class="flex justify-start">
       <img src="Media/quienes/Mision.png" alt="Misión"
-           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
     </div>
 
     <!-- Imagen 3: Visión (derecha) -->
     <div class="flex justify-end">
       <img src="Media/quienes/Vision.png" alt="Visión"
-           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
     </div>
 
     <!-- Imagen 4: Política (izquierda) -->
     <div class="flex justify-start">
       <img src="Media/quienes/Politica.png" alt="Política"
-           class="w-[700px] sm:w-[900px] md:w-[1100px]">
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
     </div>
 
   </div>
 </section>
 
-
-
-  <!-- =================================================== -->
-  <!-- 5. B L O G                                          -->
-  <!-- =================================================== -->
-  <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center font-bold text-primary section-title">Blog DIF Saltillo</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Placeholder de entradas -->
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Entrada de ejemplo</h3>
-          <p>Próximamente aquí encontrarás artículos, noticias y eventos del DIF Saltillo.</p>
+<!-- =================================================== -->
+<!-- 5. B L O G (Coverflow corregido)                    -->
+<!-- =================================================== -->
+<section id="blog" class="py-32 px-4 max-w-7xl mx-auto">
+  <div class="relative min-h-[700px] flex items-center justify-center">
+    
+    <!-- 🔹 Versión Coverflow (solo desktop) -->
+    <div id="blogCarousel" class="hidden md:flex justify-center items-center relative perspective-[1200px] w-full">
+      
+      <!-- Tarjeta 1 -->
+      <div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+        <div class="header-blog text-center py-4 hidden">
+          <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+        </div>
+        <div class="bg-gray-200 w-full h-[250px] flex items-center justify-center">
+          <span class="text-gray-500">Imagen aquí</span>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Entrada 1</h4>
+          <a href="#" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </a>
         </div>
       </div>
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Otra entrada</h3>
-          <p>Este espacio será editable para publicar información relevante.</p>
+
+      <!-- Tarjeta 2 -->
+      <div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+        <div class="header-blog text-center py-4 hidden">
+          <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+        </div>
+        <div class="bg-gray-200 w-full h-[250px] flex items-center justify-center">
+          <span class="text-gray-500">Imagen aquí</span>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Entrada 2</h4>
+          <a href="#" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </a>
         </div>
       </div>
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Más publicaciones</h3>
-          <p>Puedes asignar esta sección a un compañero del equipo.</p>
+
+      <!-- Tarjeta 3 -->
+      <div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+        <div class="header-blog text-center py-4 hidden">
+          <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+        </div>
+        <div class="bg-gray-200 w-full h-[250px] flex items-center justify-center">
+          <span class="text-gray-500">Imagen aquí</span>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Entrada 3</h4>
+          <a href="#" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </a>
         </div>
       </div>
     </div>
-  </section>
 
+    <!-- Flechas (solo desktop) -->
+    <button id="prevBlog" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
+      ❮
+    </button>
+    <button id="nextBlog" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
+      ❯
+    </button>
+
+    <!-- 🔹 Versión simple (solo móvil) -->
+    <div class="block md:hidden w-[70vw] bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div class="text-center py-4">
+        <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+      </div>
+      <div class="bg-gray-200 w-full h-[200px] flex items-center justify-center">
+        <span class="text-gray-500">Imagen aquí</span>
+      </div>
+      <div class="p-6 text-center">
+        <h4 class="text-lg font-bold text-[#e20d7b] mb-4">Entrada principal</h4>
+        <a href="#" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+          LEER MÁS
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+I
+
+
+<script>
+  const cards = document.querySelectorAll("#blogCarousel .blog-card");
+  let activeIndex = 0;
+
+  function updateBlogCarousel() {
+    cards.forEach((card, i) => {
+      const offset = i - activeIndex;
+      const header = card.querySelector(".header-blog");
+
+      if (offset === 0) {
+        // Card central
+        card.style.transform = "translateX(0) scale(1) rotateY(0)";
+        card.style.zIndex = 3;
+        card.style.opacity = 1;
+        if (header) header.classList.remove("hidden");
+      } else if (offset === -1 || offset === cards.length - 1) {
+        // Izquierda
+        card.style.transform = "translateX(-300px) scale(0.85) rotateY(25deg)";
+        card.style.zIndex = 2;
+        card.style.opacity = 0.7;
+        if (header) header.classList.add("hidden");
+      } else if (offset === 1 || offset === -(cards.length - 1)) {
+        // Derecha
+        card.style.transform = "translateX(300px) scale(0.85) rotateY(-25deg)";
+        card.style.zIndex = 2;
+        card.style.opacity = 0.7;
+        if (header) header.classList.add("hidden");
+      } else {
+        // Ocultas atrás
+        card.style.transform = "translateX(0) scale(0.5)";
+        card.style.zIndex = 1;
+        card.style.opacity = 0;
+        if (header) header.classList.add("hidden");
+      }
+    });
+  }
+
+  document.getElementById("nextBlog").addEventListener("click", () => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    updateBlogCarousel();
+  });
+
+  document.getElementById("prevBlog").addEventListener("click", () => {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    updateBlogCarousel();
+  });
+
+  // Inicializar
+  updateBlogCarousel();
+</script>
 
   <!-- =================================================== -->
   <!-- 6. ESPACIOS DIF                                     -->
@@ -943,36 +1049,27 @@
 <!-- =================================================== -->
 <section id="contacto" class="py-20 px-4 bg-transparent">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">¡Contáctanos!</h2>
 
     <div class="flex flex-col lg:flex-row gap-10">
-      <div
-        class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-        <div class="p-6 border-b">
-          <h3 class="text-2xl font-semibold text-primary section-subtitle">Formulario de contacto</h3>
-        </div>
-        <div class="w-full h-[800px]"> <!-- altura fija más alta -->
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
-            class="w-full h-full border-0" allowfullscreen></iframe>
-        </div>
+      <!-- Formulario limpio -->
+      <div class="flex-1 w-full overflow-hidden">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
+          class="w-full h-[800px] border-0" allowfullscreen></iframe>
       </div>
 
-      <div
-        class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-        <div class="p-6 border-b">
-          <h3 class="text-2xl font-semibold text-primary section-subtitle">Ubicación DIF Saltillo</h3>
-        </div>
-        <div class="w-full h-[800px]"> <!-- misma altura para el mapa -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
-            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+      <!-- Mapa limpio -->
+      <div class="flex-1 w-full overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
+          class="w-full h-[800px] border-0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 </section>
+
 
 
   <!-- =================================================== -->
