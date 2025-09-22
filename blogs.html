@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs DIF Saltillo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-[#e20d7b] text-white py-6 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold">Blogs DIF Saltillo</h1>
+      <a href="index.html" class="bg-white text-[#e20d7b] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Volver al inicio</a>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#e20d7b] mb-12">Últimas actividades</h2>
+
+    <!-- Grid de blogs -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Blog 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="Media/BLOGS/alimentos.jpg" alt="Alimentos del corazón" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-[#e20d7b] mb-3">Alimentos del corazón</h3>
+          <p class="text-gray-600 mb-4">
+            Actividad de apoyo alimenticio para las familias más necesitadas de Saltillo.
+          </p>
+          <button onclick="openModal('modal1')" class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </button>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="Media/BLOGS/Apoyos.JPG" alt="Apoyos de corazón" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-[#e20d7b] mb-3">Apoyos de corazón</h3>
+          <p class="text-gray-600 mb-4">
+            Breve descripción de la actividad que realizó el DIF para la comunidad.
+          </p>
+          <button onclick="openModal('modal2')" class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </button>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="Media/BLOGS/Jornada.jpg" alt="Jornada del día del niño" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-[#e20d7b] mb-3">Jornada del día del niño</h3>
+          <p class="text-gray-600 mb-4">
+            Breve descripción de otra actividad en favor de la población vulnerable.
+          </p>
+          <button onclick="openModal('modal3')" class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+            LEER MÁS
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <!-- Modal 1 -->
+  <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full mx-4 overflow-hidden">
+      <div class="relative">
+        <img src="Media/BLOGS/alimentos.jpg" alt="Alimentos del corazón" class="w-full h-64 object-cover">
+        <button onclick="closeModal('modal1')" class="absolute top-2 right-2 bg-[#e20d7b] text-white px-3 py-1 rounded-full">✕</button>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#e20d7b] mb-4">Alimentos del corazón</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Aquí puedes escribir un texto más largo sobre esta actividad, contando los detalles,
+          el impacto en la comunidad y cualquier información relevante que quieras compartir.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full mx-4 overflow-hidden">
+      <div class="relative">
+        <img src="Media/BLOGS/entrada2.jpg" alt="Entrada 2" class="w-full h-64 object-cover">
+        <button onclick="closeModal('modal2')" class="absolute top-2 right-2 bg-[#e20d7b] text-white px-3 py-1 rounded-full">✕</button>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#e20d7b] mb-4">Entrada 2</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Texto extendido para Entrada 2. Aquí podrás poner la historia completa o la descripción 
+          larga de la actividad realizada por el DIF.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal3" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full mx-4 overflow-hidden">
+      <div class="relative">
+        <img src="Media/BLOGS/entrada3.jpg" alt="Entrada 3" class="w-full h-64 object-cover">
+        <button onclick="closeModal('modal3')" class="absolute top-2 right-2 bg-[#e20d7b] text-white px-3 py-1 rounded-full">✕</button>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#e20d7b] mb-4">Entrada 3</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Texto extendido para Entrada 3. Puedes contar la experiencia, agregar testimonios,
+          fotografías adicionales, etc.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para modales -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-[#e20d7b] text-white py-6 text-center mt-16">
+    <p>&copy; 2025 DIF Saltillo - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
