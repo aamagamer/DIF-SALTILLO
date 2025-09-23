@@ -4,6 +4,17 @@
     --prog-title-fz: clamp(1rem, 3vw, 1.4rem);
     --coord-desc-fz: clamp(0.8rem, 3vw, 1.2rem);
     --prog-desc-fz: clamp(0.8rem, 2.5vw, 1rem);
+    --coord-mujeres-color: #9b21d7;
+    --coord-medica-color: #0b9ad7;
+    --coord-ninos-color: #f19300;
+    --coord-personas-discapacidad-color: #14b2b6;
+    --coord-salud-mental-color: #BDCD00;
+    --coord-talleres-color: #172982;
+    --coord-voluntariado-color: #e20d7b;
+    --coord-fortalecimiento-color: #e1001a;
+    --coord-adultos-mayores-color: #94be23;
+    --coord-asuntos-juridicos-color: #f19300;
+    --coord-atencion-ciudadana-color: #f19300;
 }
 
 *{
@@ -71,7 +82,7 @@ p {
 /* CARD STYLE */
 .programas-item {
     background: #fff;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -79,6 +90,7 @@ p {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     display: flex;
     flex-direction: column;
+    max-width: 650px;
 }
 
 .programas-item:hover {
@@ -90,13 +102,14 @@ p {
 /* IMAGE */
 .programa-img-container{
     height: 180px;
-    background: #eee;
-}
-.programas-img {
     width: 100%;
-    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.programa-img{
     object-fit: cover;
-    display: block;
 }
 
 /* CONTENT */
@@ -124,6 +137,7 @@ p {
 }
 
 /* MUJERES */
+/*modal text #9b21d7*/
 .modal-card-mujeres{
     background: linear-gradient(135deg, rgba(176, 62, 233, 0.7), rgba(70, 17, 94, 0.8));
 }
@@ -133,7 +147,12 @@ p {
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
 
+.programa-img-container.--mujeres{
+    background: var(--coord-mujeres-color);
+}
+
 /* MEDICA */
+/*modal text #0b9ad7*/
 .modal-card-medica{
     background: linear-gradient(
             135deg, 
@@ -147,6 +166,10 @@ p {
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
 
+.programa-img-container.--medica{
+    background: var(--coord-medica-color);
+}
+
 /* SALUD MENTAL */
 /*modal text #BDCD00*/
 .modal-card-salud_mental{
@@ -156,6 +179,10 @@ p {
 .my-modal-salud_mental .modal-backdrop {
     background-color: #82881c  !important; /* Un tono de morado */
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
+}
+
+.programa-img-container.--salud_mental{
+    background: var(--coord-salud-mental-color);
 }
 
 /* FORTALECIMIENTO SOCIAL */
@@ -173,6 +200,10 @@ p {
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
 
+.programa-img-container.--fortalecimiento_social{
+    background: var(--coord-fortalecimiento-color);
+}
+
 /* TALLERES */
 /*modal text #172982*/
 .modal-card-talleres{
@@ -186,6 +217,10 @@ p {
 .my-modal-talleres .modal-backdrop {
     background-color: #202d71 !important; /* Un tono de morado */
     opacity: 0.4 !important; /* Ajusta la opacidad a tu gusto */
+}
+
+.programa-img-container.--talleres{
+    background: var(--coord-talleres-color);
 }
 
 /* NIÑOS */
@@ -203,6 +238,10 @@ p {
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
 
+.programa-img-container.--ninos{
+    background: var(--coord-ninos-color);
+}
+
 /* DISCAPACIDAD */
 /*modal text #14b2b6*/
 .modal-card-discapacidad{
@@ -217,6 +256,10 @@ background: linear-gradient(
     background-color: #149698 !important; /* Un tono de morado */
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
+
+.programa-img-container.--discapacidad{
+    background: var(--coord-personas-discapacidad-color);
+}
     
 /* ADULTOS MAYORES */
 /*modal text #94be23*/
@@ -227,6 +270,10 @@ background: linear-gradient(
 .my-modal-mayores .modal-backdrop {
     background-color: #6c8a19 !important; /* Un tono de morado */
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
+}
+
+.programa-img-container.--adultos_mayores{
+    background: var(--coord-adultos-mayores-color);
 }
 
 /* VOLUNTARIADO */
@@ -241,6 +288,10 @@ background: linear-gradient(
 .my-modal-voluntariado .modal-backdrop {
     background-color: #a81561 !important; /* Un tono de morado */
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
+}
+
+.programa-img-container.--voluntariado{
+    background: var(--coord-voluntariado-color);
 }
 
 /* ATENCIÓN CIUDADANA */
@@ -258,6 +309,10 @@ background: linear-gradient(
     opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
 }
 
+.programa-img-container.--atencion_ciudadana{
+    background: var(--coord-atencion-ciudadana-color);
+}
+
 /* ASUNTOS JURIDICOS */
 /*modal text #f19300*/
 .modal-card-asuntos_juridicos{
@@ -267,6 +322,17 @@ background: linear-gradient(
             rgba(252, 108, 42, 0.8) 100%
             );
 }
+
+.my-modal-atencion_ciudadana .modal-backdrop {
+    background-color: #ad8b02 !important; /* Un tono de morado */
+    opacity: 0.2 !important; /* Ajusta la opacidad a tu gusto */
+}
+
+.programa-img-container.--asuntos_juridicos{
+    background: var(--coord-asuntos-juridicos-color);
+}
+
+/* === FIN DE ESTILOS PERSONALIZADOS PARA COORDINACIONES */
 
 .my-modal-asuntos_juridicos .modal-backdrop {
     background-color: #ad8b02 !important; /* Un tono de morado */
