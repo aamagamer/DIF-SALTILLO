@@ -670,7 +670,7 @@
           <!-- <span class="text-sm font-medium">Ver más</span> -->
         <!-- </div> -->
       <!-- </div> -->
-    <!-- </div> -->
+    </div> 
 
     <!-- Flechas -->
     <button id="prevBtn" aria-label="Previous Slide"
@@ -687,7 +687,7 @@
 <!-- MODAL -->
 <div id="modal"
   class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
+  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto in-li">
     <button id="modalClose"
       class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
     <!-- <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3> -->
@@ -724,7 +724,7 @@
       let slideInterval = setInterval(() => {
         counter = (counter === slides.length - 1) ? 0 : counter + 1;
         updateSlide();
-      }, 5000);
+      }, 7000);
 
       // Pausar y reiniciar auto slide al usar flechas
       [prevBtn, nextBtn].forEach(btn => {
