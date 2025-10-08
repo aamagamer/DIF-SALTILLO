@@ -603,7 +603,7 @@
 <!-- =================================================== -->
 <!-- 4. P R O G R A M A S -->
 <!-- =================================================== -->
-<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1200px] mx-auto">
+<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[900px] mx-auto">
   <h4 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-10 text-primary section-title">
   <i>Estamos más cerca de ti a través de</i>
 </h4>
@@ -657,20 +657,18 @@
       </div>
 
       <!-- Slide 4 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa4">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png"
-          alt="Centro Internacional de los Grandes" class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
-        <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+      <!-- <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa4">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
           </svg>
           <span class="text-sm font-medium">Ver más</span>
-        </div>
-      </div>
-    </div>
+        </div> 
+      </div> -->
+
+    </div> 
+  
 
     <!-- Flechas -->
     <button id="prevBtn" aria-label="Previous Slide"
@@ -687,12 +685,12 @@
 <!-- MODAL -->
 <div id="modal"
   class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto">
+  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto in-li">
     <button id="modalClose"
       class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
-    <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3>
-    <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-64 object-contain" />
-    <div id="modalText" class="text-gray-700 whitespace-pre-wrap"></div>
+    <!-- <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3> -->
+    <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-30 object-contain" />
+    <div id="modalText" class="text-gray-700 whitespace-pre-line text-base leading-tight max-w-3xl text-justify"></div>
   </div>
 </div>
 
@@ -724,7 +722,7 @@
       let slideInterval = setInterval(() => {
         counter = (counter === slides.length - 1) ? 0 : counter + 1;
         updateSlide();
-      }, 5000);
+      }, 7000);
 
       // Pausar y reiniciar auto slide al usar flechas
       [prevBtn, nextBtn].forEach(btn => {
@@ -747,67 +745,58 @@
       const programInfo = [
         {
           id: 'programa1',
-          title: 'Espacios DIF',
+          // title: 'Espacios DIF',
           img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
-          text: `<strong>Objetivo del proyecto:</strong><br>
-        Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br><br>
-        <strong>Descripción:</strong><br>
-        Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br><br>
+          text: `Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br>
+        Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br>
         Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
         },
         {
           id: 'programa2',
-          title: 'Amor En Movimiento',
+          // title: 'Amor En Movimiento',
           img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
-          text: `<strong>Objetivo del proyecto:</strong><br>
-        Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br><br>
-        <strong>Descripción:</strong><br>
-        Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br><br>
-        <ul class="list-disc list-inside pl-4">
+          text: `Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br>
+        Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br>
+        <ul  style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
           <li>Atención médica general</li>
           <li>Evaluación dental y limpieza</li>
           <li>Audiometría y entrega de aparatos auditivos</li>
           <li>Optometría y entrega de lentes</li>
           <li>Tamizaje de glucosa</li>
-        </ul><br>
+        </ul>
         Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
         },
         {
           id: 'programa3',
-          title: 'TEAcompaño Con Amor',
+          // title: 'TEAcompaño Con Amor',
           img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png',
-          text: `<strong>Objetivo del proyecto:</strong><br>
-        Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br><br>
-        <strong>Descripción:</strong><br>
-        TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br><br>
-        Aquí se brindan:<br>
-        <ul class="list-disc list-inside pl-4">
+          text: `Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br>
+        TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br>
+        Aquí se brindan:
+        <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
           <li>Evaluaciones</li>
           <li>Terapias psicopedagógicas y de lenguaje</li>
           <li>Asesoría para madres, padres y cuidadores</li>
           <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
-        </ul><br>
+        </ul>
         TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
-        },
-        {
-          id: 'programa4',
-          title: 'Centro Internacional de los Grandes',
-          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
-          text: `<strong>Objetivo del proyecto:</strong><br>
-        Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br><br>
-        <strong>Descripción:</strong><br>
-        El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br><br>
-        Este proyecto contempla:<br>
-        <ul class="list-disc list-inside pl-4">
-          <li>Áreas para la salud preventiva</li>
-          <li>Talleres formativos</li>
-          <li>Actividades recreativas</li>
-          <li>Atención psicológica</li>
-          <li>Espacios de encuentro entre generaciones</li>
-        </ul><br>
-        Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br><br>
-        Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
         }
+        // ,{
+        // id: 'programa4',
+        // img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
+        // text: `Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br>
+        // El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br>
+        // Este proyecto contempla:
+        // <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
+        //   <li>Áreas para la salud preventiva</li>
+        //   <li>Talleres formativos</li>
+        //   <li>Actividades recreativas</li>
+        //    <li>Atención psicológica</li>
+        //    <li>Espacios de encuentro entre generaciones</li>
+        //  </ul>
+        // Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br>
+        // Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
+        // }
       ];
 
       // Abre modal al hacer click en la imagen
@@ -825,7 +814,7 @@
       window.openModal = function (id) {
         const programa = programInfo.find(p => p.id === id);
         if (!programa) return;
-        modalTitle.innerHTML = programa.title;
+        // modalTitle.innerHTML = programa.title;
         modalImg.src = programa.img;
         modalImg.alt = programa.title;
         modalText.innerHTML = programa.text;
