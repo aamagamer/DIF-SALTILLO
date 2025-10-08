@@ -409,15 +409,15 @@ background: linear-gradient(
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 880px) {
     .programas-container_list{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1424px) {
     .programas-container_list{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     }
 }
 
