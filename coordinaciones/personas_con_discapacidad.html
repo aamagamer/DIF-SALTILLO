@@ -23,15 +23,15 @@
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex flex-col items-end gap-3">
                 <nav class="flex gap-2 xl:gap-4 font-medium">
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#inicio">Inicio</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#programas">Programas Sociales</a>
 
                     <!-- Desktop Coordinaciones Dropdown -->
                     <div class="dropdown dropdown-hover dropdown-bottom">
                         <label tabindex="0"
-                            class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                            class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
                             Coordinaciones
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </label>
@@ -73,31 +73,31 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#blog">Blog</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
-                        href="https://transparenciasaltillo.mx/">Transparencia</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
+                        href="https://transparenciasaltillo.mx/" target="_blank">Transparencia</a>
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#contacto">Contáctanos</a>
                 </nav>
 
                 <!-- Responsive white line -->
-                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto nav-line"></div>
 
                 <!-- Social media icons desktop -->
                 <div class="flex gap-3 xl:gap-4 mt-2 text-gray-600 text-xl xl:text-2xl">
                     <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
                         aria-label="Facebook">
-                        <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-facebook-f hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-instagram hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-tiktok hover:scale-110 transition"></i>
                     </a>
                     <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                        <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-x-twitter hover:scale-110 transition"></i>
                     </a>
                 </div>
             </div>
@@ -216,7 +216,7 @@
 
 <!-- Logo fijo en esquina -->
 <div class="absolute top-0 left-0 z-50">
-  <a href="../index.html" class="block w-28 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+  <a href="../index.html" class="block w-36 sm:w-40 md:w-48 lg:w-64 xl:w-80">
     <img src="../Media/LogoEsquina.png" 
          alt="Logo DIF Saltillo" 
          class="w-full h-auto cursor-pointer"
@@ -228,7 +228,10 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div id="coord-title-container" class="max-w-7xl mx-auto px-4 pt-12 sm:pt-10 md:pt-10 lg:pt-8 py-12 text-center z-50">
-        <h1 class="coord-title text-[#14b2b6]">Coordinación de Personas Con Discapacidad</h1>
+        <div class="coord-icon_container">
+            <img src="iconos_coordinaciones/Discapacidad.png" alt="icono coordinación discapacidad" class="coord-icon">
+        </div>
+        <h1 class="coord-title">Coordinación de Personas Con Discapacidad</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Trabajamos por la inclusión y el bienestar de las
             personas con discapacidad, ofreciendo apoyos, terapias y programas que les permitan desarrollar su máximo
             potencial en un entorno accesible y digno. </p>
@@ -236,7 +239,7 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="pb-8 sm:py-12 lg:pb-16 lg:pt-0 z-50">
+    <section id="programas" class="pb-12z-50">
         <div class="programas-container sm:px-6 lg:px-8 xl:px-12">
             <ul class="programas-container_list">
                 <li class="programas-item  bg-white rounded-lg shadow-md cursor-pointer transition program"
@@ -245,7 +248,6 @@
                         <img src="Programas_Media/Programas DIF25 colores-Jornadas_de_Accesibilidad.png" alt="Jornadas De Accesibilidad Para Personas Con Discapacidad" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Jornadas De Accesibilidad Para Personas Con Discapacidad</h3>
                         <p class="programa-desc text-gray-600">Las Jornadas de Accesibilidad para Personas con Discapacidad son una
                             iniciativa del DIF Saltillo que busca sensibilizar a la comunidad y promover espacios
                             físicos y sociales más inclusivos. A través de talleres, actividades culturales,
@@ -253,6 +255,7 @@
                             más empática sobre la discapacidad. Este programa está dirigido a escuelas, empresas,
                             instituciones públicas y privadas, y a toda persona interesada en aprender sobre
                             accesibilidad e inclusión en Saltillo.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -262,20 +265,20 @@
                         <img src="Programas_Media/Programas DIF25 colores-Apoyos_para_Personas_con_Discapacidad.png" alt="Apoyos Para Personas Con Discapacidad" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Apoyos Para Personas Con Discapacidad</h3>
                         <p class="programa-desc text-gray-600">El programa de Apoyos para Personas con Discapacidad del DIF Saltillo
                             tiene como finalidad mejorar la calidad de vida de niñas, niños, adolescentes, personas adultas y
                             personas mayores con alguna discapacidad. A través de este programa se otorgan diversos apoyos, que
                             pueden incluir:
-                            <ul class="in-ul">
+                            <!-- <ul class="in-ul">
                                 <li class="in-li text-gray-600">Sillas de ruedas</li>
                                 <li class="in-li text-gray-600">Bastones</li>
                                 <li class="in-li text-gray-600">Andaderas</li>
                                 <li class="in-li text-gray-600">Aparatos auditivos</li>
                                 <li class="in-li text-gray-600">Valoraciones médicas y canalizaciones</li>
-                            </ul>
+                            </ul> -->
                             Este servicio está disponible para personas con discapacidad que residan en Saltillo.
                         </p>
+                        <button onclick="openModal('m1')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -285,7 +288,6 @@
                         <img src="Programas_Media/Programas DIF25 colores-Ponte_las_Pilas.png" alt="Programa Ponte Las Pilas" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Programa Ponte Las Pilas</h3>
                         <p class="programa-desc text-gray-600">El programa Ponte las Pilas del DIF Saltillo está enfocado en formar a
                             personas con discapacidad para que puedan integrarse activamente en puestos de trabajo. A
                             través de cursos, talleres y capacitaciones, las y los participantes adquieren habilidades
@@ -294,6 +296,7 @@
                             empleo formal, promoviendo la inclusión laboral y la igualdad de oportunidades para personas
                             con discapacidad en Saltillo. También se vincula con empresas socialmente responsables que
                             abren espacios de trabajo inclusivos.</p>
+                        <button onclick="openModal('m2')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -303,7 +306,6 @@
                         <img src="Programas_Media/Programas DIF25 colores-Cirujia_de_Implantes_Cocleares.png" alt="Programa Para Cirugía De Implantes Cocleares" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Programa Para Cirugía De Implantes Cocleares</h3>
                         <p class="programa-desc text-gray-600">El Programa de Implantes Cocleares del DIF Saltillo está diseñado para
                             beneficiar a menores con pérdida auditiva severa que no pueden ser beneficiados con
                             auxiliares convencionales. El implante coclear les permite acceder a sonidos, desarrollarse
@@ -311,6 +313,7 @@
                             se brinda acompañamiento médico, canalización a instancias especializadas y apoyo en los
                             trámites necesarios para acceder a la cirugía. El objetivo es lograr una inclusión auditiva
                             y educativa efectiva.</p>
+                        <button onclick="openModal('m3')" class="programa-btn">LEER MÁS</button>
                     </div>
                     
                 </li>
@@ -321,13 +324,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Sumando_Con_Amor.png" alt="Sumando Con Amor" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Sumando Con Amor</h3>
                         <p class="programa-desc text-gray-600">Sumando Con Amor es una iniciativa del DIF Saltillo que busca
                             involucrar a la ciudadanía en acciones de concientización, voluntariado y apadrinamiento de
                             personas con discapacidad. El programa genera puentes de solidaridad a través de eventos
                             especiales, campañas de sensibilización y actividades donde el amor y el compromiso social
                             son el eje principal. Está abierto a familias, estudiantes, empresas y toda persona que
                             quiera contribuir al bienestar de quienes viven con discapacidad en Saltillo.</p>
+                        <button onclick="openModal('m4')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -337,11 +340,11 @@
                         <img src="Programas_Media/Programas DIF25 colores-Deporte_para_Personas_con_Discapacidad.png" alt="Deporte Para Personas Con Discapacidad" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#14b2b6]">Deporte Para Personas Con Discapacidad</h3>
                         <p class="programa-desc text-gray-600">El programa Deporte para Personas con Discapacidad del DIF Saltillo
                             fomenta la inclusión a través del ejercicio físico. Ofrece espacios seguros y actividades
                             deportivas adaptadas a las necesidades de niñas, niños, adolescentes y personas adultas con
                             discapacidad.</p>
+                        <button onclick="openModal('m5')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
             </ul>

@@ -23,15 +23,15 @@
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex flex-col items-end gap-3">
                 <nav class="flex gap-2 xl:gap-4 font-medium">
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#inicio">Inicio</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#programas">Programas Sociales</a>
 
                     <!-- Desktop Coordinaciones Dropdown -->
                     <div class="dropdown dropdown-hover dropdown-bottom">
                         <label tabindex="0"
-                            class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                            class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
                             Coordinaciones
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </label>
@@ -73,31 +73,31 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#blog">Blog</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
-                        href="https://transparenciasaltillo.mx/">Transparencia</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
+                        href="https://transparenciasaltillo.mx/" target="_blank">Transparencia</a>
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#contacto">Contáctanos</a>
                 </nav>
 
                 <!-- Responsive white line -->
-                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto nav-line"></div>
 
                 <!-- Social media icons desktop -->
                 <div class="flex gap-3 xl:gap-4 mt-2 text-gray-600 text-xl xl:text-2xl">
                     <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
                         aria-label="Facebook">
-                        <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-facebook-f hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-instagram hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-tiktok hover:scale-110 transition"></i>
                     </a>
                     <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                        <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-x-twitter hover:scale-110 transition"></i>
                     </a>
                 </div>
             </div>
@@ -215,7 +215,7 @@
 
 <!-- Logo fijo en esquina -->
 <div class="absolute top-0 left-0 z-50">
-  <a href="../index.html" class="block w-28 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+  <a href="../index.html" class="block w-36 sm:w-40 md:w-48 lg:w-64 xl:w-80">
     <img src="../Media/LogoEsquina.png" 
          alt="Logo DIF Saltillo" 
          class="w-full h-auto cursor-pointer"
@@ -227,7 +227,10 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div id="coord-title-container" class="max-w-7xl mx-auto px-4 pt-12 sm:pt-10 md:pt-10 lg:pt-8 py-12 text-center z-50">
-        <h1 class="coord-title text-[#94be23]">Coordinación de Adultos Mayores</h1>
+        <div class="coord-icon_container">
+            <img src="iconos_coordinaciones/Adultos_Mayores.png" alt="icono adultos mayores" class="coord-icon">
+        </div>
+        <h1 class="coord-title">Coordinación de Adultos Mayores</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Fomentamos el bienestar y la calidad de vida de
             las personas mayores, ofreciendo actividades recreativas, de salud y apoyo integral para que vivan con
             dignidad y alegría. </p>
@@ -235,7 +238,7 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="pb-8 sm:py-12 lg:pb-16 lg:pt-0 z-50">
+    <section id="programas" class="pb-12 z-50">
         <div class="programas-container sm:px-6 lg:px-8 xl:px-12">
             <ul class="programas-container_list">
                 <li class="programas-item  bg-white rounded-lg shadow-md cursor-pointer transition program"
@@ -244,13 +247,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Centro_de_los_Grandes_Con_Amor_a_Saltillo.png" alt="Centro De Los Grandes Con Amor A Saltillo" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#94be23]">Centro De Los Grandes Con Amor A Saltillo</h3>
                         <p class="programa-desc text-gray-600">El Centro de los Grandes Con Amor a Saltillo es un lugar diseñado
                             especialmente para personas adultas mayores, donde se ofrecen actividades recreativas,
                             talleres, servicios de salud y espacios de convivencia diaria. Este centro del DIF Saltillo
                             busca que las y los adultos mayores se mantengan activos, acompañados y valorados. Con un
                             enfoque de respeto y dignidad, el centro promueve el envejecimiento activo, el aprendizaje
                             continuo y la inclusión de los adultos mayores en la vida comunitaria.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -260,7 +263,6 @@
                         <img src="Programas_Media/Programas DIF25 colores-Grupos_Cercanos_Con_Amor.png" alt="Grupos Cercanos Con Amor" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#94be23]">Grupos Cercanos Con Amor</h3>
                         <p class="programa-desc text-gray-600">Grupos Cercanos Con Amor es una red de grupos comunitarios para adultos
                             mayores organizada por el DIF Saltillo en distintas colonias y comunidades. En estos
                             espacios se realizan actividades culturales, recreativas, deportivas y de reflexión,
@@ -268,6 +270,7 @@
                             son liderados por promotores voluntarios y forman parte de una estrategia de prevención del
                             aislamiento social en las personas mayores, promoviendo la empatía, el cuidado mutuo y la
                             cercanía intergeneracional.</p>
+                        <button onclick="openModal('m1')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -277,13 +280,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Recorridos_Con_Amor_Rutas_Culturales.png" alt="Recorridos Con Amor: Rutas Culturales" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#94be23]">Recorridos Con Amor: Rutas Culturales</h3>
                         <p class="programa-desc text-gray-600">Recorridos Con Amor: Rutas Culturales es una experiencia organizada por
                             el DIF Saltillo para que los adultos mayores disfruten de visitas culturales a museos,
                             parques, teatros, sitios históricos y eventos artísticos. Además de promover el derecho al
                             esparcimiento, estos recorridos contribuyen al aprendizaje, la socialización y la
                             construcción de memorias compartidas entre los participantes. Es una forma de reconocer la
                             vida, la historia y la presencia activa de las personas mayores en la comunidad.</p>
+                        <button onclick="openModal('m2')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -293,13 +296,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Jornadas_Con_Amor_Asilos_y_Comedores.png" alt="Jornadas Con Amor En Los Asilos Y Comedores" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#94be23]">Jornadas Con Amor En Los Asilos Y Comedores</h3>
                         <p class="programa-desc text-gray-600">Con las Jornadas Con Amor, el DIF Saltillo visita asilos y comedores
                             comunitarios para ofrecer actividades recreativas, sesiones informativas, atención médica y
                             emocional, así como momentos de compañía y alegría a quienes más lo necesitan. Estas
                             jornadas fortalecen la dignidad y calidad de vida de las personas adultas mayores,
                             especialmente de aquellas que viven en situación de vulnerabilidad o soledad. Cada jornada
                             es un recordatorio de que en Saltillo nadie envejece solo.</p>
+                        <button onclick="openModal('m3')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
             </ul>

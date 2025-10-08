@@ -23,15 +23,15 @@
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex flex-col items-end gap-3">
                 <nav class="flex gap-2 xl:gap-4 font-medium">
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#inicio">Inicio</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#programas">Programas Sociales</a>
 
                     <!-- Desktop Coordinaciones Dropdown -->
                     <div class="dropdown dropdown-hover dropdown-bottom">
                         <label tabindex="0"
-                            class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                            class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
                             Coordinaciones
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </label>
@@ -73,31 +73,31 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#blog">Blog</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
-                        href="https://transparenciasaltillo.mx/">Transparencia</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
+                        href="https://transparenciasaltillo.mx/" target="_blank">Transparencia</a>
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#contacto">Contáctanos</a>
                 </nav>
 
                 <!-- Responsive white line -->
-                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto nav-line"></div>
 
                 <!-- Social media icons desktop -->
                 <div class="flex gap-3 xl:gap-4 mt-2 text-gray-600 text-xl xl:text-2xl">
                     <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
                         aria-label="Facebook">
-                        <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-facebook-f hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-instagram hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-tiktok hover:scale-110 transition"></i>
                     </a>
                     <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                        <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-x-twitter hover:scale-110 transition"></i>
                     </a>
                 </div>
             </div>
@@ -204,9 +204,8 @@
                                     <i class="fab fa-x-twitter"></i>
                                 </a>
                             </div>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -217,7 +216,7 @@
 
 <!-- Logo fijo en esquina -->
 <div class="absolute top-0 left-0 z-50">
-  <a href="../index.html" class="block w-28 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+  <a href="../index.html" class="block w-36 sm:w-40 md:w-48 lg:w-64 xl:w-80">
     <img src="../Media/LogoEsquina.png" 
          alt="Logo DIF Saltillo" 
          class="w-full h-auto cursor-pointer"
@@ -229,7 +228,10 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div id="coord-title-container" class="max-w-7xl mx-auto px-4 pt-12 sm:pt-10 md:pt-10 lg:pt-8 py-12 text-center z-50">
-        <h1 class="coord-title text-[#0b9ad7]">Coordinación Médica</h1>
+        <div class="coord-icon_container">
+            <img src="iconos_coordinaciones/Médica.png" alt="icono coordinacion medica" class="coord-icon">
+        </div>
+        <h1 class="coord-title">Coordinación Médica</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Brindamos servicios de salud accesibles y de
             calidad para la comunidad, asegurando atención médica, dental, oftalmológica y de rehabilitación para
             quienes más lo necesitan. </p>
@@ -237,7 +239,7 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="pb-8 sm:py-12 lg:pb-16 lg:pt-0 z-50">
+    <section id="programas" class="pb-12 z-50">
         <div class="programas-container sm:px-6 lg:px-8 xl:px-12">
             <ul class="programas-container_list">
                 <li class="programas-item  bg-white rounded-lg shadow-md cursor-pointer transition program"
@@ -246,13 +248,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Framacias_DIF_Saltillo.png" alt="Farmacias DIF Saltillo" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Farmacias DIF Saltillo</h3>
                         <p class="programa-desc text-gray-600">Las Farmacias DIF Saltillo están ubicadas estratégicamente en distintos
                             sectores de la ciudad para brindar acceso a medicamentos a precios bajos para todas las
                             familias. Estas farmacias forman parte del compromiso del DIF Saltillo con el bienestar y la
                             salud de la población, especialmente para quienes más lo necesitan. Además de ofrecer
                             medicamentos genéricos y de patente, las farmacias cuentan con personal capacitado para
                             brindar orientación y un trato digno a cada persona.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -262,12 +264,12 @@
                         <img src="Programas_Media/Programas DIF25 colores-Te_Cuidamos_Con_Amor.png" alt="Te Cuidamos Con Amor" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Te Cuidamos Con Amor</h3>
                         <p class="programa-desc text-gray-600">Te Cuidamos Con Amor es un programa integral del DIF Saltillo que
                             brinda atención óptica y dental accesible. A través de nuestras clínicas, las personas
                             pueden acceder a estudios de la vista, lentes a bajo costo, limpiezas dentales,
                             extracciones, resinas, entre otros servicios, con enfoque preventivo y humano. Este programa
                             busca que más personas puedan cuidar su salud sin barreras económicas.</p>
+                        <button onclick="openModal('m1')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -277,13 +279,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Con_Amor_a_las_Sonrisas_Sanas.png" alt="Con Amor A Las Sonrisas Sanas" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Con Amor A Las Sonrisas Sanas</h3>
                         <p class="programa-desc text-gray-600">El programa Con Amor a las Sonrisas Sanas está enfocado en la atención
                             dental infantil. A través de brigadas y visitas a centros educativos, se realizan
                             revisiones, limpiezas, talleres de higiene bucal y actividades para promover el cuidado
                             dental desde la infancia. Esta iniciativa del DIF Saltillo busca generar hábitos de
                             prevención, reducir la incidencia de enfermedades bucales en niñas y niños, y sembrar la
                             importancia del autocuidado en la salud.</p>
+                        <button onclick="openModal('m2')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -293,12 +295,12 @@
                         <img src="Programas_Media/Programas DIF25 colores-Vision_Con_Amor.png" alt="Visión Con Amor: Cirugía De Cataratas" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Visión Con Amor: Cirugía De Cataratas</h3>
                         <p class="programa-desc text-gray-600">Visión Con Amor es un programa del DIF Saltillo que brinda acceso
                             gratuito a cirugías de cataratas para adultos mayores. A través de un proceso de valoración
                             médica, se identifican candidatos aptos y se les brinda seguimiento hasta su operación y
                             recuperación. Recuperar la vista es recuperar independencia, dignidad y esperanza. Por eso,
                             este programa es una forma de ver la vida con nuevos ojos y con amor.</p>
+                        <button onclick="openModal('m3')" class="programa-btn">LEER MÁS</button>
                     </div>
                     
                 </li>
@@ -309,12 +311,12 @@
                         <img src="Programas_Media/Programas DIF25 colores-Labio_y_Paladar_Hendido.png" alt="Operación De Labio Y Paladar Hendido" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Operación De Labio Y Paladar Hendido</h3>
                         <p class="programa-desc text-gray-600">A través de alianzas con especialistas y hospitales, el DIF Saltillo
                             impulsa este programa que brinda atención médica integral, cirugías y acompañamiento a
                             familias con niñas y niños que presentan labio y/o paladar hendido. Además del procedimiento
                             quirúrgico, se acompaña a cada caso con seguimiento emocional, terapias del lenguaje y
                             orientación médica, en un proceso lleno de empatía y compromiso.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -324,13 +326,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Unidad_Básica_de_Rehabilitacion.png" alt="Unidad Básica De Rehabilitación (Ubr)" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#0b9ad7]">Unidad Básica De Rehabilitación (UBR)</h3>
                         <p class="programa-desc text-gray-600">La Unidad Básica de Rehabilitación (UBR) es parte fundamental del
                             sistema DIF Saltillo. En ella se ofrecen servicios de fisioterapia, estimulación temprana,
                             mecanoterapia, electroterapia, terapia ocupacional y más. Está dirigida a personas con
                             discapacidad o en procesos de recuperación física, incluyendo infancias, adultos y adultos
                             mayores. La atención es profesional, accesible y siempre enfocada en mejorar la autonomía y
-                            calidad de vida de cada paciente.</p>
+                            calidad de vida de cada paciente.</p>    
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
             </ul>

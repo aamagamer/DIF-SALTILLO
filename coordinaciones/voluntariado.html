@@ -23,15 +23,15 @@
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex flex-col items-end gap-3">
                 <nav class="flex gap-2 xl:gap-4 font-medium">
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#inicio">Inicio</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#programas">Programas Sociales</a>
 
                     <!-- Desktop Coordinaciones Dropdown -->
                     <div class="dropdown dropdown-hover dropdown-bottom">
                         <label tabindex="0"
-                            class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                            class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
                             Coordinaciones
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </label>
@@ -73,31 +73,31 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#blog">Blog</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
-                        href="https://transparenciasaltillo.mx/">Transparencia</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
+                        href="https://transparenciasaltillo.mx/" target="_blank">Transparencia</a>
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#contacto">Contáctanos</a>
                 </nav>
 
                 <!-- Responsive white line -->
-                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto nav-line"></div>
 
                 <!-- Social media icons desktop -->
                 <div class="flex gap-3 xl:gap-4 mt-2 text-gray-600 text-xl xl:text-2xl">
                     <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
                         aria-label="Facebook">
-                        <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-facebook-f hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-instagram hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-tiktok hover:scale-110 transition"></i>
                     </a>
                     <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                        <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-x-twitter hover:scale-110 transition"></i>
                     </a>
                 </div>
             </div>
@@ -215,7 +215,7 @@
 
 <!-- Logo fijo en esquina -->
 <div class="absolute top-0 left-0 z-50">
-  <a href="../index.html" class="block w-28 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+  <a href="../index.html" class="block w-36 sm:w-40 md:w-48 lg:w-64 xl:w-80">
     <img src="../Media/LogoEsquina.png" 
          alt="Logo DIF Saltillo" 
          class="w-full h-auto cursor-pointer"
@@ -227,7 +227,10 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div id="coord-title-container" class="max-w-7xl mx-auto px-4 pt-12 sm:pt-10 md:pt-10 lg:pt-8 py-12 text-center z-50">
-        <h1 class="coord-title text-[#e20d7b]">Coordinación de Voluntariado</h1>
+        <div class="coord-icon_container">
+            <img src="iconos_coordinaciones/Voluntariado.png" alt="icono coordinación voluntariado" class="coord-icon">
+        </div>
+        <h1 class="coord-title">Coordinación de Voluntariado</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Sumamos corazones a la labor del DIF, invitando a
             empresas y sociedad civil a participar en acciones solidarias que marcan la diferencia en la vida de quienes
             más lo necesitan. </p>
@@ -235,7 +238,7 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="pb-8 sm:py-12 lg:pb-16 lg:pt-0 z-50">
+    <section id="programas" class="pb-12 z-50">
         <div class="programas-container sm:px-6 lg:px-8 xl:px-12">
             <ul class="programas-container_list">
                 <li class="programas-item  bg-white rounded-lg shadow-md cursor-pointer transition program"
@@ -244,7 +247,6 @@
                         <img src="Programas_Media/Programas DIF25 colores-Corazones_Voluntariados.png" alt="Corazones Voluntarios" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#e20d7b]">Corazones Voluntarios</h3>
                         <p class="programa-desc text-gray-600">Corazones Voluntarios es un espacio abierto para todas las personas que
                             desean aportar un poco de su tiempo y energía para hacer la diferencia en la vida de quienes
                             más lo necesitan. Ya sea colaborando en campañas, eventos o actividades diarias, cada
@@ -252,6 +254,7 @@
                             el deseo de ayudar y quieres ser parte de algo que transforma, en DIF Saltillo encontrarás
                             un lugar para crecer y contribuir con amor y compromiso. ¡Tu apoyo puede cambiar muchas
                             historias!</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -261,13 +264,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Servicio_Social_Comunitario.png   " alt="Servicio Social Comunitario" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#e20d7b]">Servicio Social Comunitario</h3>
                         <p class="programa-desc text-gray-600">El programa de Servicio Social Comunitario del DIF Saltillo ofrece a
                             estudiantes la oportunidad de cumplir con su requisito académico mientras contribuyen
                             activamente al bienestar de la comunidad. Participar aquí significa involucrarse en
                             proyectos sociales que fortalecen habilidades y valores, además de crear redes de apoyo y
                             solidaridad en Saltillo. Si eres estudiante y buscas una experiencia significativa que
                             complemente tu formación, este programa es ideal para ti.</p>
+                        <button onclick="openModal('m1')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -277,13 +280,13 @@
                         <img src="" alt="Vinculación Empresarial" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#e20d7b]">Vinculación Empresarial</h3>
                         <p class="programa-desc text-gray-600">La Coordinación de Vinculación Empresarial conecta a empresas
                             comprometidas con la responsabilidad social con las iniciativas del DIF Saltillo. A través
                             de colaboraciones estratégicas, se potencian recursos y se amplifica el impacto positivo en
                             la comunidad, especialmente en sectores vulnerables. Buscamos a empresas que deseen ser
                             parte de un movimiento que transforma vidas en Saltillo. ¡Aquí encontrarás la oportunidad
                             perfecta para contribuir con tu apoyo y compromiso social!</p>
+                        <button onclick="openModal('m2')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
             </ul>

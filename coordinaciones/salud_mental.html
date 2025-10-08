@@ -23,15 +23,15 @@
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex flex-col items-end gap-3">
                 <nav class="flex gap-2 xl:gap-4 font-medium">
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#inicio">Inicio</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#programas">Programas Sociales</a>
 
                     <!-- Desktop Coordinaciones Dropdown -->
                     <div class="dropdown dropdown-hover dropdown-bottom">
                         <label tabindex="0"
-                            class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
+                            class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
                             Coordinaciones
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </label>
@@ -73,31 +73,31 @@
                         </ul>
                     </div>
 
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#blog">Blog</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
-                        href="https://transparenciasaltillo.mx/">Transparencia</a>
-                    <a class="btn btn-ghost text-gray-600 text-sm xl:text-base px-2 xl:px-4"
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
+                        href="https://transparenciasaltillo.mx/" target="_blank">Transparencia</a>
+                    <a class="nav-item btn btn-ghost text-sm xl:text-base px-2 xl:px-4"
                         href="../index.html#contacto">Contáctanos</a>
                 </nav>
 
                 <!-- Responsive white line -->
-                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+                <div class="w-[90%] max-w-[1400px] border-t-2 ml-auto nav-line"></div>
 
                 <!-- Social media icons desktop -->
                 <div class="flex gap-3 xl:gap-4 mt-2 text-gray-600 text-xl xl:text-2xl">
                     <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
                         aria-label="Facebook">
-                        <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-facebook-f hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-instagram hover:scale-110 transition"></i>
                     </a>
                     <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-tiktok hover:scale-110 transition"></i>
                     </a>
                     <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                        <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+                        <i class="redes-icon fab fa-x-twitter hover:scale-110 transition"></i>
                     </a>
                 </div>
             </div>
@@ -204,18 +204,18 @@
                                     <i class="fab fa-x-twitter"></i>
                                 </a>
                             </div>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 <body class="bg-gray-50 min-h-screen">
 
 <!-- Logo fijo en esquina -->
 <div class="absolute top-0 left-0 z-50">
-  <a href="../index.html" class="block w-28 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+  <a href="../index.html" class="block w-36 sm:w-40 md:w-48 lg:w-64 xl:w-80">
     <img src="../Media/LogoEsquina.png" 
          alt="Logo DIF Saltillo" 
          class="w-full h-auto cursor-pointer"
@@ -227,7 +227,10 @@
     <!-- TÍTULO DE COORDINACIÓN -->
     <!-- =================================================== -->
     <div id="coord-title-container" class="max-w-7xl mx-auto px-4 pt-12 sm:pt-10 md:pt-10 lg:pt-8 py-12 text-center z-50">
-        <h1 class="coord-title text-[#BDCD00]">Coordinación de Salud Mental</h1>
+        <div class="coord-icon_container">
+            <img src="iconos_coordinaciones/Salud_Mental.png" alt="icono coordinación salud_mental" class="coord-icon">
+        </div>
+        <h1 class="coord-title">Coordinación de Salud Mental</h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto coord-desc">Ofrecemos apoyo psicológico y emocional gratuito
             para personas y familias en situación de vulnerabilidad, promoviendo el bienestar mental a través de
             terapias y acompañamiento profesional. </p>
@@ -235,7 +238,7 @@
     <!-- =================================================== -->
     <!-- 2. PROGRAMAS                                        -->
     <!-- =================================================== -->
-    <section id="programas" class="pb-8 sm:py-12 lg:pb-16 lg:pt-0 z-50">
+    <section id="programas" class="pb-12 z-50">
         <div class="programas-container sm:px-6 lg:px-8 xl:px-12">
             <ul class="programas-container_list">
                 <li class="programas-item  bg-white rounded-lg shadow-md cursor-pointer transition program"
@@ -244,13 +247,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Atencion_Psicologica.png" alt="Atención Psicológica" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#BDCD00]">Atención Psicológica</h3>
                         <p class="programa-desc text-gray-600">En DIF Saltillo creemos que la salud mental es tan importante como la
                             salud física. Por eso ofrecemos atención psicológica gratuita con profesionales capacitados,
                             en espacios seguros, empáticos y confidenciales. Este servicio está abierto a niñas, niños,
                             adolescentes, personas adultas y adultas mayores que estén atravesando situaciones
                             emocionales complejas, crisis familiares, ansiedad, tristeza, duelo o cualquier otro reto
                             emocional.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -260,13 +263,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Justicia_Civica.png" alt="Justicia Cívica" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#BDCD00]">Justicia Cívica</h3>
                         <p class="programa-desc text-gray-600">Justicia Cívica es un programa del DIF Saltillo enfocado en brindar
                             atención psicosocial a adolescentes y jóvenes. A través de trabajo social, acompañamiento
                             psicológico y actividades formativas, se busca que los jóvenes reconozcan sus acciones,
                             fortalezcan su autoestima y construyan un nuevo proyecto de vida. Este programa se enfoca en
                             el aprendizaje y crecimiento porque creemos que toda persona merece una segunda oportunidad,
                             y que el cambio es posible con apoyo, orientación y escucha.</p>
+                        <button onclick="openModal('m1')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -276,13 +279,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Cerca_de_Ti.png" alt="Cerca De Ti" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#BDCD00]">Cerca De Ti</h3>
                         <p class="programa-desc text-gray-600">Cerca de Ti es un programa de brigadas itinerantes que lleva servicios
                             de salud mental y bienestar emocional directamente a la comunidad. En estas jornadas se
                             ofrece atención psicológica, orientación, canalización y actividades de autocuidado para
                             personas de todas las edades. Con este programa, DIF Saltillo busca romper barreras de
                             acceso y estigmas en torno a la salud mental, construyendo una ciudad más empática,
                             solidaria y consciente.</p>
+                        <button onclick="openModal('m2')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
 
@@ -292,13 +295,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Espacio_Seguro.png" alt="Espacio Seguro" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#BDCD00]">Espacio Seguro</h3>
                         <p class="programa-desc text-gray-600">Espacio Seguro es una iniciativa de la Coordinación de Salud Mental del
                             DIF Saltillo que busca crear lugares de contención emocional y escucha activa, especialmente
                             para personas que viven momentos de vulnerabilidad, ansiedad o estrés. Está abierto a todas
                             las personas, con un enfoque especial en adolescentes y jóvenes. Aquí se privilegia la
                             empatía, la dignidad y la protección emocional. Porque sentirse en paz, acompañado y
                             respetado... es una forma de sanar.</p>
+                        <button onclick="openModal('m3')" class="programa-btn">LEER MÁS</button>
                     </div>
                     
                 </li>
@@ -309,13 +312,13 @@
                         <img src="Programas_Media/Programas DIF25 colores-Talleres_y_Platicas_de_Bienestar_Emocional.png" alt="Talleres Y Pláticas De Bienestar Emocional" class="programa-img">
                     </div>
                     <div class="programa-content">
-                        <h3 class="programa-title text-[#BDCD00]">Talleres Y Pláticas De Bienestar Emocional</h3>
                         <p class="programa-desc text-gray-600">En DIF Saltillo creemos que prevenir es cuidar, y por eso organizamos
                             talleres y pláticas de bienestar emocional en escuelas, centros comunitarios, espacios
                             públicos y colonias de la ciudad. Estos espacios están pensados para ofrecer información,
                             ejercicios y estrategias para gestionar emociones, manejar el estrés, fomentar la autoestima
                             y fortalecer los vínculos familiares. Todo desde un enfoque accesible, cálido y adaptado a
                             cada grupo de edad.</p>
+                        <button onclick="openModal('m0')" class="programa-btn">LEER MÁS</button>
                     </div>
                 </li>
             </ul>
