@@ -426,3 +426,10 @@ background: linear-gradient(
         max-width: 88rem;
     }
 }
+
+@media (min-width: 1870px) {
+    #programas{
+        max-width: 65vw;
+        margin: auto;
+    }
+}
