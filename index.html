@@ -12,21 +12,31 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Estilos personalizados -->
-  <script src="https://cdn.tailwindcss.com"></script> 
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/fonts.css">
   <link rel="preload" as="image" href="/imagenes/carrusel1.webp">
   <link rel="preload" as="image" href="/imagenes/carrusel2.webp">
   <link rel="preload" as="image" href="/imagenes/carrusel3.webp">
 
-</head>
-
-<body class="scroll-smooth">
-
-
-  <style>
+    <style>
     * {
       scroll-behavior: smooth;
     }
+
+    body {
+  background: none; /* o un color base neutro */
+}
+
+.main-bg-gradient {
+  background-image: url("Media/Degradado.png");
+  background-repeat: no-repeat;
+  background-position: top center;   /* empieza pegado arriba */
+  background-size: 1920px auto;      /* ancho fijo */
+  background-attachment: scroll;     /* se mueve con el scroll */
+  min-height: 100vh;
+}
+
+
 
     .coord-block {
       position: relative;
@@ -55,12 +65,12 @@
 
     .section-title {
       font-family: Gilroy-Black;
-      color: #e20d7b;
+      color: #ffffff;
     }
 
     .section-subtitle {
       font-family: Galano-Grotesque, sans-serif;
-      color: #e20d7b;
+      color: #ffffff;
     }
 
     @media (max-width: 768px) {
@@ -166,29 +176,61 @@
     .chevron.rotated {
       transform: rotate(180deg);
     }
+
+    /* Para que el formulario crezca lo necesario y no tenga scroll interno */
+.contact-form {
+  max-height: none; /* Sin límite de alto */
+  overflow: visible; /* Nada de scroll interno */
+}
+
+/* Hacer que el mapa iguale el alto del formulario */
+.contact-map {
+  height: 100%; /* Depende del contenedor padre */
+  min-height: auto; /* Evitar que quede más chico */
+}
+
+/* Si están en un grid o flex */
+.contact-section {
+  display: flex;
+  align-items: stretch; /* Esto iguala las alturas */
+}
+
+
+.section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700; /* Esto lo hace más "gordito" */
+    }
   </style>
+
+</head>
+
+<body class="scroll-smooth">
+
+<!-- Logo fijo en esquina -->
+<div class="absolute top-0 left-0 z-50">
+  <a href="#inicio" class="block w-24 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+    <img src="Media/LogoEsquina.png" 
+         alt="Logo DIF Saltillo" 
+         class="w-full h-auto cursor-pointer"
+         onclick="window.location.href='index.html'" />
+  </a>
+</div>
+
   <!-- =================================================== -->
   <!-- 1. N A V B A R                                      -->
   <!-- =================================================== -->
-  <header id="mainNav" class="navbar absolute inset-x-0 top-5 z-50 transition-all duration-300">
-    <div class="nav-overlay absolute inset-0"></div>
-    <div class="w-full px-8 relative z-10">
-      <div class="flex justify-between w-full">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <a href="#inicio" class="block w-16 sm:w-20 md:w-24">
-            <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/Logos DIF25-27/Logo Vert DIF fondo.png"
-              alt="Logo DIF Saltillo" class="w-full h-auto object-contain cursor-pointer"
-              onclick="window.location.href='../index.html'" />
-          </a>
-        </div>
+<header id="mainNav" class="navbar absolute inset-x-0 top-0 z-40 transition-all duration-300">
+  <div class="nav-overlay absolute inset-0"></div>
+  <div class="w-full px-8 relative z-10">
+    <div class="flex justify-end w-full">
+
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex flex-col items-end gap-3">
           <nav class="flex gap-2 xl:gap-4 font-medium">
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="../index.html#inicio">Inicio</a>
+            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="index.html#inicio">Inicio</a>
             <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
-              href="../index.html#programas">Programas Sociales</a>
+              href="index.html#Programas">Programas Sociales</a>
 
             <!-- Desktop Coordinaciones Dropdown -->
             <div class="dropdown dropdown-hover dropdown-bottom">
@@ -198,47 +240,47 @@
               </label>
               <ul tabindex="0"
                 class="dropdown-content menu p-3 shadow-lg bg-white rounded-xl w-64 mt-0 border border-gray-200 z-[1000]">
-                <li><a href="../coordinaciones/mujeres.html"
+                <li><a href="coordinaciones/mujeres.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Mujeres</a>
                 </li>
-                <li><a href="../coordinaciones/medica.html"
+                <li><a href="coordinaciones/medica.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Médica</a>
                 </li>
-                <li><a href="../coordinaciones/salud_mental.html"
+                <li><a href="coordinaciones/salud_mental.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Salud
                     Mental</a></li>
-                <li><a href="../coordinaciones/fortalecimiento.html"
+                <li><a href="coordinaciones/fortalecimiento.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Fortalecimiento
                     Social</a></li>
-                <li><a href="../coordinaciones/talleres.html"
+                <li><a href="coordinaciones/talleres.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Talleres</a>
                 </li>
-                <li><a href="../coordinaciones/niñes.html"
+                <li><a href="coordinaciones/niñes.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Niños,
                     Niñas y Adolescentes</a></li>
-                <li><a href="../coordinaciones/personas_con_discapacidad.html"
+                <li><a href="coordinaciones/personas_con_discapacidad.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Personas
                     con Discapacidad</a></li>
-                <li><a href="../coordinaciones/adultos_mayores.html"
+                <li><a href="coordinaciones/adultos_mayores.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Adultos
                     Mayores</a></li>
-                <li><a href="../coordinaciones/voluntariado.html"
+                <li><a href="coordinaciones/voluntariado.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Voluntariado</a>
                 </li>
-                <li><a href="../coordinaciones/atencion_ciudadana.html"
+                <li><a href="coordinaciones/atencion_ciudadana.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Atención
                     Ciudadana</a></li>
-                <li><a href="../coordinaciones/asuntos_juridicos.html"
+                <li><a href="coordinaciones/asuntos_juridicos.html"
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Asuntos
                     Jurídicos</a></li>
               </ul>
             </div>
 
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="../index.html#blog">Blog</a>
+            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="index.html#blog">Blog</a>
             <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
               href="https://transparenciasaltillo.mx/">Transparencia</a>
             <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
-              href="../index.html#contacto">Contáctanos</a>
+              href="index.html#contacto">Contáctanos</a>
           </nav>
 
           <!-- Responsive white line -->
@@ -284,61 +326,61 @@
                 <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/mujeres.html">Mujeres</a>
+                    <a href="coordinaciones/mujeres.html">Mujeres</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/medica.html">Médica</a>
+                    <a href="coordinaciones/medica.html">Médica</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/salud_mental.html">Salud Mental</a>
+                    <a href="coordinaciones/salud_mental.html">Salud Mental</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/fortalecimiento.html">Fortalecimiento Social</a>
+                    <a href="coordinaciones/fortalecimiento.html">Fortalecimiento Social</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/talleres.html">Talleres</a>
+                    <a href="coordinaciones/talleres.html">Talleres</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a>
+                    <a href="coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a>
+                    <a href="coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/adultos_mayores.html">Adultos Mayores</a>
+                    <a href="coordinaciones/adultos_mayores.html">Adultos Mayores</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/voluntariado.html">Voluntariado</a>
+                    <a href="coordinaciones/voluntariado.html">Voluntariado</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a>
+                    <a href="coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a>
                   </li>
                   <li
                     class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="../coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a>
+                    <a href="coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a>
                   </li>
                 </ul>
               </li>
 
-              <li><a href="../index.html#programas" onclick="closeMobileMenu()"
+              <li><a href="index.html#programas" onclick="closeMobileMenu()"
                   class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Programas</a>
               </li>
-              <li><a href="../index.html#blog" onclick="closeMobileMenu()"
+              <li><a href="index.html#blog" onclick="closeMobileMenu()"
                   class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Blog</a>
               </li>
               <li><a href="https://transparenciasaltillo.mx/" onclick="closeMobileMenu()"
                   class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Transparencia</a>
               </li>
-              <li><a href="../index.html#contacto" onclick="closeMobileMenu()"
+              <li><a href="index.html#contacto" onclick="closeMobileMenu()"
                   class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Contáctanos</a>
               </li>
 
@@ -378,92 +420,140 @@
     </div>
   </header>
 
-
   <!-- =================================================== -->
   <!-- 2. B A N N E R / I N I C I O                        -->
   <!-- =================================================== -->
   <section id="inicio" class="relative">
-    <div class="carousel w-full max-h-screen">
-      <!-- Banner 1 -->
-      <div id="slide1" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel.png" alt="Banner 1" class="w-full object-cover" />
+    <div class="w-full h-full h-[50vh] md:h-[60vh] lg:h-[100vh] relative overflow-hidden">
+            <!-- Banner 3 -->
+      <div class="carousel-item relative w-full h-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel3.png" alt="Banner 3"
+          class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+        </div>
+      </div>
+      
+      <!-- Banner 1 -->
+      <div class="carousel-item relative w-full h-full">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel.png" alt="Banner 1" class="w-full h-full object-cover md:object-bottom" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
         </div>
       </div>
       <!-- Banner 2 -->
-      <div id="slide2" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 2.png" alt="Banner 2"
-          class="w-full object-cover" />
+      <div class="carousel-item relative w-full h-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel2.png" alt="Banner 2"
+          class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide3" class="btn btn-circle">❯</a>
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
         </div>
       </div>
-      <!-- Banner 3 -->
-      <div id="slide3" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/Banner Carrusel 3.png" alt="Banner 3"
-          class="w-full object-cover" />
+      <!-- Banner 4 -->
+      <div class="carousel-item relative w-full h-full hidden">
+        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel4.png" alt="Banner 4"
+          class="w-full h-full object-cover md:object-bottom"/>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" class="btn btn-circle">❮</a>
-          <a href="#slide1" class="btn btn-circle">❯</a>
+          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
         </div>
       </div>
     </div>
   </section>
 
+  <script>
+    let bannerIndex = 0;
+    const slides = document.querySelectorAll('#inicio .carousel-item');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('hidden', i !== index);
+      });
+    }
+
+    function nextSlide() {
+      bannerIndex = (bannerIndex + 1) % totalSlides;
+      showSlide(bannerIndex);
+    }
+
+    function prevSlide() {
+      bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
+      showSlide(bannerIndex);
+    }
+
+    setInterval(nextSlide, 4000);
+    showSlide(bannerIndex);
+  </script>
+
+
+   <div class="main-bg-gradient">
+    
+    <main>
 
   <!-- =================================================== -->
   <!-- 3. C O O R D I N A C I O N E S                      -->
   <!-- =================================================== -->
-  <section id="coordinaciones" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Nuestras Coordinaciones</h2>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
-      <div class="coord-block"onclick="window.location.href='coordinaciones/mujeres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Mujeres.png');"></div>
+  <section id="coordinaciones" class="py-14 px-4 w-9/10 max-w-7xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-10 text-primary section-title">
+  Conoce nuestras Coordinaciones
+</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+      <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Mujeres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/medica.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Medica.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Medica.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/salud_mental.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Salud_Mental.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/SaludMental.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/fortalecimiento.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Fortalecimiento.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/talleres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Talleres.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Talleres.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/niñes.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Niñes.png');" ></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Niños.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/personas_con_discapacidad.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png');"></div>
+        <div class="coord-block-img"
+          style="background-image:url('Media/COORDINACIONES/Discapacidad.png');"></div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/adultos_mayores.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/AdultoMayor.png');">
+        </div>
       </div>
       <div class="coord-block" onclick="window.location.href='coordinaciones/voluntariado.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Voluntariado.png');"></div>
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Voluntariado.png');">
+        </div>
       </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/centros_comunitarios.html'">
-        <div class="coord-block-img" style="background-image:url('Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png');"></div>
+      <div class="coord-block" onclick="window.location.href='coordinaciones/asuntos_juridicos.html'">
+        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Juridico.png');">
+        </div>
       </div>
     </div>
   </section>
   <!-- Scale Effect -->
   <style>
-    .coord-block{
+    .coord-block {
       overflow: hidden;
     }
+
     .coord-block-img {
       height: 100%;
       background-size: cover;
       background-position: center;
       transition: transform 0.3s ease-in-out;
     }
-    .coord-block:hover .coord-block-img{
+
+    .coord-block:hover .coord-block-img {
       transform: scale(1.06) translateY(-2px);
     }
   </style>
@@ -503,7 +593,7 @@
       document.body.appendChild(tpl);
     });
     window.openModal = id => document.getElementById(id).checked = true;
-    // cierre al clicar fuera
+    // cierre al click fuera
     addEventListener('click', e => {
       document.querySelectorAll('.dynamic-toggle').forEach(t => {
         const box = t.nextElementSibling.querySelector('.modal-box');
@@ -511,240 +601,431 @@
       });
     });
   </script>
-
-  <!-- =================================================== -->
-<!-- 4. P R O G R A M A S                                -->
 <!-- =================================================== -->
-<section id="inicio" class="relative">
-    <div class="carousel w-full">
-      <!-- Programa 1 -->
-      <div id="p1" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios DIF.png" alt="Espacios DIF"
-          class="w-full object-cover cursor-pointer" onclick="openModal('programa1')" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#p4" class="btn btn-circle">❮</a>
-          <a href="#p2" class="btn btn-circle">❯</a>
+<!-- 4. P R O G R A M A S -->
+<!-- =================================================== -->
+<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1100px] mx-auto">
+  <h4 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-10 text-primary section-title">
+  <i>Estamos más cerca de ti a través de</i>
+</h4>
+  <div class="carousel-container relative overflow-hidden"
+    style="aspect-ratio: 16 / 9;">
+    <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
+      
+      <!-- Slide 1 -->
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa1">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF"
+          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+          <span class="text-sm font-medium">Ver más</span>
         </div>
       </div>
 
-      <!-- Programa 2 -->
-      <div id="p2" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor en movimiento.png" alt="Amor en Movimiento"
-          class="w-full object-cover cursor-pointer" onclick="openModal('programa2')" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#p1" class="btn btn-circle">❮</a>
-          <a href="#p3" class="btn btn-circle">❯</a>
+      <!-- Slide 2 -->
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa2">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento"
+          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+          <span class="text-sm font-medium">Ver más</span>
         </div>
       </div>
 
-      <!-- Programa 3 -->
-      <div id="p3" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño"
-          class="w-full object-cover cursor-pointer" onclick="openModal('programa3')" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#p2" class="btn btn-circle">❮</a>
-          <a href="#p4" class="btn btn-circle">❯</a>
+      <!-- Slide 3 -->
+      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa3">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor"
+          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+          <span class="text-sm font-medium">Ver más</span>
         </div>
       </div>
 
-      <!-- Programa 4 -->
-      <div id="p4" class="carousel-item relative w-full">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro de los grandes.png" alt="Centro de los Grandes"
-          class="w-full object-cover cursor-pointer" onclick="openModal('programa4')" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#p3" class="btn btn-circle">❮</a>
-          <a href="#p1" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Slide 4 -->
+      <!-- <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa4">
+        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+          <span class="text-sm font-medium">Ver más</span>
+        </div> 
+      </div> -->
 
-  <!-- ========== MODALES DE PROGRAMAS ========== -->
-  <template id="programModalTemplate">
-    <input type="checkbox" id="modal-toggle" class="modal-toggle" />
-    <div class="modal">
-      <div class="modal-box max-w-2xl">
-        <h3 class="font-bold text-lg mb-4 prog-title"></h3>
-        <img class="rounded mb-4 prog-img" src="" alt="Imagen programa" />
-        <p class="prog-text mb-4"></p>
-        <div class="modal-action">
-          <label for="modal-toggle" class="btn close-btn">Cerrar</label>
-        </div>
-      </div>
-      <label for="modal-toggle" class="modal-backdrop"></label>
-    </div>
-  </template>
+    </div> 
+  
+
+    <!-- Flechas -->
+    <button id="prevBtn" aria-label="Previous Slide"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
+      ❮
+    </button>
+    <button id="nextBtn" aria-label="Next Slide"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
+      ❯
+    </button>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto in-li">
+    <button id="modalClose"
+      class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
+    <!-- <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3> -->
+    <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-30 object-contain" />
+    <div id="modalText" class="text-gray-700 whitespace-pre-line text-base leading-tight max-w-3xl text-justify"></div>
+  </div>
+</div>
+
+
 
   <script>
-    const programInfo = [
-      {
-        id: 'programa1',
-        title: 'Espacios DIF',
-        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios DIF.png'),
-        text: `<strong>Objetivo del proyecto:</strong><br>
-        Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br><br>
-        <strong>Descripción:</strong><br>
-        Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br><br>
+    (() => {
+      const slideContainer = document.querySelector('.carousel-slide');
+      const slides = document.querySelectorAll('.carousel-slide > div');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let counter = 0;
+
+      function updateSlide() {
+        slideContainer.style.transform = `translateX(${-counter * 100}%)`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        counter = (counter === 0) ? slides.length - 1 : counter - 1;
+        updateSlide();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        counter = (counter === slides.length - 1) ? 0 : counter + 1;
+        updateSlide();
+      });
+
+      // Auto slide cada 5 segundos
+      let slideInterval = setInterval(() => {
+        counter = (counter === slides.length - 1) ? 0 : counter + 1;
+        updateSlide();
+      }, 7000);
+
+      // Pausar y reiniciar auto slide al usar flechas
+      [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          slideInterval = setInterval(() => {
+            counter = (counter === slides.length - 1) ? 0 : counter + 1;
+            updateSlide();
+          }, 5000);
+        });
+      });
+
+      // Modal elements
+      const modal = document.getElementById('modal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalImg = document.getElementById('modalImg');
+      const modalText = document.getElementById('modalText');
+      const modalClose = document.getElementById('modalClose');
+
+      const programInfo = [
+        {
+          id: 'programa1',
+          // title: 'Espacios DIF',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
+          text: `Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br>
+        Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br>
         Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
-      },
-      {
-        id: 'programa2',
-        title: 'Amor En Movimiento',
-        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor en movimiento.png'),
-        text: `<strong>Objetivo del proyecto:</strong><br>
-        Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br><br>
-        <strong>Descripción:</strong><br>
-        Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br><br>
-        <ul class="list-disc list-inside">
+        },
+        {
+          id: 'programa2',
+          // title: 'Amor En Movimiento',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
+          text: `Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br>
+        Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br>
+        <ul  style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
           <li>Atención médica general</li>
           <li>Evaluación dental y limpieza</li>
           <li>Audiometría y entrega de aparatos auditivos</li>
           <li>Optometría y entrega de lentes</li>
           <li>Tamizaje de glucosa</li>
-        </ul><br>
-      Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
-      },
-      {
-        id: 'programa3',
-        title: 'TEAcompaño Con Amor',
-        img: encodeURI('Media\IMÁGENES_PROGRAMAS_INSIGNIA\TEAcompaño.png'),
-        text: `<strong>Objetivo del proyecto:</strong><br>
-        Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br><br>
-
-        <strong>Descripción:</strong><br>
-        TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br><br>
-
-        Aquí se brindan:<br>
-        <ul class="list-disc list-inside">
+        </ul>
+        Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
+        },
+        {
+          id: 'programa3',
+          // title: 'TEAcompaño Con Amor',
+          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png',
+          text: `Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br>
+        TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br>
+        Aquí se brindan:
+        <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
           <li>Evaluaciones</li>
           <li>Terapias psicopedagógicas y de lenguaje</li>
           <li>Asesoría para madres, padres y cuidadores</li>
           <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
-        </ul><br>
-
+        </ul>
         TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
-      },
-      {
-        id: 'programa4',
-        title: 'Centro Internacional de los Grandes',
-        img: encodeURI('Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro de los grandes.png'),
-        text: `<strong>Objetivo del proyecto:</strong><br>
-        Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br><br>
+        }
+        // ,{
+        // id: 'programa4',
+        // img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
+        // text: `Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br>
+        // El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br>
+        // Este proyecto contempla:
+        // <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
+        //   <li>Áreas para la salud preventiva</li>
+        //   <li>Talleres formativos</li>
+        //   <li>Actividades recreativas</li>
+        //    <li>Atención psicológica</li>
+        //    <li>Espacios de encuentro entre generaciones</li>
+        //  </ul>
+        // Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br>
+        // Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
+        // }
+      ];
 
-        <strong>Descripción:</strong><br>
-        El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br><br>
-
-        Este proyecto contempla:<br>
-        <ul class="list-disc list-inside">
-          <li>Áreas para la salud preventiva</li>
-          <li>Talleres formativos</li>
-          <li>Actividades recreativas</li>
-          <li>Atención psicológica</li>
-          <li>Espacios de encuentro entre generaciones</li>
-        </ul><br>
-
-        Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br><br>
-
-      Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
-      }
-    ];
-
-    // Crear modales
-    programInfo.forEach(info => {
-      const modalTemplate = document.getElementById('programModalTemplate').content.cloneNode(true);
-      const modal = modalTemplate.querySelector('.modal-toggle');
-      modal.id = info.id;
-
-      modalTemplate.querySelector('.prog-title').textContent = info.title;
-      modalTemplate.querySelector('.prog-img').src = info.img;
-      modalTemplate.querySelector('.prog-text').innerHTML = info.text;
-
-      modalTemplate.querySelectorAll('.close-btn, .modal-backdrop').forEach(el => {
-        el.setAttribute('for', info.id);
+      // Abre modal al hacer click en la imagen
+      slideContainer.addEventListener('click', (e) => {
+        let target = e.target;
+        // En caso de click en contenedor div y no en img
+        if (!target.dataset.id) {
+          target = target.closest('[data-id]');
+        }
+        if (target && target.dataset.id) {
+          openModal(target.dataset.id);
+        }
       });
 
-      document.body.appendChild(modalTemplate);
-    });
+      window.openModal = function (id) {
+        const programa = programInfo.find(p => p.id === id);
+        if (!programa) return;
+        // modalTitle.innerHTML = programa.title;
+        modalImg.src = programa.img;
+        modalImg.alt = programa.title;
+        modalText.innerHTML = programa.text;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
 
-    // Función para abrir modales
-    function openModal(modalId) {
-      document.getElementById(modalId).checked = true;
-    }
+        // Bloquear scroll
+        document.body.style.overflow = 'hidden';
+      };
+
+      modalClose.addEventListener('click', () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+
+        // Liberar scroll
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          modal.classList.remove('opacity-100');
+
+          // Liberar scroll
+          document.body.style.overflow = '';
+        }
+      });
+
+    })();
+
   </script>
 
-  <!-- =================================================== -->
-<!-- 4.5 ¿ Q U I É N E S   S O M O S ?                    -->
 <!-- =================================================== -->
-<section id="quienes-somos" class="py-16 px-4 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-primary section-title">¿Quiénes Somos?</h2>
-      <p class="mt-4 max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-        Somos una organización gubernamental donde trabajamos con el <span class="font-semibold text-primary">corazón</span> para construir una comunidad más solidaria, inclusiva y justa. Estamos dedicados a brindar asistencia social a quienes más lo necesitan, fortaleciendo a las familias y protegiendo a los sectores más vulnerables de nuestra sociedad.
-      </p>
+<!-- 4.5 ¿ Q U I É N E S   S O M O S ? (solo imágenes sobre gradient) -->
+<!-- =================================================== -->
+<section id="quienes-somos" class="py-20">
+  <div class="flex flex-col gap-4"> <!-- antes gap-20 -->
+    
+    <!-- Imagen 1: Somos (derecha) -->
+    <div class="flex justify-end">
+      <img src="Media/quienes/Somos.png" alt="Somos"
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
+      
     </div>
 
-    <!-- Grid Principal -->
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <!-- Imagen de referencia -->
-      <div class="relative">
-        <img src="Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/DIF.png" alt="DIF Saltillo" 
-          class="rounded-2xl shadow-xl w-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl"></div>
-      </div>
+    <!-- Imagen 2: Misión (izquierda) -->
+    <div class="flex justify-start">
+      <img src="Media/quienes/Mision.png" alt="Misión"
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
+    </div>
 
-      <!-- Texto descriptivo -->
-      <div>
-        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-          A través de programas de bienestar, salud, educación y asistencia, buscamos mejorar la calidad de vida de niñas, niños, adolescentes, adultos mayores y personas con discapacidad. Nuestro compromiso es claro: estar siempre cerca de la gente, ofreciendo apoyo, esperanza y oportunidades para un mejor futuro.
-        </p>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li><strong>Misión:</strong> Promover el desarrollo humano de la población saltillense, a través de políticas públicas que trascienden a favor del bienestar social.</li>
-          <li><strong>Visión:</strong> Ser un referente nacional con el diseño de modelos de intervención innovadores que respondan, de manera congruente, a las demandas y necesidades de la sociedad saltillense.</li>
-          <li><strong>Política de gestión de calidad:</strong> En el DIF Saltillo estamos comprometidos con las necesidades de nuestros clientes, mejorando continuamente la efectividad del sistema de gestión de calidad y cumpliendo con los programas de atención a la población vulnerable.</li>
-        </ul>
+    <!-- Imagen 3: Visión (derecha) -->
+    <div class="flex justify-end">
+      <img src="Media/quienes/Vision.png" alt="Visión"
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
+    </div>
+
+    <!-- Imagen 4: Política (izquierda) -->
+    <div class="flex justify-start">
+      <img src="Media/quienes/Politica.png" alt="Política"
+           class="w-full sm:w-4/5 md:w-3/4 lg:w-5/6">
+    </div>
+
+  </div>
+</section>
+
+<!-- =================================================== -->
+<!-- 5. B L O G (Coverflow corregido)                    -->
+<!-- =================================================== -->
+<section id="blog" class="py-32 px-4 max-w-7xl mx-auto">
+  <div class="relative min-h-[700px] flex items-center justify-center">
+    
+    <!-- 🔹 Versión Coverflow (solo desktop) -->
+    <div id="blogCarousel" class="hidden md:flex justify-center items-center relative perspective-[1200px] w-full">
+      
+<!-- Tarjeta 1 -->
+<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+  <div class="header-blog text-center py-4 hidden">
+    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+  </div>
+  <!-- Imagen -->
+  <img src="Media/BLOGS/Alimentos.JPG" alt="Alimentos del corazón" class="w-full h-[250px] object-cover">
+  <!-- Contenido -->
+  <div class="p-6 text-center">
+    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Alimentos del corazón</h4>
+    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+      LEER MÁS
+    </a>
+  </div>
+</div>
+
+<!-- Tarjeta 2 -->
+<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+  <div class="header-blog text-center py-4 hidden">
+    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+  </div>
+  <!-- Imagen -->
+  <img src="Media/BLOGS/Apoyos.JPG" alt="Entrada 2" class="w-full h-[250px] object-cover">
+  <!-- Contenido -->
+  <div class="p-6 text-center">
+    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Apoyos de corazón</h4>
+    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+      LEER MÁS
+    </a>
+  </div>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
+  <div class="header-blog text-center py-4 hidden">
+    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+  </div>
+  <!-- Imagen -->
+  <img src="Media/BLOGS/Jornada.jpg" alt="Entrada 3" class="w-full h-[250px] object-cover">
+  <!-- Contenido -->
+  <div class="p-6 text-center">
+    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Jornada y día del niño</h4>
+    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+      LEER MÁS
+    </a>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Flechas (solo desktop) -->
+    <button id="prevBlog" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
+      ❮
+    </button>
+    <button id="nextBlog" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
+      ❯
+    </button>
+
+    <!-- 🔹 Versión simple (solo móvil) -->
+    <div class="block md:hidden w-[70vw] bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div class="text-center py-4">
+        <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+      </div>
+      <div class="bg-gray-200 w-full h-[200px] flex items-center justify-center">
+        <span class="text-gray-500"> <img src="Media/BLOGS/Alimentos.JPG" alt="Alimentos del corazón" class="w-full h-[200px] object-cover"></span>
+      </div>
+      <div class="p-6 text-center">
+        <h4 class="text-lg font-bold text-[#e20d7b] mb-4">Alimentos del corazón</h4>
+        <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
+  LEER MÁS
+</a>
       </div>
     </div>
   </div>
 </section>
 
 
-  <!-- =================================================== -->
-  <!-- 5. B L O G                                          -->
-  <!-- =================================================== -->
-  <section id="blog" class="py-14 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">Blog DIF Saltillo</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Placeholder de entradas -->
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Entrada de ejemplo</h3>
-          <p>Próximamente aquí encontrarás artículos, noticias y eventos del DIF Saltillo.</p>
-        </div>
-      </div>
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Otra entrada</h3>
-          <p>Este espacio será editable para publicar información relevante.</p>
-        </div>
-      </div>
-      <div class="card bg-white shadow-md">
-        <div class="card-body">
-          <h3 class="card-title">Más publicaciones</h3>
-          <p>Puedes asignar esta sección a un compañero del equipo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<script>
+  const cards = document.querySelectorAll("#blogCarousel .blog-card");
+  let activeIndex = 0;
 
+  function updateBlogCarousel() {
+    cards.forEach((card, i) => {
+      const offset = i - activeIndex;
+      const header = card.querySelector(".header-blog");
+
+      if (offset === 0) {
+        // Card central
+        card.style.transform = "translateX(0) scale(1) rotateY(0)";
+        card.style.zIndex = 3;
+        card.style.opacity = 1;
+        if (header) header.classList.remove("hidden");
+      } else if (offset === -1 || offset === cards.length - 1) {
+        // Izquierda
+        card.style.transform = "translateX(-300px) scale(0.85) rotateY(25deg)";
+        card.style.zIndex = 2;
+        card.style.opacity = 0.7;
+        if (header) header.classList.add("hidden");
+      } else if (offset === 1 || offset === -(cards.length - 1)) {
+        // Derecha
+        card.style.transform = "translateX(300px) scale(0.85) rotateY(-25deg)";
+        card.style.zIndex = 2;
+        card.style.opacity = 0.7;
+        if (header) header.classList.add("hidden");
+      } else {
+        // Ocultas atrás
+        card.style.transform = "translateX(0) scale(0.5)";
+        card.style.zIndex = 1;
+        card.style.opacity = 0;
+        if (header) header.classList.add("hidden");
+      }
+    });
+  }
+
+  document.getElementById("nextBlog").addEventListener("click", () => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    updateBlogCarousel();
+  });
+
+  document.getElementById("prevBlog").addEventListener("click", () => {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    updateBlogCarousel();
+  });
+
+  // Inicializar
+  updateBlogCarousel();
+</script>
 
   <!-- =================================================== -->
   <!-- 6. ESPACIOS DIF                                     -->
   <!-- =================================================== -->
-  <section id="transparencia" class="py-16 px-4 bg-base-200">
+  <section id="transparencia" class="py-16 px-4 bg-transparent">
     <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden">
       <div class="p-6 md:p-10">
-        <h2 class="text-4xl text-center mb-10 text-primary section-title">Espacios DIF</h2>
+        <h2 class="text-3xl text-center font-extrabold text-[#e20d7b] mb-10">Espacios DIF</h2>
 
         <div class="rounded-xl overflow-hidden border border-gray-300 shadow-md">
           <iframe
@@ -756,57 +1037,40 @@
     </div>
   </section>
 
-  <!-- =================================================== -->
-  <!-- 7. C O N T Á C T A N O S                            -->
-  <!-- =================================================== -->
-  <section id="contacto" class="py-20 px-4 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl text-center mb-10 text-primary section-title">Contáctanos</h2>
+<!-- =================================================== -->
+<!-- 7. C O N T Á C T A N O S                            -->
+<!-- =================================================== -->
+<section id="contacto" class="py-20 px-4 bg-transparent">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl text-center mb-10 text-primary section-title">¡Contáctanos!</h2>
 
-      <div class="flex flex-col lg:flex-row gap-10">
-        <div
-          class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-          <div class="p-6 border-b">
-            <h3 class="text-2xl font-semibold text-primary section-subtitle">Formulario de contacto</h3>
-          </div>
-          <div class="w-full aspect-video">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
-              class="w-full h-full border-0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <div
-          class="flex-1 w-full bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-          <div class="p-6 border-b">
-            <h3 class="text-2xl font-semibold text-primary section-subtitle">Ubicación DIF Saltillo</h3>
-          </div>
-          <div class="w-full aspect-video">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
-              class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+    <div class="flex flex-col lg:flex-row gap-10">
+      <!-- Formulario con fondo blanco -->
+      <div class="flex-1 w-full bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="w-full h-[800px] p-4">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeO14evtCSI2P3mn8tCc3k44p0Iq4fIXhUvapXfNwUauA_Bpw/viewform?embedded=true"
+            class="w-full h-full border-0 rounded-lg bg-white" allowfullscreen></iframe>
         </div>
       </div>
+
+      <!-- Mapa limpio -->
+      <div class="flex-1 w-full overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
+          class="w-full h-[800px] border-0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
+  </div>
+</section>
 
 
-  </section>
 
   <!-- =================================================== -->
   <!--  REDES SOCIALES                                     -->
   <!-- =================================================== -->
   <div class="flex justify-center gap-8 mt-6 text-6xl">
-    <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook"
-      class="text-[#1877F2] hover:scale-110 transition">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram"
-      class="text-[#E4405F] hover:scale-110 transition">
-      <i class="fab fa-instagram"></i>
-    </a>
-
   </div>
 
 
@@ -840,18 +1104,51 @@
     document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
       item.addEventListener('click', closeMobileMenu);
     });
-  </script>
+        </script>
+      </main>
+    </div>
+<!-- =================================================== -->
+<!-- F O O T E R -->
+<!-- =================================================== -->
+<footer class="relative overflow-hidden bg-center bg-cover" 
+  style="background-image: url('Media/footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  
+  <div class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+    
+    <!-- Logos -->
+    <div class="flex items-center gap-4">
+      <img src="Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24">
+      <img src="Media/PorAmorLogo.png" alt="Por Amor a Saltillo" class="h-20 md:h-24">
+    </div>
 
-  <script>
-  // Carrusel automático para banners
-  let bannerIndex = 1;
-  const bannerSlides = ['#slide1', '#slide2', '#slide3'];
+    <!-- Contacto y redes -->
+    <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
+      <p class="text-[#602F89] font-bold uppercase">Contacto</p>
+      <p class="text-[#602F89] font-semibold">
+        <i class="fas fa-phone-alt"></i> 844 412 1264
+      </p>
 
-  setInterval(() => {
-    bannerIndex = (bannerIndex % bannerSlides.length) + 1;
-    window.location.hash = 'slide' + bannerIndex;
-  }, 4000);
-</script>
+      <p class="text-[#602F89] font-bold uppercase mt-4">
+        Síguenos en nuestras redes sociales
+      </p>
 
-</body>
+      <div class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2">
+        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+        </a>
+        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram hover:scale-110 transition"></i>
+        </a>
+        <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok hover:scale-110 transition"></i>
+        </a>
+        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+          <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
 </html>

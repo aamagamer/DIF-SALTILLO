@@ -91,34 +91,34 @@ function closeMobileMenu() {
 }
 
 function toggleSubmenu(menuId) {
-            const submenu = document.getElementById(menuId + '-submenu');
-            const chevron = document.getElementById(menuId + '-chevron');
-            
-            if (submenu.classList.contains('active')) {
-                submenu.classList.remove('active');
-                chevron.classList.remove('rotated');
-            } else {
-                submenu.classList.add('active');
-                chevron.classList.add('rotated');
-            }
-        }
+    const submenu = document.getElementById(menuId + '-submenu');
+    const chevron = document.getElementById(menuId + '-chevron');
+    
+    if (submenu.classList.contains('active')) {
+        submenu.classList.remove('active');
+        chevron.classList.remove('rotated');
+    } else {
+        submenu.classList.add('active');
+        chevron.classList.add('rotated');
+    }
+}
 
-        function closeMobileMenu() {
-            // Close the dropdown by removing focus
-            document.activeElement.blur();
-            
-            // Also close any open submenus
-            const submenus = document.querySelectorAll('.submenu');
-            const chevrons = document.querySelectorAll('.chevron');
-            
-            submenus.forEach(submenu => submenu.classList.remove('active'));
-            chevrons.forEach(chevron => chevron.classList.remove('rotated'));
-        }
+function closeMobileMenu() {
+    // Close the dropdown by removing focus
+    document.activeElement.blur();
+    
+    // Also close any open submenus
+    const submenus = document.querySelectorAll('.submenu');
+    const chevrons = document.querySelectorAll('.chevron');
+    
+    submenus.forEach(submenu => submenu.classList.remove('active'));
+    chevrons.forEach(chevron => chevron.classList.remove('rotated'));
+}
 
-        // Close submenu when clicking on a submenu item
-        document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
-            item.addEventListener('click', closeMobileMenu);
-        });
+// Close submenu when clicking on a submenu item
+document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
+    item.addEventListener('click', closeMobileMenu);
+});
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
