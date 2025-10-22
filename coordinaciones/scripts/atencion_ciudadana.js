@@ -29,16 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Agregar información detallada
         const infoDetalle = `
-            <div class="bg-gray-100 p-4 rounded-lg mb-4">
-                <h3 class="font-bold mb-2">${info.titulo}</h4>
-                <br>
-                <p class="font-bold>Objetivo:</p>
-                <p>${info.objetivo}</p>
-                <br>
-                <p class="font-bold>Descripción:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left side (text) -->
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <h3 class="font-bold mb-2 text-xl">${info.titulo}</h3>
+                <p class="mb-3">${info.objetivo}</p>
+                <p class="font-bold">Descripción:</p>
                 <p>${info.descripcion}</p>
             </div>
-        `;
+
+            <!-- Right side (image placeholder) -->
+            <div class="flex items-center justify-center">
+                <img src="Programas_Media/sin_color/${info.imagen}" alt="${info.titulo}" class="rounded-lg max-h-90 object-cover">
+            </div>
+        </div>`;
         
         tpl.querySelector('.info-detalle').innerHTML = infoDetalle;
         

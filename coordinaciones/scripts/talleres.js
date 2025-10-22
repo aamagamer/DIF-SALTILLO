@@ -5,7 +5,8 @@ const progInfo = [
     "id": "m0",
     "titulo": "Amor Por Aprender",
     "objetivo": "Ofrecer talleres prácticos y accesibles que permitan a personas adultas adquirir o fortalecer habilidades en distintos oficios, con el fin de mejorar sus oportunidades de empleo o emprendimiento.",
-    "descripcion": "El programa Amor por Aprender es una iniciativa del DIF Saltillo que brinda talleres para todas las personas que deseen aprender, desarrollarse o iniciar un proyecto laboral propio. Se imparten cursos como corte y confección, cocina, repostería, belleza, cartonería y más. Los talleres están pensados para impulsar la autonomía para personas en situación de vulnerabilidad, brindándoles herramientas reales para generar ingresos, crecer profesionalmente y transformar su realidad.<br><ul class=\"in-ul\"><li class=\"in-li text-gray-600\">Belleza – $385.00</li><li class=\"in-li text-gray-600\">Colorimetría – $640.00</li><li class=\"in-li text-gray-600\">Maquillaje – $385.00</li><li class=\"in-li text-gray-600\">Uñas – $640.00</li><li class=\"in-li text-gray-600\">Barbería – $385.00</li><li class=\"in-li text-gray-600\">Carpintería – $395.00</li><li class=\"in-li text-gray-600\">Chocolatería – $385.00</li><li class=\"in-li text-gray-600\">Pastelería – $640.00</li><li class=\"in-li text-gray-600\">Dulces regionales – $385.00</li><li class=\"in-li text-gray-600\">Postres – $385.00</li><li class=\"in-li text-gray-600\">Guitarra – $125.00</li><li class=\"in-li text-gray-600\">Cartonería – $125.00</li><li class=\"in-li text-gray-600\">Electricidad – $260.00</li><li class=\"in-li text-gray-600\">Soldadura – $260.00</li><li class=\"in-li text-gray-600\">Computación – $260.00</li><li class=\"in-li text-gray-600\">Pintura – $385.0</li><li class=\"in-li text-gray-600\">Pincelada – $125.00</li><li class=\"in-li text-gray-600\">Vitromosaico – $640.00</li><li class=\"in-li text-gray-600\">Corte y confección – $385.00</li><li class=\"in-li text-gray-600\">Mecánica – $385.00</li><li class=\"in-li text-gray-600\">Bisutería – $385.00</li><li class=\"in-li text-gray-600\">Reciclado – $260.00</li><li class=\"in-li text-gray-600\">Huertos familiares – $260.00</li></ul>"
+    "descripcion": "El programa Amor por Aprender es una iniciativa del DIF Saltillo que brinda talleres para todas las personas que deseen aprender, desarrollarse o iniciar un proyecto laboral propio. Se imparten cursos como corte y confección, cocina, repostería, belleza, cartonería y más. Los talleres están pensados para impulsar la autonomía para personas en situación de vulnerabilidad, brindándoles herramientas reales para generar ingresos, crecer profesionalmente y transformar su realidad.<br><ul class=\"in-ul\"><li class=\"in-li text-gray-600\">Belleza – $385.00</li><li class=\"in-li text-gray-600\">Colorimetría – $640.00</li><li class=\"in-li text-gray-600\">Maquillaje – $385.00</li><li class=\"in-li text-gray-600\">Uñas – $640.00</li><li class=\"in-li text-gray-600\">Barbería – $385.00</li><li class=\"in-li text-gray-600\">Carpintería – $395.00</li><li class=\"in-li text-gray-600\">Chocolatería – $385.00</li><li class=\"in-li text-gray-600\">Pastelería – $640.00</li><li class=\"in-li text-gray-600\">Dulces regionales – $385.00</li><li class=\"in-li text-gray-600\">Postres – $385.00</li><li class=\"in-li text-gray-600\">Guitarra – $125.00</li><li class=\"in-li text-gray-600\">Cartonería – $125.00</li><li class=\"in-li text-gray-600\">Electricidad – $260.00</li><li class=\"in-li text-gray-600\">Soldadura – $260.00</li><li class=\"in-li text-gray-600\">Computación – $260.00</li><li class=\"in-li text-gray-600\">Pintura – $385.0</li><li class=\"in-li text-gray-600\">Pincelada – $125.00</li><li class=\"in-li text-gray-600\">Vitromosaico – $640.00</li><li class=\"in-li text-gray-600\">Corte y confección – $385.00</li><li class=\"in-li text-gray-600\">Mecánica – $385.00</li><li class=\"in-li text-gray-600\">Bisutería – $385.00</li><li class=\"in-li text-gray-600\">Reciclado – $260.00</li><li class=\"in-li text-gray-600\">Huertos familiares – $260.00</li></ul>",
+    "imagen": ""
 }
 ,
 
@@ -13,7 +14,8 @@ const progInfo = [
     "id": "m1",
     "titulo": "Estética Dif",
     "objetivo": "Ofrecer cortes de cabello a bajo costo para las familias saltillenses y dignificar la imagen personal de quienes más lo necesitan.",
-    "descripcion": "La Estética DIF es un programa social que brinda cortes de cabello gratuitos en las instalaciones del DIF Saltillo, así como en diferentes colonias de la ciudad mediante las Jornadas DIF en tu colonia. Este servicio es atendido por personas capacitadas en nuestros talleres y forma parte de una red de apoyo pensada para ayudar, cuidar y acompañar."
+    "descripcion": "La Estética DIF es un programa social que brinda cortes de cabello gratuitos en las instalaciones del DIF Saltillo, así como en diferentes colonias de la ciudad mediante las Jornadas DIF en tu colonia. Este servicio es atendido por personas capacitadas en nuestros talleres y forma parte de una red de apoyo pensada para ayudar, cuidar y acompañar.",
+    "imagen": "estética_dif.png"
 }
 
 ];
@@ -29,16 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Agregar información detallada
         const infoDetalle = `
-            <div class="bg-gray-100 p-4 rounded-lg mb-4">
-                <h3 class="font-bold mb-2">${info.titulo}</h4>
-                <br>
-                <p class="font-bold">Objetivo:</p>
-                <p>${info.objetivo}</p>
-                <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left side (text) -->
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <h3 class="font-bold mb-2 text-xl">${info.titulo}</h3>
+                <p class="mb-3">${info.objetivo}</p>
                 <p class="font-bold">Descripción:</p>
                 <p>${info.descripcion}</p>
             </div>
-        `;
+
+            <!-- Right side (image placeholder) -->
+            <div class="flex items-center justify-center">
+                <img src="Programas_Media/sin_color/${info.imagen}" alt="${info.titulo}" class="rounded-lg max-h-90 object-cover">
+            </div>
+        </div>`;
         
         tpl.querySelector('.info-detalle').innerHTML = infoDetalle;
         
