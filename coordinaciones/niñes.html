@@ -332,64 +332,48 @@
     </template>
     </main>
     <script src="../coordinaciones/scripts/niñes.js"></script>
-</body>
+
 <!-- =================================================== -->
 <!-- F O O T E R                                         -->
 <!-- =================================================== -->
-<footer class="relative bg-white overflow-hidden">
-    <!-- Fondo de arcos invertidos -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
-        <!-- degradado sutil -->
-        <defs>
-        <linearGradient id="softFade" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#000" stop-opacity="0.06"/>
-            <stop offset="100%" stop-color="#000" stop-opacity="0"/>
-        </linearGradient>
-        </defs>
-        <rect x="0" y="0" width="1440" height="260" fill="url(#softFade)" opacity="0.05"></rect>
-
-        <!-- Arcos invertidos (extremos arriba, centro abajo) -->
-        <path d="M -120 60 Q 720 200 1560 60"  fill="none" stroke="#e5e7eb" stroke-width="14" opacity="0.65"/>
-        <path d="M -120 80 Q 720 220 1560 80"  fill="none" stroke="#eceff1" stroke-width="10" opacity="0.7"/>
-        <path d="M -120 100 Q 720 240 1560 100" fill="none" stroke="#f1f5f9" stroke-width="8"  opacity="0.8"/>
-        <path d="M -120 120 Q 720 255 1560 120" fill="none" stroke="#e5e7eb" stroke-width="6"  opacity="0.7"/>
-        <path d="M -120 140 Q 720 270 1560 140" fill="none" stroke="#eceff1" stroke-width="4"  opacity="0.75"/>
-    </svg>
-
-    <div class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-
-        <!-- Logos juntos -->
-        <div class="flex items-center gap-4">
-            <img src="../Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24">
-            <img src="../Media/PorAmorLogo.png" alt="Por Amor a Saltillo" class="h-20 md:h-24">
-        </div>
-
-        <!-- Contacto y redes -->
-        <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
-            <p class="text-[#602F89] font-bold uppercase">Contacto</p>
-            <p class="text-[#602F89] font-semibold">
-                <i class="fas fa-phone-alt"></i> 844 412 1264 Ext: 125
-            </p>
-
-            <p class="text-[#602F89] font-bold uppercase mt-4">
-                Síguenos en nuestras redes sociales
-            </p>
-
-            <div class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2">
-                <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-                </a>
-                <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram hover:scale-110 transition"></i>
-                </a>
-                <a href="https://www.tiktok.com/@difsaltillo" target="_blank" aria-label="TikTok">
-                    <i class="fab fa-tiktok hover:scale-110 transition"></i>
-                </a>
-                <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-                    <i class="fab fa-x-twitter hover:scale-110 transition"></i>
-                </a>
-            </div>
-        </div>
+<footer class="relative overflow-hidden bg-center bg-cover" 
+  style="background-image: url('../Media/footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  
+  <div class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+    
+    <!-- Logos -->
+    <div class="flex items-center gap-4">
+      <img src="../Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24">
+      <img src="../Media/PorAmorLogo.png" alt="Por Amor a Saltillo" class="h-20 md:h-24">
     </div>
+
+    <!-- Contacto y redes -->
+    <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
+      <p class="text-[#602F89] font-bold uppercase">Contacto</p>
+      <p class="text-[#602F89] font-semibold">
+        <i class="fas fa-phone-alt"></i> 844 412 1264 EXT: 125
+      </p>
+
+      <p class="text-[#602F89] font-bold uppercase mt-4">
+        Síguenos en nuestras redes sociales
+      </p>
+
+      <div class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2">
+        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+        </a>
+        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram hover:scale-110 transition"></i>
+        </a>
+        <a href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok hover:scale-110 transition"></i>
+        </a>
+        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+          <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
+</body>
 </html>
