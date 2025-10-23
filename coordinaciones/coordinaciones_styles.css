@@ -139,9 +139,6 @@ p {
 /* IMAGE */
 .programa-img-container{
     width: 100%;
-    height: fit-content;
-    min-height: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -157,7 +154,6 @@ p {
 
 /* CONTENT */
 .programa-content {
-    display: none;
     padding: 1rem;
 }
 
