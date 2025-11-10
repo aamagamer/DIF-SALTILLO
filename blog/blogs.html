@@ -2020,17 +2020,23 @@ En el DIF Saltillo, los invitamos a disfrutar de esta experiencia única, donde 
     <!-- ====================================================== -->
     <!-- ================== SCRIPT FUNCIONAL ================== -->
     <!-- ====================================================== -->
-
-  <script>
+<!-- ====================================================== -->
+<!-- ================== SCRIPT FUNCIONAL ================== -->
+<!-- ====================================================== -->
+<script>
   function openModal(id) {
     document.getElementById(id).classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // 🔒 Bloquea el scroll del fondo
   }
+
   function closeModal(id, event = null) {
     const modal = document.getElementById(id);
     if (!event || event.target === modal) {
       modal.classList.add("hidden");
+      document.body.style.overflow = ""; // 🔓 Restaura el scroll
     }
   }
 </script>
+
 </body>
 </html>
