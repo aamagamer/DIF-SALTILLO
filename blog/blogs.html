@@ -36,7 +36,7 @@
         <!-- Blog Septiembre 1 -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img
-            src="[RUTA_IMAGEN_SEPT_1]"
+            src="MediaBlog/PlaceHold.png"
             alt="[ALT_SEPT_1]"
             class="w-full h-56 object-cover"
           />
@@ -59,7 +59,7 @@
         <!-- Blog Septiembre 2 -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img
-            src="[RUTA_IMAGEN_SEPT_2]"
+            src="MediaBlog/PlaceHold.png"
             alt="[ALT_SEPT_2]"
             class="w-full h-56 object-cover"
           />
@@ -82,7 +82,7 @@
         <!-- Blog Septiembre 3 -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
           <img
-            src="[RUTA_IMAGEN_SEPT_3]"
+            src="MediaBlog/PlaceHold.png"
             alt="[ALT_SEPT_3]"
             class="w-full h-56 object-cover"
           />
@@ -95,6 +95,52 @@
             </p>
             <button
               onclick="openModal('modalSept3')"
+              class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+            >
+              LEER MÁS
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Septiembre 4 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img
+            src="MediaBlog/PlaceHold.png"
+            alt="[ALT_SEPT_4]"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#e20d7b] mb-3">
+              [TÍTULO_BLOG_SEPT_4]
+            </h3>
+            <p class="text-gray-600 mb-4">
+              [DESCRIPCIÓN_CORTA_SEPT_4]
+            </p>
+            <button
+              onclick="openModal('modalSept4')"
+              class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+            >
+              LEER MÁS
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Septiembre 5 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+          <img
+            src="MediaBlog/PlaceHold.png"
+            alt="[ALT_SEPT_5]"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#e20d7b] mb-3">
+              Concierto a Ciegas en Saltillo
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Una experiencia sensorial e inclusiva.
+            </p>
+            <button
+              onclick="openModal('modalSept5')"
               class="bg-[#e20d7b] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
             >
               LEER MÁS
@@ -845,6 +891,86 @@
             [CONTENIDO_COMPLETO_SEPT_3]
           </p>
         </div>
+      </div>
+    </div>
+
+        <!-- Modal Septiembre 4 -->
+    <div
+      id="modalSept4"
+      class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+      onclick="closeModal('modalSept4', event)"
+    >
+      <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] mx-4 overflow-y-auto relative">
+        <div class="relative">
+          <img
+            src="[RUTA_IMAGEN_SEPT_4]"
+            alt="[ALT_SEPT_4]"
+            class="w-full h-64 object-cover"
+          />
+          <button
+            onclick="closeModal('modalSept4')"
+            class="absolute top-2 right-2 bg-[#e20d7b] text-white px-3 py-1 rounded-full"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-[#e20d7b] mb-4">
+            [TÍTULO_BLOG_SEPT_4]
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            [CONTENIDO_COMPLETO_SEPT_4]
+          </p>
+        </div>
+      </div>
+    </div>
+
+        <!-- Modal Septiembre 5 -->
+    <div
+      id="modalSept5"
+      class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+      onclick="closeModal('modalSept5', event)"
+    >
+      <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] mx-4 overflow-y-auto relative">
+        <div class="relative">
+          <img
+            src="MediaBlog/PlaceHold.png"
+            alt="[ALT_SEPT_5]"
+            class="w-full h-64 object-cover"
+          />
+          <button
+            onclick="closeModal('modalSept5')"
+            class="absolute top-2 right-2 bg-[#e20d7b] text-white px-3 py-1 rounded-full"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="p-6">
+  <h3 class="text-2xl font-bold text-[#e20d7b] mb-4">
+    Concierto a Ciegas en Saltillo: una experiencia sensorial e inclusiva
+  </h3>
+  <p class="text-gray-700 leading-relaxed whitespace-pre-line">
+En el DIF Saltillo, creemos que la música puede ser una herramienta poderosa para fomentar la inclusión, la empatía y la sensibilización social. Por ello, impulsamos el Concierto a Ciegas, una experiencia única donde los asistentes pueden disfrutar de la música de la Marimba y el Arpa interpretadas por los talentosos músicos de la Orquesta Filarmónica del Desierto, en completa oscuridad.
+
+Una experiencia sensorial e inmersiva
+
+El Concierto a Ciegas nos invita a escuchar la música de manera diferente, apreciando los sonidos, las vibraciones y la conexión emocional con cada instrumento. Al eliminar la vista, los sentidos auditivos y táctiles se agudizan, permitiendo vivir cada nota de manera más intensa y profunda.
+
+Durante el evento, se aplican ajustes razonables para garantizar que todos los asistentes puedan disfrutar plenamente, incluyendo:
+
+• Oscuridad total: Para lograr una experiencia inmersiva única.  
+• Sensibilidad y empatía: Tomar conciencia de los desafíos que enfrentan las personas con discapacidad visual.  
+• Enfoque sensorial: Agudizar otros sentidos, haciendo los sonidos más nítidos y las vibraciones más palpables.  
+• Promoción de la inclusión: Fomentar una cultura de respeto, solidaridad y participación social.
+
+Reflexión sobre diversidad y accesibilidad
+
+Este concierto invita a reflexionar sobre la diversidad y la accesibilidad, fomentando una cultura inclusiva en nuestra sociedad y promoviendo la empatía hacia las personas con discapacidad visual.
+
+En el DIF Saltillo, los invitamos a disfrutar de esta experiencia única, donde cada nota y cada vibración nos recuerdan que la inclusión, la solidaridad y el respeto son parte fundamental de nuestra labor y compromiso con toda la comunidad.
+  </p>
+</div>
+
       </div>
     </div>
 
