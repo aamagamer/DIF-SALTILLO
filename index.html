@@ -1,669 +1,1073 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" data-theme="light">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIF Saltillo</title>
-  <!-- Tailwind + DaisyUI CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" />
-  <!-- Font Awesome para iconos sociales -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-  <!-- Estilos personalizados -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/fonts.css">
-  <link rel="preload" as="image" href="/imagenes/carrusel1.webp">
-  <link rel="preload" as="image" href="/imagenes/carrusel2.webp">
-  <link rel="preload" as="image" href="/imagenes/carrusel3.webp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIF Saltillo</title>
+    <!-- Tailwind + DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome para iconos sociales -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Estilos personalizados -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="preload" as="image" href="/imagenes/carrusel1.webp" />
+    <link rel="preload" as="image" href="/imagenes/carrusel2.webp" />
+    <link rel="preload" as="image" href="/imagenes/carrusel3.webp" />
 
     <style>
-    * {
-      scroll-behavior: smooth;
-    }
-
-    body {
-  background: none; /* o un color base neutro */
-}
-
-.main-bg-gradient {
-  background-image: url("Media/Degradado.png");
-  background-repeat: no-repeat;
-  background-position: top center;   /* empieza pegado arriba */
-  background-size: 1920px auto;      /* ancho fijo */
-  background-attachment: scroll;     /* se mueve con el scroll */
-  min-height: 100vh;
-}
-
-
-
-    .coord-block {
-      position: relative;
-      cursor: pointer;
-      background-size: cover;
-      background-position: center;
-      aspect-ratio: 1 / 1;
-      /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .coord-block span {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: .9rem;
-      color: #fff;
-      pointer-events: none;
-      text-align: center;
-      padding: .5rem;
-    }
-
-    .section-title {
-      font-family: Gilroy-Black;
-      color: #ffffff;
-    }
-
-    .section-subtitle {
-      font-family: Galano-Grotesque, sans-serif;
-      color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .nav-bg {
-        background-attachment: scroll;
-        background-position: center top;
+      * {
+        scroll-behavior: smooth;
       }
-    }
 
-    .nav-overlay {
-      background-color: rgba(0, 0, 0, 0.0);
-    }
-
-    .coord-title {
-      font-family: Gilroy-Black, sans-serif;
-      color: #e20d7b;
-    }
-
-    .coord-desc {
-      text-align: center;
-    }
-
-    .program h3 {
-      font-family: Galano-Grotesque, sans-serif;
-      color: #e20d7b;
-    }
-
-    .program p {
-      font-family: Josefine-Sans, sans-serif;
-    }
-
-    p {
-      font-family: Josefine-Sans, sans-serif;
-      text-align: justify;
-    }
-
-    .in-ul {
-      list-style: square;
-      list-style-position: inside;
-    }
-
-    .in-li {
-      font-family: Josefine-Sans, sans-serif;
-      text-align: justify;
-    }
-
-    .modal-card {
-      background-image: url('/Media/IMÁGENES_Y_LOGOTIPOS_COORDINACIONES/degradados/mujeres.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* Custom responsive utilities */
-    @media (min-width: 1536px) {
-      .max-w-8xl {
-        max-width: 88rem;
+      body {
+        background: none; /* o un color base neutro */
       }
-    }
 
-    /* Fix for navbar height on mobile */
-    @media (max-width: 768px) {
-      .navbar {
-        min-height: auto;
-        padding: 0.5rem 1rem;
+      .main-bg-gradient {
+        background-image: url("Media/Degradado.png");
+        background-repeat: no-repeat;
+        background-position: top center; /* empieza pegado arriba */
+        background-size: 1920px auto; /* ancho fijo */
+        background-attachment: scroll; /* se mueve con el scroll */
+        min-height: 100vh;
       }
-    }
 
-    /* Improved button hover effects */
-    .btn-ghost:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
+      .coord-block {
+        position: relative;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 1 / 1;
+        /* 1:1 cuadrado, o 4/3, 16/9 según forma de tus imágenes */
+        width: 100%;
+        overflow: hidden;
+      }
 
-    /* Better text scaling */
-    .coord-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
+      .coord-block span {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #fff;
+        pointer-events: none;
+        text-align: center;
+        padding: 0.5rem;
+      }
 
-    .coord-desc {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-    }
+      .section-title {
+        font-family: Gilroy-Black;
+        color: #ffffff;
+      }
 
-    .submenu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
+      .section-subtitle {
+        font-family: Galano-Grotesque, sans-serif;
+        color: #ffffff;
+      }
 
-    .submenu.active {
-      max-height: 500px;
-      transition: max-height 0.3s ease-in;
-    }
+      @media (max-width: 768px) {
+        .nav-bg {
+          background-attachment: scroll;
+          background-position: center top;
+        }
+      }
 
-    .submenu-item {
-      padding-left: 2rem;
-      border-left: 2px solid #f3f4f6;
-    }
+      .nav-overlay {
+        background-color: rgba(0, 0, 0, 0);
+      }
 
-    .chevron {
-      transition: transform 0.3s ease;
-    }
+      .coord-title {
+        font-family: Gilroy-Black, sans-serif;
+        color: #e20d7b;
+      }
 
-    .chevron.rotated {
-      transform: rotate(180deg);
-    }
+      .coord-desc {
+        text-align: center;
+      }
 
-    /* Para que el formulario crezca lo necesario y no tenga scroll interno */
-.contact-form {
-  max-height: none; /* Sin límite de alto */
-  overflow: visible; /* Nada de scroll interno */
-}
+      .program h3 {
+        font-family: Galano-Grotesque, sans-serif;
+        color: #e20d7b;
+      }
 
-/* Hacer que el mapa iguale el alto del formulario */
-.contact-map {
-  height: 100%; /* Depende del contenedor padre */
-  min-height: auto; /* Evitar que quede más chico */
-}
+      .program p {
+        font-family: Josefine-Sans, sans-serif;
+      }
 
-/* Si están en un grid o flex */
-.contact-section {
-  display: flex;
-  align-items: stretch; /* Esto iguala las alturas */
-}
+      p {
+        font-family: Josefine-Sans, sans-serif;
+        text-align: justify;
+      }
 
+      .in-ul {
+        list-style: square;
+        list-style-position: inside;
+      }
 
-.section-title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700; /* Esto lo hace más "gordito" */
-    }
-  </style>
+      .in-li {
+        font-family: Josefine-Sans, sans-serif;
+        text-align: justify;
+      }
 
-</head>
+      .modal-card {
+        background-image: url("/Media/IMÁGENES_Y_LOGOTIPOS_COORDINACIONES/degradados/mujeres.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-<body class="scroll-smooth">
+      /* Custom responsive utilities */
+      @media (min-width: 1536px) {
+        .max-w-8xl {
+          max-width: 88rem;
+        }
+      }
 
-<!-- Logo fijo en esquina -->
-<div class="absolute top-0 left-0 z-50">
-  <a href="#inicio" class="block w-24 sm:w-32 md:w-48 lg:w-64 xl:w-80">
-    <img src="Media/LogoEsquina.png" 
-         alt="Logo DIF Saltillo" 
-         class="w-full h-auto cursor-pointer"
-         onclick="window.location.href='index.html'" />
-  </a>
-</div>
+      /* Fix for navbar height on mobile */
+      @media (max-width: 768px) {
+        .navbar {
+          min-height: auto;
+          padding: 0.5rem 1rem;
+        }
+      }
 
-  <!-- =================================================== -->
-  <!-- 1. N A V B A R                                      -->
-  <!-- =================================================== -->
-<header id="mainNav" class="navbar absolute inset-x-0 top-0 z-40 transition-all duration-300">
-  <div class="nav-overlay absolute inset-0"></div>
-  <div class="w-full px-8 relative z-10">
-    <div class="flex justify-end w-full">
+      /* Improved button hover effects */
+      .btn-ghost:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
 
+      /* Better text scaling */
+      .coord-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
 
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:flex flex-col items-end gap-3">
-          <nav class="flex gap-2 xl:gap-4 font-medium">
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="index.html#inicio">Inicio</a>
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
-              href="index.html#Programas">Programas Sociales</a>
+      .coord-desc {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+      }
 
-            <!-- Desktop Coordinaciones Dropdown -->
-            <div class="dropdown dropdown-hover dropdown-bottom">
-              <label tabindex="0" class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer">
-                Coordinaciones
-                <i class="fas fa-chevron-down ml-1 text-xs"></i>
-              </label>
-              <ul tabindex="0"
-                class="dropdown-content menu p-3 shadow-lg bg-white rounded-xl w-64 mt-0 border border-gray-200 z-[1000]">
-                <li><a href="coordinaciones/mujeres.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Mujeres</a>
-                </li>
-                <li><a href="coordinaciones/medica.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Médica</a>
-                </li>
-                <li><a href="coordinaciones/salud_mental.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Salud
-                    Mental</a></li>
-                <li><a href="coordinaciones/fortalecimiento.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Fortalecimiento
-                    Social</a></li>
-                <li><a href="coordinaciones/talleres.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Talleres</a>
-                </li>
-                <li><a href="coordinaciones/niñes.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Niños,
-                    Niñas y Adolescentes</a></li>
-                <li><a href="coordinaciones/personas_con_discapacidad.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Personas
-                    con Discapacidad</a></li>
-                <li><a href="coordinaciones/adultos_mayores.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Adultos
-                    Mayores</a></li>
-                <li><a href="coordinaciones/voluntariado.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Voluntariado</a>
-                </li>
-                <li><a href="coordinaciones/atencion_ciudadana.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Atención
-                    Ciudadana</a></li>
-                <li><a href="coordinaciones/asuntos_juridicos.html"
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Asuntos
-                    Jurídicos</a></li>
-              </ul>
-            </div>
+      .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
 
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4" href="index.html#blog">Blog</a>
-            
-            <a href="https://saltillo.gob.mx/transparencia-dif/"
-  class="nav-item btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer hover:bg-[#e20d7b] transition-colors">
-  Transparencia
-</a>
+      .submenu.active {
+        max-height: 500px;
+        transition: max-height 0.3s ease-in;
+      }
 
+      .submenu-item {
+        padding-left: 2rem;
+        border-left: 2px solid #f3f4f6;
+      }
 
-            <a class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
-              href="index.html#contacto">Contáctanos</a>
-          </nav>
+      .chevron {
+        transition: transform 0.3s ease;
+      }
 
-          <!-- Responsive white line -->
-          <div id="mainNav-wh_line" class="w-[90%] max-w-[1400px] border-t-2 ml-auto"></div>
+      .chevron.rotated {
+        transform: rotate(180deg);
+      }
 
-          <!-- Social media icons desktop -->
-          <div class="flex gap-3 xl:gap-4 mt-2 text-white text-xl xl:text-2xl">
-            <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-            </a>
-            <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram hover:scale-110 transition"></i>
-            </a>
-            <a href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1" target="_blank" aria-label="TikTok">
-              <i class="fab fa-tiktok hover:scale-110 transition"></i>
-            </a>
-            <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-              <i class="fab fa-x-twitter hover:scale-110 transition"></i>
-            </a>
-          </div>
-        </div>
+      /* Para que el formulario crezca lo necesario y no tenga scroll interno */
+      .contact-form {
+        max-height: none; /* Sin límite de alto */
+        overflow: visible; /* Nada de scroll interno */
+      }
 
-        <!-- Mobile menu button -->
-        <div class="lg:hidden">
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </label>
-            <ul tabindex="0"
-              class="menu menu-sm dropdown-content bg-white mt-3 p-4 shadow-lg rounded-xl w-64 z-[1000] border border-gray-200">
-              <li><a href="../index.html#inicio" onclick="closeMobileMenu()"
-                  class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Inicio</a>
-              </li>
-              <li>
-                <button onclick="toggleSubmenu('mobile-coordinaciones')"
-                  class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2">
+      /* Hacer que el mapa iguale el alto del formulario */
+      .contact-map {
+        height: 100%; /* Depende del contenedor padre */
+        min-height: auto; /* Evitar que quede más chico */
+      }
+
+      /* Si están en un grid o flex */
+      .contact-section {
+        display: flex;
+        align-items: stretch; /* Esto iguala las alturas */
+      }
+
+      .section-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700; /* Esto lo hace más "gordito" */
+      }
+    </style>
+  </head>
+
+  <body class="scroll-smooth">
+    <!-- Logo fijo en esquina -->
+    <div class="absolute top-0 left-0 z-50">
+      <a href="#inicio" class="block w-24 sm:w-32 md:w-48 lg:w-64 xl:w-80">
+        <img
+          src="Media/LogoEsquina.png"
+          alt="Logo DIF Saltillo"
+          class="w-full h-auto cursor-pointer"
+          onclick="window.location.href='index.html'"
+        />
+      </a>
+    </div>
+
+    <!-- =================================================== -->
+    <!-- 1. N A V B A R                                      -->
+    <!-- =================================================== -->
+    <header
+      id="mainNav"
+      class="navbar absolute inset-x-0 top-0 z-40 transition-all duration-300"
+    >
+      <div class="nav-overlay absolute inset-0"></div>
+      <div class="w-full px-8 relative z-10">
+        <div class="flex justify-end w-full">
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex flex-col items-end gap-3">
+            <nav class="flex gap-2 xl:gap-4 font-medium">
+              <a
+                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                href="index.html#inicio"
+                >Inicio</a
+              >
+              <a
+                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                href="index.html#Programas"
+                >Programas Sociales</a
+              >
+
+              <!-- Desktop Coordinaciones Dropdown -->
+              <div class="dropdown dropdown-hover dropdown-bottom">
+                <label
+                  tabindex="0"
+                  class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer"
+                >
                   Coordinaciones
-                  <i id="mobile-coordinaciones-chevron" class="fas fa-chevron-down text-xs chevron ml-2"></i>
-                </button>
-                <ul id="mobile-coordinaciones-submenu" class="submenu ml-2 mt-1 space-y-1">
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/mujeres.html">Mujeres</a>
+                  <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </label>
+                <ul
+                  tabindex="0"
+                  class="dropdown-content menu p-3 shadow-lg bg-white rounded-xl w-64 mt-0 border border-gray-200 z-[1000]"
+                >
+                  <li>
+                    <a
+                      href="coordinaciones/mujeres.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Mujeres</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/medica.html">Médica</a>
+                  <li>
+                    <a
+                      href="coordinaciones/medica.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Médica</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/salud_mental.html">Salud Mental</a>
+                  <li>
+                    <a
+                      href="coordinaciones/salud_mental.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Salud Mental</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/fortalecimiento.html">Fortalecimiento Social</a>
+                  <li>
+                    <a
+                      href="coordinaciones/fortalecimiento.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Fortalecimiento Social</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/talleres.html">Talleres</a>
+                  <li>
+                    <a
+                      href="coordinaciones/talleres.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Talleres</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/niñes.html">Niños, Niñas y Adolescentes</a>
+                  <li>
+                    <a
+                      href="coordinaciones/niñes.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Niños, Niñas y Adolescentes</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/personas_con_discapacidad.html">Personas con Discapacidad</a>
+                  <li>
+                    <a
+                      href="coordinaciones/personas_con_discapacidad.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Personas con Discapacidad</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/adultos_mayores.html">Adultos Mayores</a>
+                  <li>
+                    <a
+                      href="coordinaciones/adultos_mayores.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Adultos Mayores</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/voluntariado.html">Voluntariado</a>
+                  <li>
+                    <a
+                      href="coordinaciones/voluntariado.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Voluntariado</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/atencion_ciudadana.html">Atención Ciudadana</a>
+                  <li>
+                    <a
+                      href="coordinaciones/atencion_ciudadana.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Atención Ciudadana</a
+                    >
                   </li>
-                  <li
-                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item">
-                    <a href="coordinaciones/asuntos_juridicos.html">Asuntos Jurídicos</a>
+                  <li>
+                    <a
+                      href="coordinaciones/asuntos_juridicos.html"
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                      >Asuntos Jurídicos</a
+                    >
                   </li>
                 </ul>
-              </li>
+              </div>
 
-              <li><a href="index.html#programas" onclick="closeMobileMenu()"
-                  class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Programas</a>
-              </li>
-              <li><a href="index.html#blog" onclick="closeMobileMenu()"
-                  class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Blog</a>
-              </li>
-              <li><a href="https://saltillo.gob.mx/transparencia-dif/" onclick="closeMobileMenu()"
-                  class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Transparencia</a>
-              </li>
-              <li><a href="index.html#contacto" onclick="closeMobileMenu()"
-                  class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors">Contáctanos</a>
-              </li>
+              <a
+                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                href="index.html#blog"
+                >Blog</a
+              >
 
-              <!-- Separator line -->
-              <div class="divider my-3"></div>
+              <a
+                href="https://saltillo.gob.mx/transparencia-dif/"
+                class="nav-item btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4 cursor-pointer hover:bg-[#e20d7b] transition-colors"
+              >
+                Transparencia
+              </a>
 
-              <!-- Mobile social media icons -->
-              <li class="pointer-events-none">
-                <div class="flex justify-center gap-4 text-xl">
-                  <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank"
-                    aria-label="Facebook"
-                    class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram"
-                    class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="https://wa.me/5218441234567" target="_blank" aria-label="WhatsApp"
-                    class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                  <a href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1" target="_blank" aria-label="TikTok"
-                    class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
-                    <i class="fab fa-tiktok"></i>
-                  </a>
-                  <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X"
-                    class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto">
-                    <i class="fab fa-x-twitter"></i>
-                  </a>
-                </div>
-              </li>
-            </ul>
+              <a
+                class="btn btn-ghost text-white text-sm xl:text-base px-2 xl:px-4"
+                href="index.html#contacto"
+                >Contáctanos</a
+              >
+            </nav>
+
+            <!-- Responsive white line -->
+            <div
+              id="mainNav-wh_line"
+              class="w-[90%] max-w-[1400px] border-t-2 ml-auto"
+            ></div>
+
+            <!-- Social media icons desktop -->
+            <div
+              class="flex gap-3 xl:gap-4 mt-2 text-white text-xl xl:text-2xl"
+            >
+              <a
+                href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/dif_saltillo/?hl=es"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram hover:scale-110 transition"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1"
+                target="_blank"
+                aria-label="TikTok"
+              >
+                <i class="fab fa-tiktok hover:scale-110 transition"></i>
+              </a>
+              <a
+                href="https://x.com/dif_saltillo"
+                target="_blank"
+                aria-label="X"
+              >
+                <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="lg:hidden">
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-white mt-3 p-4 shadow-lg rounded-xl w-64 z-[1000] border border-gray-200"
+              >
+                <li>
+                  <a
+                    href="../index.html#inicio"
+                    onclick="closeMobileMenu()"
+                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <button
+                    onclick="toggleSubmenu('mobile-coordinaciones')"
+                    class="flex items-center justify-between w-full text-left text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors px-2 py-2"
+                  >
+                    Coordinaciones
+                    <i
+                      id="mobile-coordinaciones-chevron"
+                      class="fas fa-chevron-down text-xs chevron ml-2"
+                    ></i>
+                  </button>
+                  <ul
+                    id="mobile-coordinaciones-submenu"
+                    class="submenu ml-2 mt-1 space-y-1"
+                  >
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/mujeres.html">Mujeres</a>
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/medica.html">Médica</a>
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/salud_mental.html"
+                        >Salud Mental</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/fortalecimiento.html"
+                        >Fortalecimiento Social</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/talleres.html">Talleres</a>
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/niñes.html"
+                        >Niños, Niñas y Adolescentes</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/personas_con_discapacidad.html"
+                        >Personas con Discapacidad</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/adultos_mayores.html"
+                        >Adultos Mayores</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/voluntariado.html"
+                        >Voluntariado</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/atencion_ciudadana.html"
+                        >Atención Ciudadana</a
+                      >
+                    </li>
+                    <li
+                      class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item"
+                    >
+                      <a href="coordinaciones/asuntos_juridicos.html"
+                        >Asuntos Jurídicos</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a
+                    href="index.html#programas"
+                    onclick="closeMobileMenu()"
+                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                    >Programas</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="index.html#blog"
+                    onclick="closeMobileMenu()"
+                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://saltillo.gob.mx/transparencia-dif/"
+                    onclick="closeMobileMenu()"
+                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                    >Transparencia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="index.html#contacto"
+                    onclick="closeMobileMenu()"
+                    class="text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors"
+                    >Contáctanos</a
+                  >
+                </li>
+
+                <!-- Separator line -->
+                <div class="divider my-3"></div>
+
+                <!-- Mobile social media icons -->
+                <li class="pointer-events-none">
+                  <div class="flex justify-center gap-4 text-xl">
+                    <a
+                      href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA"
+                      target="_blank"
+                      aria-label="Facebook"
+                      class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/dif_saltillo/?hl=es"
+                      target="_blank"
+                      aria-label="Instagram"
+                      class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="https://wa.me/5218441234567"
+                      target="_blank"
+                      aria-label="WhatsApp"
+                      class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1"
+                      target="_blank"
+                      aria-label="TikTok"
+                      class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto"
+                    >
+                      <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a
+                      href="https://x.com/dif_saltillo"
+                      target="_blank"
+                      aria-label="X"
+                      class="text-[#e20d7b] hover:text-[#b8095f] hover:scale-110 transition-all duration-300 pointer-events-auto"
+                    >
+                      <i class="fab fa-x-twitter"></i>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- =================================================== -->
-  <!-- 2. B A N N E R / I N I C I O                        -->
-  <!-- =================================================== -->
-  <section id="inicio" class="relative">
-    <div class="w-full h-full h-[50vh] md:h-[60vh] lg:h-[100vh] relative overflow-hidden">
-            <!-- Banner 3 -->
-      <div class="carousel-item relative w-full h-full hidden">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel3.png" alt="Banner 3"
-          class="w-full h-full object-cover md:object-bottom"/>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+    <!-- =================================================== -->
+    <!-- 2. B A N N E R / I N I C I O                        -->
+    <!-- =================================================== -->
+    <section id="inicio" class="relative">
+      <div
+        class="w-full h-full h-[50vh] md:h-[60vh] lg:h-[100vh] relative overflow-hidden"
+      >
+        <!-- Banner 3 -->
+        <div class="carousel-item relative w-full h-full hidden">
+          <img
+            src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel3.png"
+            alt="Banner 3"
+            class="w-full h-full object-cover md:object-bottom"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+            <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+          </div>
+        </div>
+
+        <!-- Banner 1 -->
+        <div class="carousel-item relative w-full h-full">
+          <img
+            src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel.png"
+            alt="Banner 1"
+            class="w-full h-full object-cover md:object-bottom"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+            <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+          </div>
+        </div>
+        <!-- Banner 2 -->
+        <div class="carousel-item relative w-full h-full hidden">
+          <img
+            src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel2.png"
+            alt="Banner 2"
+            class="w-full h-full object-cover md:object-bottom"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+            <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+          </div>
+        </div>
+        <!-- Banner 4 -->
+        <div class="carousel-item relative w-full h-full hidden">
+          <img
+            src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel4.png"
+            alt="Banner 4"
+            class="w-full h-full object-cover md:object-bottom"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <button class="btn btn-circle" onclick="prevSlide()">❮</button>
+            <button class="btn btn-circle" onclick="nextSlide()">❯</button>
+          </div>
         </div>
       </div>
-      
-      <!-- Banner 1 -->
-      <div class="carousel-item relative w-full h-full">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel.png" alt="Banner 1" class="w-full h-full object-cover md:object-bottom" />
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
-        </div>
-      </div>
-      <!-- Banner 2 -->
-      <div class="carousel-item relative w-full h-full hidden">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel2.png" alt="Banner 2"
-          class="w-full h-full object-cover md:object-bottom"/>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
-        </div>
-      </div>
-      <!-- Banner 4 -->
-      <div class="carousel-item relative w-full h-full hidden">
-        <img src="Media/IMÁGENES_BANNER_CARRUSEL_HOME/BannerCarrusel4.png" alt="Banner 4"
-          class="w-full h-full object-cover md:object-bottom"/>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <button class="btn btn-circle" onclick="prevSlide()">❮</button>
-          <button class="btn btn-circle" onclick="nextSlide()">❯</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    let bannerIndex = 0;
-    const slides = document.querySelectorAll('#inicio .carousel-item');
-    const totalSlides = slides.length;
+    <script>
+      let bannerIndex = 0;
+      const slides = document.querySelectorAll("#inicio .carousel-item");
+      const totalSlides = slides.length;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('hidden', i !== index);
-      });
-    }
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("hidden", i !== index);
+        });
+      }
 
-    function nextSlide() {
-      bannerIndex = (bannerIndex + 1) % totalSlides;
+      function nextSlide() {
+        bannerIndex = (bannerIndex + 1) % totalSlides;
+        showSlide(bannerIndex);
+      }
+
+      function prevSlide() {
+        bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
+        showSlide(bannerIndex);
+      }
+
+      setInterval(nextSlide, 4000);
       showSlide(bannerIndex);
-    }
+    </script>
 
-    function prevSlide() {
-      bannerIndex = (bannerIndex - 1 + totalSlides) % totalSlides;
-      showSlide(bannerIndex);
-    }
+    <div class="main-bg-gradient">
+      <main>
+        <!-- =================================================== -->
+        <!-- 3. C O O R D I N A C I O N E S                      -->
+        <!-- =================================================== -->
+        <section
+          id="coordinaciones"
+          class="py-14 px-4 w-9/10 max-w-7xl mx-auto"
+        >
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl text-center mb-10 text-primary section-title"
+          >
+            Conoce nuestras Coordinaciones
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/mujeres.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Mujeres.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/medica.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Medica.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/salud_mental.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/SaludMental.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/fortalecimiento.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Fortalecimiento.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/talleres.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Talleres.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/niñes.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Niños.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/personas_con_discapacidad.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Discapacidad.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/adultos_mayores.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/AdultoMayor.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/voluntariado.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Voluntariado.png&quot;);
+                "
+              ></div>
+            </div>
+            <div
+              class="coord-block"
+              onclick="window.location.href='coordinaciones/asuntos_juridicos.html'"
+            >
+              <div
+                class="coord-block-img"
+                style="
+                  background-image: url(&quot;Media/COORDINACIONES/Juridico.png&quot;);
+                "
+              ></div>
+            </div>
+          </div>
+        </section>
+        <!-- Scale Effect -->
+        <style>
+          .coord-block {
+            overflow: hidden;
+          }
 
-    setInterval(nextSlide, 4000);
-    showSlide(bannerIndex);
-  </script>
+          .coord-block-img {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease-in-out;
+          }
 
+          .coord-block:hover .coord-block-img {
+            transform: scale(1.06) translateY(-2px);
+          }
+        </style>
+        <!-- ========== MODALES DE COORDINACIONES ========== -->
+        <template id="coordModalTemplate">
+          <input type="checkbox" class="modal-toggle dynamic-toggle" />
+          <div class="modal">
+            <div class="modal-box max-w-2xl">
+              <h3 class="font-bold text-lg mb-4 modal-title"></h3>
+              <img
+                class="rounded mb-4 modal-img"
+                src=""
+                alt="Imagen coordinación"
+              />
+              <p class="modal-text mb-4"></p>
+              <div class="modal-action">
+                <label class="btn close-btn">Cerrar</label>
+              </div>
+            </div>
+            <label class="modal-backdrop close-btn"></label>
+          </div>
+        </template>
 
-   <div class="main-bg-gradient">
-    
-    <main>
+        <script>
+          const coordInfo = [
+            {
+              id: "modal1",
+              title: "Coordinación de Mujeres",
+              img: "Media/IMÁGENES_COORDINACIONES/Mujeres.png",
+              text: "Programas de prevención y apoyo.",
+            },
+            {
+              id: "modal2",
+              title: "Coordinación Médica",
+              img: "Media/IMÁGENES_COORDINACIONES/Medica.png",
+              text: "Servicios de salud accesibles.",
+            },
+            {
+              id: "modal3",
+              title: "Coordinación de Salud Mental",
+              img: "Media/IMÁGENES_COORDINACIONES/Salud_Mental.png",
+              text: "Apoyo psicológico gratuito.",
+            },
+            {
+              id: "modal4",
+              title: "Coordinación de Fortalecimiento Social",
+              img: "Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png",
+              text: "Programas comunitarios.",
+            },
+            {
+              id: "modal5",
+              title: "Coordinación de Talleres",
+              img: "Media/IMÁGENES_COORDINACIONES/Talleres.png",
+              text: "Talleres de oficios.",
+            },
+            {
+              id: "modal6",
+              title: "Coordinación de Niñas, Niños y Adolescentes",
+              img: "Media/IMÁGENES_COORDINACIONES/Niñes.png",
+              text: "Protección de la infancia.",
+            },
+            {
+              id: "modal7",
+              title: "Coordinación de Discapacidad",
+              img: "Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png",
+              text: "Rehabilitación y apoyos.",
+            },
+            {
+              id: "modal8",
+              title: "Coordinación de Adultos Mayores",
+              img: "Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png",
+              text: "Envejecimiento activo.",
+            },
+            {
+              id: "modal9",
+              title: "Coordinación de Voluntariado",
+              img: "Media/IMÁGENES_COORDINACIONES/Voluntariado.png",
+              text: "Sumamos corazones.",
+            },
+            {
+              id: "modal10",
+              title: "Coordinación de Centros Comunitarios",
+              img: "Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png",
+              text: "Espacios de atención cercana.",
+            },
+          ];
+          coordInfo.forEach((info) => {
+            const tpl = document
+              .getElementById("coordModalTemplate")
+              .content.cloneNode(true);
+            tpl.querySelector(".modal-toggle").id = info.id;
+            tpl.querySelector(".modal-title").textContent = info.title;
+            tpl.querySelector(".modal-img").src = info.img;
+            tpl.querySelector(".modal-text").textContent = info.text;
+            tpl
+              .querySelectorAll(".close-btn")
+              .forEach((btn) => btn.setAttribute("for", info.id));
+            document.body.appendChild(tpl);
+          });
+          window.openModal = (id) =>
+            (document.getElementById(id).checked = true);
+          // cierre al click fuera
+          addEventListener("click", (e) => {
+            document.querySelectorAll(".dynamic-toggle").forEach((t) => {
+              const box = t.nextElementSibling.querySelector(".modal-box");
+              if (
+                t.checked &&
+                !box.contains(e.target) &&
+                !e.target.closest(".coord-block")
+              )
+                t.checked = false;
+            });
+          });
+        </script>
+        <!-- =================================================== -->
+        <!-- 4. P R O G R A M A S -->
+        <!-- =================================================== -->
+        <section
+          id="Programas"
+          class="relative w-full overflow-hidden p-4 max-w-[1100px] mx-auto"
+        >
+          <h4
+            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-10 text-primary section-title"
+          >
+            <i>Estamos más cerca de ti a través de</i>
+          </h4>
+          <div
+            class="carousel-container relative overflow-hidden"
+            style="aspect-ratio: 16 / 9"
+          >
+            <div
+              class="carousel-slide flex transition-transform duration-700 ease-in-out h-full"
+            >
+              <!-- Slide 1 -->
+              <div
+                class="relative w-full flex-shrink-0 h-full cursor-pointer group"
+                data-id="programa1"
+              >
+                <img
+                  src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png"
+                  alt="Espacios DIF"
+                  class="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
+                />
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 mb-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+                    />
+                  </svg>
+                  <span class="text-sm font-medium">Ver más</span>
+                </div>
+              </div>
 
-  <!-- =================================================== -->
-  <!-- 3. C O O R D I N A C I O N E S                      -->
-  <!-- =================================================== -->
-  <section id="coordinaciones" class="py-14 px-4 w-9/10 max-w-7xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-10 text-primary section-title">
-  Conoce nuestras Coordinaciones
-</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
-      <div class="coord-block" onclick="window.location.href='coordinaciones/mujeres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Mujeres.png');"></div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/medica.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Medica.png');"></div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/salud_mental.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/SaludMental.png');">
-        </div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/fortalecimiento.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Fortalecimiento.png');">
-        </div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/talleres.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Talleres.png');"></div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/niñes.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Niños.png');"></div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/personas_con_discapacidad.html'">
-        <div class="coord-block-img"
-          style="background-image:url('Media/COORDINACIONES/Discapacidad.png');"></div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/adultos_mayores.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/AdultoMayor.png');">
-        </div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/voluntariado.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Voluntariado.png');">
-        </div>
-      </div>
-      <div class="coord-block" onclick="window.location.href='coordinaciones/asuntos_juridicos.html'">
-        <div class="coord-block-img" style="background-image:url('Media/COORDINACIONES/Juridico.png');">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Scale Effect -->
-  <style>
-    .coord-block {
-      overflow: hidden;
-    }
+              <!-- Slide 2 -->
+              <div
+                class="relative w-full flex-shrink-0 h-full cursor-pointer group"
+                data-id="programa2"
+              >
+                <img
+                  src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png"
+                  alt="Amor En Movimiento"
+                  class="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
+                />
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 mb-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+                    />
+                  </svg>
+                  <span class="text-sm font-medium">Ver más</span>
+                </div>
+              </div>
 
-    .coord-block-img {
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease-in-out;
-    }
+              <!-- Slide 3 -->
+              <div
+                class="relative w-full flex-shrink-0 h-full cursor-pointer group"
+                data-id="programa3"
+              >
+                <img
+                  src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png"
+                  alt="TEAcompaño Con Amor"
+                  class="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
+                />
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 mb-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+                    />
+                  </svg>
+                  <span class="text-sm font-medium">Ver más</span>
+                </div>
+              </div>
 
-    .coord-block:hover .coord-block-img {
-      transform: scale(1.06) translateY(-2px);
-    }
-  </style>
-  <!-- ========== MODALES DE COORDINACIONES ========== -->
-  <template id="coordModalTemplate">
-    <input type="checkbox" class="modal-toggle dynamic-toggle" />
-    <div class="modal">
-      <div class="modal-box max-w-2xl">
-        <h3 class="font-bold text-lg mb-4 modal-title"></h3><img class="rounded mb-4 modal-img" src=""
-          alt="Imagen coordinación" />
-        <p class="modal-text mb-4"></p>
-        <div class="modal-action"><label class="btn close-btn">Cerrar</label></div>
-      </div><label class="modal-backdrop close-btn"></label>
-    </div>
-  </template>
-
-  <script>
-    const coordInfo = [
-      { id: 'modal1', title: 'Coordinación de Mujeres', img: 'Media/IMÁGENES_COORDINACIONES/Mujeres.png', text: 'Programas de prevención y apoyo.' },
-      { id: 'modal2', title: 'Coordinación Médica', img: 'Media/IMÁGENES_COORDINACIONES/Medica.png', text: 'Servicios de salud accesibles.' },
-      { id: 'modal3', title: 'Coordinación de Salud Mental', img: 'Media/IMÁGENES_COORDINACIONES/Salud_Mental.png', text: 'Apoyo psicológico gratuito.' },
-      { id: 'modal4', title: 'Coordinación de Fortalecimiento Social', img: 'Media/IMÁGENES_COORDINACIONES/Fortalecimiento.png', text: 'Programas comunitarios.' },
-      { id: 'modal5', title: 'Coordinación de Talleres', img: 'Media/IMÁGENES_COORDINACIONES/Talleres.png', text: 'Talleres de oficios.' },
-      { id: 'modal6', title: 'Coordinación de Niñas, Niños y Adolescentes', img: 'Media/IMÁGENES_COORDINACIONES/Niñes.png', text: 'Protección de la infancia.' },
-      { id: 'modal7', title: 'Coordinación de Discapacidad', img: 'Media/IMÁGENES_COORDINACIONES/Personas_con_discapacidad.png', text: 'Rehabilitación y apoyos.' },
-      { id: 'modal8', title: 'Coordinación de Adultos Mayores', img: 'Media/IMÁGENES_COORDINACIONES/Adultos_Mayores.png', text: 'Envejecimiento activo.' },
-      { id: 'modal9', title: 'Coordinación de Voluntariado', img: 'Media/IMÁGENES_COORDINACIONES/Voluntariado.png', text: 'Sumamos corazones.' },
-      { id: 'modal10', title: 'Coordinación de Centros Comunitarios', img: 'Media/IMÁGENES_COORDINACIONES/Centros_comunitarios.png', text: 'Espacios de atención cercana.' }
-    ];
-    coordInfo.forEach(info => {
-      const tpl = document.getElementById('coordModalTemplate').content.cloneNode(true);
-      tpl.querySelector('.modal-toggle').id = info.id;
-      tpl.querySelector('.modal-title').textContent = info.title;
-      tpl.querySelector('.modal-img').src = info.img;
-      tpl.querySelector('.modal-text').textContent = info.text;
-      tpl.querySelectorAll('.close-btn').forEach(btn => btn.setAttribute('for', info.id));
-      document.body.appendChild(tpl);
-    });
-    window.openModal = id => document.getElementById(id).checked = true;
-    // cierre al click fuera
-    addEventListener('click', e => {
-      document.querySelectorAll('.dynamic-toggle').forEach(t => {
-        const box = t.nextElementSibling.querySelector('.modal-box');
-        if (t.checked && !box.contains(e.target) && !e.target.closest('.coord-block')) t.checked = false;
-      });
-    });
-  </script>
-<!-- =================================================== -->
-<!-- 4. P R O G R A M A S -->
-<!-- =================================================== -->
-<section id="Programas" class="relative w-full overflow-hidden p-4 max-w-[1100px] mx-auto">
-  <h4 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center mb-10 text-primary section-title">
-  <i>Estamos más cerca de ti a través de</i>
-</h4>
-  <div class="carousel-container relative overflow-hidden"
-    style="aspect-ratio: 16 / 9;">
-    <div class="carousel-slide flex transition-transform duration-700 ease-in-out h-full">
-      
-      <!-- Slide 1 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa1">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png" alt="Espacios DIF"
-          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
-        <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-          <span class="text-sm font-medium">Ver más</span>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa2">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png" alt="Amor En Movimiento"
-          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
-        <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-          <span class="text-sm font-medium">Ver más</span>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa3">
-        <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png" alt="TEAcompaño Con Amor"
-          class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
-        <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-          <span class="text-sm font-medium">Ver más</span>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <!-- <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa4">
+              <!-- Slide 4 -->
+              <!-- <div class="relative w-full flex-shrink-0 h-full cursor-pointer group" data-id="programa4">
         <img src="Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png" alt="Centro Internacional de los Grandes" class="w-full h-full object-cover transition duration-300 group-hover:brightness-75" />
         <div class="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -672,96 +1076,114 @@
           <span class="text-sm font-medium">Ver más</span>
         </div> 
       </div> -->
+            </div>
 
-    </div> 
-  
+            <!-- Flechas -->
+            <button
+              id="prevBtn"
+              aria-label="Previous Slide"
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20"
+            >
+              ❮
+            </button>
+            <button
+              id="nextBtn"
+              aria-label="Next Slide"
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20"
+            >
+              ❯
+            </button>
+          </div>
+        </section>
 
-    <!-- Flechas -->
-    <button id="prevBtn" aria-label="Previous Slide"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
-      ❮
-    </button>
-    <button id="nextBtn" aria-label="Next Slide"
-      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white rounded-full w-10 h-10 flex justify-center items-center z-20">
-      ❯
-    </button>
-  </div>
-</section>
+        <!-- MODAL -->
+        <div
+          id="modal"
+          class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50"
+        >
+          <div
+            class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto in-li"
+          >
+            <button
+              id="modalClose"
+              class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none"
+            >
+              &times;
+            </button>
+            <!-- <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3> -->
+            <img
+              id="modalImg"
+              src=""
+              alt="Programa"
+              class="rounded mb-4 w-full max-h-30 object-contain"
+            />
+            <div
+              id="modalText"
+              class="text-gray-700 whitespace-pre-line text-base leading-tight max-w-3xl text-justify"
+            ></div>
+          </div>
+        </div>
 
-<!-- MODAL -->
-<div id="modal"
-  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
-  <div class="bg-white rounded-lg shadow-lg max-w-3xl p-6 relative mx-4 max-h-[90vh] overflow-y-auto in-li">
-    <button id="modalClose"
-      class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
-    <!-- <h3 id="modalTitle" class="font-bold text-xl mb-4"></h3> -->
-    <img id="modalImg" src="" alt="Programa" class="rounded mb-4 w-full max-h-30 object-contain" />
-    <div id="modalText" class="text-gray-700 whitespace-pre-line text-base leading-tight max-w-3xl text-justify"></div>
-  </div>
-</div>
+        <script>
+          (() => {
+            const slideContainer = document.querySelector(".carousel-slide");
+            const slides = document.querySelectorAll(".carousel-slide > div");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let counter = 0;
 
+            function updateSlide() {
+              slideContainer.style.transform = `translateX(${-counter * 100}%)`;
+            }
 
+            prevBtn.addEventListener("click", () => {
+              counter = counter === 0 ? slides.length - 1 : counter - 1;
+              updateSlide();
+            });
 
-  <script>
-    (() => {
-      const slideContainer = document.querySelector('.carousel-slide');
-      const slides = document.querySelectorAll('.carousel-slide > div');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      let counter = 0;
+            nextBtn.addEventListener("click", () => {
+              counter = counter === slides.length - 1 ? 0 : counter + 1;
+              updateSlide();
+            });
 
-      function updateSlide() {
-        slideContainer.style.transform = `translateX(${-counter * 100}%)`;
-      }
+            // Auto slide cada 5 segundos
+            let slideInterval = setInterval(() => {
+              counter = counter === slides.length - 1 ? 0 : counter + 1;
+              updateSlide();
+            }, 7000);
 
-      prevBtn.addEventListener('click', () => {
-        counter = (counter === 0) ? slides.length - 1 : counter - 1;
-        updateSlide();
-      });
+            // Pausar y reiniciar auto slide al usar flechas
+            [prevBtn, nextBtn].forEach((btn) => {
+              btn.addEventListener("click", () => {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(() => {
+                  counter = counter === slides.length - 1 ? 0 : counter + 1;
+                  updateSlide();
+                }, 5000);
+              });
+            });
 
-      nextBtn.addEventListener('click', () => {
-        counter = (counter === slides.length - 1) ? 0 : counter + 1;
-        updateSlide();
-      });
+            // Modal elements
+            const modal = document.getElementById("modal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalImg = document.getElementById("modalImg");
+            const modalText = document.getElementById("modalText");
+            const modalClose = document.getElementById("modalClose");
 
-      // Auto slide cada 5 segundos
-      let slideInterval = setInterval(() => {
-        counter = (counter === slides.length - 1) ? 0 : counter + 1;
-        updateSlide();
-      }, 7000);
-
-      // Pausar y reiniciar auto slide al usar flechas
-      [prevBtn, nextBtn].forEach(btn => {
-        btn.addEventListener('click', () => {
-          clearInterval(slideInterval);
-          slideInterval = setInterval(() => {
-            counter = (counter === slides.length - 1) ? 0 : counter + 1;
-            updateSlide();
-          }, 5000);
-        });
-      });
-
-      // Modal elements
-      const modal = document.getElementById('modal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalImg = document.getElementById('modalImg');
-      const modalText = document.getElementById('modalText');
-      const modalClose = document.getElementById('modalClose');
-
-      const programInfo = [
-        {
-          id: 'programa1',
-          // title: 'Espacios DIF',
-          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png',
-          text: `Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br>
+            const programInfo = [
+              {
+                id: "programa1",
+                // title: 'Espacios DIF',
+                img: "Media/IMÁGENES_PROGRAMAS_INSIGNIA/Espacios_DIF.png",
+                text: `Acercar los servicios del DIF Saltillo a las colonias y comunidades, construyendo espacios fijos donde se brinde atención médica y psicológica gratuita.<br>
         Espacios DIF es una apuesta transformadora: llevar el DIF más cerca de quienes más lo necesitan. A través de la construcción de puntos de atención dignos, seguros y comunitarios en distintas zonas de Saltillo, buscamos eliminar barreras geográficas y sociales para el acceso a la salud y el bienestar.<br>
-        Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`
-        },
-        {
-          id: 'programa2',
-          // title: 'Amor En Movimiento',
-          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png',
-          text: `Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br>
+        Cada Espacio DIF ofrecerá servicios gratuitos de atención médica y psicológica para niñas, niños, personas mayores y familias. Será un lugar donde la gente pueda sentirse escuchada, atendida y apoyada.`,
+              },
+              {
+                id: "programa2",
+                // title: 'Amor En Movimiento',
+                img: "Media/IMÁGENES_PROGRAMAS_INSIGNIA/Amor_en_movimiento.png",
+                text: `Brindar servicios de salud especializados y gratuitos a las colonias y comunidades de Saltillo mediante una unidad móvil equipada y con personal profesional.<br>
         Amor en Movimiento: Unidad Móvil de Salud recorre las calles de Saltillo para llevar salud gratuita, humana y cercana. A bordo viajan médicos, dentistas, optometristas y especialistas que brindan servicios gratuitos como:<br>
         <ul  style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
           <li>Atención médica general</li>
@@ -770,13 +1192,13 @@
           <li>Optometría y entrega de lentes</li>
           <li>Tamizaje de glucosa</li>
         </ul>
-        Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`
-        },
-        {
-          id: 'programa3',
-          // title: 'TEAcompaño Con Amor',
-          img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png',
-          text: `Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br>
+        Este proyecto está pensado para quienes no pueden trasladarse, para quienes han postergado su salud por falta de recursos, y para quienes necesitan saber que alguien se preocupa por ellos. En Amor en Movimiento, cada visita es un acto de cuidado.`,
+              },
+              {
+                id: "programa3",
+                // title: 'TEAcompaño Con Amor',
+                img: "Media/IMÁGENES_PROGRAMAS_INSIGNIA/TEAcompanio.png",
+                text: `Ofrecer acompañamiento integral, especializado y accesible a niñas y niños con Trastorno del Espectro Autista (TEA), y orientación cercana a sus familias y entornos.<br>
         TEAcompaño Con Amor es un proyecto pionero en Saltillo: el primer centro de atención del gobierno municipal pensado exclusivamente para niñas y niños con autismo, accesible y diseñado con perspectiva de inclusión.<br>
         Aquí se brindan:
         <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
@@ -785,376 +1207,485 @@
           <li>Asesoría para madres, padres y cuidadores</li>
           <li>Acompañamiento directo a escuelas para promover la integración escolar</li>
         </ul>
-        TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`
-        }
-        // ,{
-        // id: 'programa4',
-        // img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
-        // text: `Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br>
-        // El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br>
-        // Este proyecto contempla:
-        // <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
-        //   <li>Áreas para la salud preventiva</li>
-        //   <li>Talleres formativos</li>
-        //   <li>Actividades recreativas</li>
-        //    <li>Atención psicológica</li>
-        //    <li>Espacios de encuentro entre generaciones</li>
-        //  </ul>
-        // Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br>
-        // Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
-        // }
-      ];
+        TEAcompaño promueve una visión profesional y un enfoque humano: cada familia es acogida, orientada y acompañada.`,
+              },
+              // ,{
+              // id: 'programa4',
+              // img: 'Media/IMÁGENES_PROGRAMAS_INSIGNIA/Centro_de_los_grandes.png',
+              // text: `Crear un espacio de convivencia activa, formación, atención y encuentro entre personas mayores y nuevas generaciones.<br>
+              // El Centro Intergeneracional de los Grandes será un espacio sin precedentes en Saltillo: un lugar donde las personas mayores reciben atención, aportan, enseñan, comparten y conviven.<br>
+              // Este proyecto contempla:
+              // <ul style="list-style:disc inside; margin:0; padding-left:1.1rem; line-height:0.75; style="margin:0 0 0.5rem 0;">
+              //   <li>Áreas para la salud preventiva</li>
+              //   <li>Talleres formativos</li>
+              //   <li>Actividades recreativas</li>
+              //    <li>Atención psicológica</li>
+              //    <li>Espacios de encuentro entre generaciones</li>
+              //  </ul>
+              // Se busca que niñas, niños y adolescentes participen junto a las personas mayores en dinámicas que fortalezcan los lazos comunitarios, el respeto y el aprendizaje mutuo.<br>
+              // Este será un centro vivo, donde envejecer se celebre y se valore la experiencia. Porque en Saltillo, las personas mayores son los grandes de nuestra historia.`
+              // }
+            ];
 
-      // Abre modal al hacer click en la imagen
-      slideContainer.addEventListener('click', (e) => {
-        let target = e.target;
-        // En caso de click en contenedor div y no en img
-        if (!target.dataset.id) {
-          target = target.closest('[data-id]');
-        }
-        if (target && target.dataset.id) {
-          openModal(target.dataset.id);
-        }
-      });
+            // Abre modal al hacer click en la imagen
+            slideContainer.addEventListener("click", (e) => {
+              let target = e.target;
+              // En caso de click en contenedor div y no en img
+              if (!target.dataset.id) {
+                target = target.closest("[data-id]");
+              }
+              if (target && target.dataset.id) {
+                openModal(target.dataset.id);
+              }
+            });
 
-      window.openModal = function (id) {
-        const programa = programInfo.find(p => p.id === id);
-        if (!programa) return;
-        // modalTitle.innerHTML = programa.title;
-        modalImg.src = programa.img;
-        modalImg.alt = programa.title;
-        modalText.innerHTML = programa.text;
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
+            window.openModal = function (id) {
+              const programa = programInfo.find((p) => p.id === id);
+              if (!programa) return;
+              // modalTitle.innerHTML = programa.title;
+              modalImg.src = programa.img;
+              modalImg.alt = programa.title;
+              modalText.innerHTML = programa.text;
+              modal.classList.remove("opacity-0", "pointer-events-none");
+              modal.classList.add("opacity-100");
 
-        // Bloquear scroll
-        document.body.style.overflow = 'hidden';
-      };
+              // Bloquear scroll
+              document.body.style.overflow = "hidden";
+            };
 
-      modalClose.addEventListener('click', () => {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
+            modalClose.addEventListener("click", () => {
+              modal.classList.add("opacity-0", "pointer-events-none");
+              modal.classList.remove("opacity-100");
 
-        // Liberar scroll
-        document.body.style.overflow = '';
-      });
+              // Liberar scroll
+              document.body.style.overflow = "";
+            });
 
-      modal.addEventListener('click', e => {
-        if (e.target === modal) {
-          modal.classList.add('opacity-0', 'pointer-events-none');
-          modal.classList.remove('opacity-100');
+            modal.addEventListener("click", (e) => {
+              if (e.target === modal) {
+                modal.classList.add("opacity-0", "pointer-events-none");
+                modal.classList.remove("opacity-100");
 
-          // Liberar scroll
-          document.body.style.overflow = '';
-        }
-      });
+                // Liberar scroll
+                document.body.style.overflow = "";
+              }
+            });
+          })();
+        </script>
 
-    })();
+        <!-- =================================================== -->
+        <!-- 4.5 ¿ Q U I É N E S   S O M O S ? (solo imágenes sobre gradient) -->
+        <!-- =================================================== -->
+        <section
+          id="quienes-somos"
+          class="py-20 bg-gradient-to-b from-gray-50 to-gray-100"
+        >
+          <div class="flex flex-col gap-4">
+            <!-- Imagen 1: Somos (derecha) -->
+            <div class="flex justify-end">
+              <img
+                src="Media/quienes/Somos.png"
+                alt="Somos"
+                class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+              />
+            </div>
 
-  </script>
+            <!-- Imagen 2: Misión (izquierda) -->
+            <div class="flex justify-start">
+              <img
+                src="Media/quienes/Mision.png"
+                alt="Misión"
+                class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+              />
+            </div>
 
-<!-- =================================================== -->
-<!-- 4.5 ¿ Q U I É N E S   S O M O S ? (solo imágenes sobre gradient) -->
-<!-- =================================================== -->
-<section id="quienes-somos" class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-  <div class="flex flex-col gap-4">
+            <!-- Imagen 3: Visión (derecha) -->
+            <div class="flex justify-end">
+              <img
+                src="Media/quienes/Vision.png"
+                alt="Visión"
+                class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+              />
+            </div>
 
-    <!-- Imagen 1: Somos (derecha) -->
-    <div class="flex justify-end">
-      <img src="Media/quienes/Somos.png" alt="Somos"
-           class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]">
-    </div>
+            <!-- Imagen 4: Política (izquierda) -->
+            <div class="flex justify-start">
+              <img
+                src="Media/quienes/Politica.png"
+                alt="Política"
+                class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+              />
+            </div>
+          </div>
+        </section>
 
-    <!-- Imagen 2: Misión (izquierda) -->
-    <div class="flex justify-start">
-      <img src="Media/quienes/Mision.png" alt="Misión"
-           class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]">
-    </div>
+        <!-- =================================================== -->
+        <!-- 5. B L O G (Coverflow corregido)                    -->
+        <!-- =================================================== -->
+        <section id="blog" class="py-32 px-4 max-w-7xl mx-auto">
+          <div class="relative min-h-[700px] flex items-center justify-center">
+            <!-- 🔹 Versión Coverflow (solo desktop) -->
+            <div
+              id="blogCarousel"
+              class="hidden md:flex justify-center items-center relative perspective-[1200px] w-full"
+            >
+              <!-- Tarjeta 1 -->
+              <div
+                class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden"
+              >
+                <div class="header-blog text-center py-4 hidden">
+                  <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+                </div>
+                <!-- Imagen -->
+                <img
+                  src="Media/BLOGS/Alimentos.JPG"
+                  alt="Alimentos del corazón"
+                  class="w-full h-[250px] object-cover"
+                />
+                <!-- Contenido -->
+                <div class="p-6 text-center">
+                  <h4 class="text-xl font-bold text-[#e20d7b] mb-4">
+                    Alimentos del corazón
+                  </h4>
+                  <a
+                    href="blog/blogs.html"
+                    class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+                  >
+                    LEER MÁS
+                  </a>
+                </div>
+              </div>
 
-    <!-- Imagen 3: Visión (derecha) -->
-    <div class="flex justify-end">
-      <img src="Media/quienes/Vision.png" alt="Visión"
-           class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]">
-    </div>
+              <!-- Tarjeta 2 -->
+              <div
+                class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden"
+              >
+                <div class="header-blog text-center py-4 hidden">
+                  <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+                </div>
+                <!-- Imagen -->
+                <img
+                  src="Media/BLOGS/Apoyos.JPG"
+                  alt="Entrada 2"
+                  class="w-full h-[250px] object-cover"
+                />
+                <!-- Contenido -->
+                <div class="p-6 text-center">
+                  <h4 class="text-xl font-bold text-[#e20d7b] mb-4">
+                    Apoyos de corazón
+                  </h4>
+                  <a
+                    href="blog/blogs.html"
+                    class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+                  >
+                    LEER MÁS
+                  </a>
+                </div>
+              </div>
 
-    <!-- Imagen 4: Política (izquierda) -->
-    <div class="flex justify-start">
-      <img src="Media/quienes/Politica.png" alt="Política"
-           class="inline-block w-full sm:w-4/5 md:w-3/4 lg:w-5/6 transition-transform duration-500 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]">
-    </div>
+              <!-- Tarjeta 3 -->
+              <div
+                class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden"
+              >
+                <div class="header-blog text-center py-4 hidden">
+                  <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+                </div>
+                <!-- Imagen -->
+                <img
+                  src="Media/BLOGS/Jornada.jpg"
+                  alt="Entrada 3"
+                  class="w-full h-[250px] object-cover"
+                />
+                <!-- Contenido -->
+                <div class="p-6 text-center">
+                  <h4 class="text-xl font-bold text-[#e20d7b] mb-4">
+                    Jornada y día del niño
+                  </h4>
+                  <a
+                    href="blog/blogs.html"
+                    class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+                  >
+                    LEER MÁS
+                  </a>
+                </div>
+              </div>
+            </div>
 
-  </div>
-</section>
+            <!-- Flechas (solo desktop) -->
+            <button
+              id="prevBlog"
+              class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition"
+            >
+              ❮
+            </button>
+            <button
+              id="nextBlog"
+              class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition"
+            >
+              ❯
+            </button>
 
+            <!-- 🔹 Versión simple (solo móvil) -->
+            <div
+              class="block md:hidden w-[70vw] bg-white rounded-3xl shadow-xl overflow-hidden"
+            >
+              <div class="text-center py-4">
+                <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
+              </div>
+              <div
+                class="bg-gray-200 w-full h-[200px] flex items-center justify-center"
+              >
+                <span class="text-gray-500">
+                  <img
+                    src="Media/BLOGS/Alimentos.JPG"
+                    alt="Alimentos del corazón"
+                    class="w-full h-[200px] object-cover"
+                /></span>
+              </div>
+              <div class="p-6 text-center">
+                <h4 class="text-lg font-bold text-[#e20d7b] mb-4">
+                  Alimentos del corazón
+                </h4>
+                <a
+                  href="blog/blogs.html"
+                  class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition"
+                >
+                  LEER MÁS
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <script>
+          const cards = document.querySelectorAll("#blogCarousel .blog-card");
+          let activeIndex = 0;
 
-<!-- =================================================== -->
-<!-- 5. B L O G (Coverflow corregido)                    -->
-<!-- =================================================== -->
-<section id="blog" class="py-32 px-4 max-w-7xl mx-auto">
-  <div class="relative min-h-[700px] flex items-center justify-center">
-    
-    <!-- 🔹 Versión Coverflow (solo desktop) -->
-    <div id="blogCarousel" class="hidden md:flex justify-center items-center relative perspective-[1200px] w-full">
-      
-<!-- Tarjeta 1 -->
-<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
-  <div class="header-blog text-center py-4 hidden">
-    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
-  </div>
-  <!-- Imagen -->
-  <img src="Media/BLOGS/Alimentos.JPG" alt="Alimentos del corazón" class="w-full h-[250px] object-cover">
-  <!-- Contenido -->
-  <div class="p-6 text-center">
-    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Alimentos del corazón</h4>
-    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
-      LEER MÁS
-    </a>
-  </div>
-</div>
+          function updateBlogCarousel() {
+            cards.forEach((card, i) => {
+              const offset = i - activeIndex;
+              const header = card.querySelector(".header-blog");
 
-<!-- Tarjeta 2 -->
-<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
-  <div class="header-blog text-center py-4 hidden">
-    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
-  </div>
-  <!-- Imagen -->
-  <img src="Media/BLOGS/Apoyos.JPG" alt="Entrada 2" class="w-full h-[250px] object-cover">
-  <!-- Contenido -->
-  <div class="p-6 text-center">
-    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Apoyos de corazón</h4>
-    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
-      LEER MÁS
-    </a>
-  </div>
-</div>
+              if (offset === 0) {
+                // Card central
+                card.style.transform = "translateX(0) scale(1) rotateY(0)";
+                card.style.zIndex = 3;
+                card.style.opacity = 1;
+                if (header) header.classList.remove("hidden");
+              } else if (offset === -1 || offset === cards.length - 1) {
+                // Izquierda
+                card.style.transform =
+                  "translateX(-300px) scale(0.85) rotateY(25deg)";
+                card.style.zIndex = 2;
+                card.style.opacity = 0.7;
+                if (header) header.classList.add("hidden");
+              } else if (offset === 1 || offset === -(cards.length - 1)) {
+                // Derecha
+                card.style.transform =
+                  "translateX(300px) scale(0.85) rotateY(-25deg)";
+                card.style.zIndex = 2;
+                card.style.opacity = 0.7;
+                if (header) header.classList.add("hidden");
+              } else {
+                // Ocultas atrás
+                card.style.transform = "translateX(0) scale(0.5)";
+                card.style.zIndex = 1;
+                card.style.opacity = 0;
+                if (header) header.classList.add("hidden");
+              }
+            });
+          }
 
-<!-- Tarjeta 3 -->
-<div class="blog-card absolute transition-all duration-700 ease-in-out bg-white rounded-3xl shadow-xl w-[35vw] max-w-[500px] h-[500px] overflow-hidden">
-  <div class="header-blog text-center py-4 hidden">
-    <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
-  </div>
-  <!-- Imagen -->
-  <img src="Media/BLOGS/Jornada.jpg" alt="Entrada 3" class="w-full h-[250px] object-cover">
-  <!-- Contenido -->
-  <div class="p-6 text-center">
-    <h4 class="text-xl font-bold text-[#e20d7b] mb-4">Jornada y día del niño</h4>
-    <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
-      LEER MÁS
-    </a>
-  </div>
-</div>
+          document.getElementById("nextBlog").addEventListener("click", () => {
+            activeIndex = (activeIndex + 1) % cards.length;
+            updateBlogCarousel();
+          });
 
-    </div>
+          document.getElementById("prevBlog").addEventListener("click", () => {
+            activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+            updateBlogCarousel();
+          });
 
-    <!-- Flechas (solo desktop) -->
-    <button id="prevBlog" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
-      ❮
-    </button>
-    <button id="nextBlog" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-50 bg-[#e20d7b] text-white p-3 rounded-full hover:bg-[#c40c66] transition">
-      ❯
-    </button>
+          // Inicializar
+          updateBlogCarousel();
+        </script>
 
-    <!-- 🔹 Versión simple (solo móvil) -->
-    <div class="block md:hidden w-[70vw] bg-white rounded-3xl shadow-xl overflow-hidden">
-      <div class="text-center py-4">
-        <h3 class="text-3xl font-extrabold text-[#e20d7b]">Blog</h3>
-      </div>
-      <div class="bg-gray-200 w-full h-[200px] flex items-center justify-center">
-        <span class="text-gray-500"> <img src="Media/BLOGS/Alimentos.JPG" alt="Alimentos del corazón" class="w-full h-[200px] object-cover"></span>
-      </div>
-      <div class="p-6 text-center">
-        <h4 class="text-lg font-bold text-[#e20d7b] mb-4">Alimentos del corazón</h4>
-        <a href="blog/blogs.html" class="bg-[#e20d7b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#c40c66] transition">
-  LEER MÁS
-</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- =================================================== -->
+        <!-- 6. ESPACIOS DIF                                     -->
+        <!-- =================================================== -->
+        <section id="transparencia" class="py-16 px-4 bg-transparent">
+          <div
+            class="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden"
+          >
+            <div class="p-6 md:p-10">
+              <h2
+                class="text-3xl text-center font-extrabold text-[#e20d7b] mb-10"
+              >
+                Espacios DIF
+              </h2>
 
+              <div
+                class="rounded-xl overflow-hidden border border-gray-300 shadow-md"
+              >
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1DX7vcm2f7cR1YjUOrwavnYoVxnuTQrI&ehbc=2E312F&noprof=1"
+                  width="100%"
+                  height="550"
+                  style="border: 0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<script>
-  const cards = document.querySelectorAll("#blogCarousel .blog-card");
-  let activeIndex = 0;
+        <!-- =================================================== -->
+        <!-- 7. C O N T Á C T A N O S                            -->
+        <!-- =================================================== -->
+        <section id="contacto" class="py-20 px-4 bg-transparent">
+          <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl text-center mb-10 text-primary section-title">
+              ¡Contáctanos!
+            </h2>
 
-  function updateBlogCarousel() {
-    cards.forEach((card, i) => {
-      const offset = i - activeIndex;
-      const header = card.querySelector(".header-blog");
+            <div class="flex flex-col lg:flex-row gap-10">
+              <!-- Formulario con fondo blanco -->
+              <div
+                class="flex-1 w-full bg-white rounded-2xl shadow-md overflow-hidden"
+              >
+                <div class="w-full h-[800px] p-4">
+                  <iframe
+                    src="https://docs.google.com/forms/d/1dgAKwKH4MJUKCG_kYLK3ZfzqWWnNlbE7povLGFpKo90/viewform?pli=1&pli=1&edit_requested=true"
+                    class="w-full h-full border-0 rounded-lg bg-white"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
 
-      if (offset === 0) {
-        // Card central
-        card.style.transform = "translateX(0) scale(1) rotateY(0)";
-        card.style.zIndex = 3;
-        card.style.opacity = 1;
-        if (header) header.classList.remove("hidden");
-      } else if (offset === -1 || offset === cards.length - 1) {
-        // Izquierda
-        card.style.transform = "translateX(-300px) scale(0.85) rotateY(25deg)";
-        card.style.zIndex = 2;
-        card.style.opacity = 0.7;
-        if (header) header.classList.add("hidden");
-      } else if (offset === 1 || offset === -(cards.length - 1)) {
-        // Derecha
-        card.style.transform = "translateX(300px) scale(0.85) rotateY(-25deg)";
-        card.style.zIndex = 2;
-        card.style.opacity = 0.7;
-        if (header) header.classList.add("hidden");
-      } else {
-        // Ocultas atrás
-        card.style.transform = "translateX(0) scale(0.5)";
-        card.style.zIndex = 1;
-        card.style.opacity = 0;
-        if (header) header.classList.add("hidden");
-      }
-    });
-  }
+              <!-- Mapa limpio -->
+              <div class="flex-1 w-full overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
+                  class="w-full h-[800px] border-0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  document.getElementById("nextBlog").addEventListener("click", () => {
-    activeIndex = (activeIndex + 1) % cards.length;
-    updateBlogCarousel();
-  });
+        <!-- =================================================== -->
+        <!--  REDES SOCIALES                                     -->
+        <!-- =================================================== -->
+        <div class="flex justify-center gap-8 mt-6 text-6xl"></div>
 
-  document.getElementById("prevBlog").addEventListener("click", () => {
-    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
-    updateBlogCarousel();
-  });
+        <script>
+          function toggleSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + "-submenu");
+            const chevron = document.getElementById(menuId + "-chevron");
 
-  // Inicializar
-  updateBlogCarousel();
-</script>
+            if (submenu.classList.contains("active")) {
+              submenu.classList.remove("active");
+              chevron.classList.remove("rotated");
+            } else {
+              submenu.classList.add("active");
+              chevron.classList.add("rotated");
+            }
+          }
 
-  <!-- =================================================== -->
-  <!-- 6. ESPACIOS DIF                                     -->
-  <!-- =================================================== -->
-  <section id="transparencia" class="py-16 px-4 bg-transparent">
-    <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden">
-      <div class="p-6 md:p-10">
-        <h2 class="text-3xl text-center font-extrabold text-[#e20d7b] mb-10">Espacios DIF</h2>
+          function closeMobileMenu() {
+            // Close the dropdown by removing focus
+            document.activeElement.blur();
 
-        <div class="rounded-xl overflow-hidden border border-gray-300 shadow-md">
-          <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1DX7vcm2f7cR1YjUOrwavnYoVxnuTQrI&ehbc=2E312F&noprof=1"
-            width="100%" height="550" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+            // Also close any open submenus
+            const submenus = document.querySelectorAll(".submenu");
+            const chevrons = document.querySelectorAll(".chevron");
 
-<!-- =================================================== -->
-<!-- 7. C O N T Á C T A N O S                            -->
-<!-- =================================================== -->
-<section id="contacto" class="py-20 px-4 bg-transparent">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl text-center mb-10 text-primary section-title">¡Contáctanos!</h2>
+            submenus.forEach((submenu) => submenu.classList.remove("active"));
+            chevrons.forEach((chevron) => chevron.classList.remove("rotated"));
+          }
 
-    <div class="flex flex-col lg:flex-row gap-10">
-      <!-- Formulario con fondo blanco -->
-      <div class="flex-1 w-full bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="w-full h-[800px] p-4">
-          <iframe
-            src="https://docs.google.com/forms/d/1dgAKwKH4MJUKCG_kYLK3ZfzqWWnNlbE7povLGFpKo90/viewform?pli=1&pli=1&edit_requested=true"
-            class="w-full h-full border-0 rounded-lg bg-white" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <!-- Mapa limpio -->
-      <div class="flex-1 w-full overflow-hidden">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115317.25779183782!2d-101.0506110253275!3d25.416045130209618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86880d380c4b1f31%3A0xeef17fb2e71db3ce!2sDIF%20Saltillo!5e0!3m2!1ses-419!2smx!4v1751786105534!5m2!1ses-419!2smx"
-          class="w-full h-[800px] border-0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- =================================================== -->
-  <!--  REDES SOCIALES                                     -->
-  <!-- =================================================== -->
-  <div class="flex justify-center gap-8 mt-6 text-6xl">
-  </div>
-
-
-  <script>
-    function toggleSubmenu(menuId) {
-      const submenu = document.getElementById(menuId + '-submenu');
-      const chevron = document.getElementById(menuId + '-chevron');
-
-      if (submenu.classList.contains('active')) {
-        submenu.classList.remove('active');
-        chevron.classList.remove('rotated');
-      } else {
-        submenu.classList.add('active');
-        chevron.classList.add('rotated');
-      }
-    }
-
-    function closeMobileMenu() {
-      // Close the dropdown by removing focus
-      document.activeElement.blur();
-
-      // Also close any open submenus
-      const submenus = document.querySelectorAll('.submenu');
-      const chevrons = document.querySelectorAll('.chevron');
-
-      submenus.forEach(submenu => submenu.classList.remove('active'));
-      chevrons.forEach(chevron => chevron.classList.remove('rotated'));
-    }
-
-    // Close submenu when clicking on a submenu item
-    document.querySelectorAll('.text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item').forEach(item => {
-      item.addEventListener('click', closeMobileMenu);
-    });
+          // Close submenu when clicking on a submenu item
+          document
+            .querySelectorAll(
+              ".text-gray-700 hover:text-white hover:bg-[#e20d7b] rounded-lg font-medium transition-colors submenu-item",
+            )
+            .forEach((item) => {
+              item.addEventListener("click", closeMobileMenu);
+            });
         </script>
       </main>
     </div>
-<!-- =================================================== -->
-<!-- F O O T E R -->
-<!-- =================================================== -->
-<footer class="relative overflow-hidden bg-center bg-cover" 
-  style="background-image: url('Media/footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-  
-  <div class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-    
-    <!-- Logos -->
-    <div class="flex items-center gap-4">
-      <img src="Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24">
-      <img src="Media/PorAmorLogo.png" alt="Por Amor a Saltillo" class="h-20 md:h-24">
-    </div>
+    <!-- =================================================== -->
+    <!-- F O O T E R -->
+    <!-- =================================================== -->
+    <footer
+      class="relative overflow-hidden bg-center bg-cover"
+      style="
+        background-image: url(&quot;Media/footer.png&quot;);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="relative max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left"
+      >
+        <!-- Logos -->
+        <div class="flex items-center gap-4">
+          <img src="Media/LogoVert.png" alt="Logo DIF" class="h-20 md:h-24" />
+          <img
+            src="Media/PorAmorLogo.png"
+            alt="Por Amor a Saltillo"
+            class="h-20 md:h-24"
+          />
+        </div>
 
-    <!-- Contacto y redes -->
-    <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
-      <p class="text-[#602F89] font-bold uppercase">Contacto</p>
-      <p class="text-[#602F89] font-semibold">
-        <i class="fas fa-phone-alt"></i> 844 412 1264
-      </p>
+        <!-- Contacto y redes -->
+        <div class="mt-6 md:mt-0 md:ml-10 space-y-3">
+          <p class="text-[#602F89] font-bold uppercase">Contacto</p>
+          <p class="text-[#602F89] font-semibold">
+            <i class="fas fa-phone-alt"></i> 844 412 1264
+          </p>
 
-      <p class="text-[#602F89] font-bold uppercase mt-4">
-        Síguenos en nuestras redes sociales
-      </p>
+          <p class="text-[#602F89] font-bold uppercase mt-4">
+            Síguenos en nuestras redes sociales
+          </p>
 
-      <div class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2">
-        <a href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.instagram.com/dif_saltillo/?hl=es" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram hover:scale-110 transition"></i>
-        </a>
-        <a href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1" target="_blank" aria-label="TikTok">
-          <i class="fab fa-tiktok hover:scale-110 transition"></i>
-        </a>
-        <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
-          <i class="fab fa-x-twitter hover:scale-110 transition"></i>
-        </a>
+          <div
+            class="flex justify-center md:justify-start gap-4 text-[#602F89] text-3xl mt-2"
+          >
+            <a
+              href="https://www.facebook.com/DIF.Saltillo2018/?locale=es_LA"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f hover:scale-110 transition"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/dif_saltillo/?hl=es"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram hover:scale-110 transition"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@dif.saltillo?_t=ZS-90nPXfp1jy3&_r=1"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <i class="fab fa-tiktok hover:scale-110 transition"></i>
+            </a>
+            <a href="https://x.com/dif_saltillo" target="_blank" aria-label="X">
+              <i class="fab fa-x-twitter hover:scale-110 transition"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
-
+    </footer>
   </body>
 </html>

@@ -1,41 +1,47 @@
 @font-face {
-  font-family: 'Gilroy-Black';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/Gilroy-Black.ttf') format('truetype');
+  font-family: "Gilroy-Black";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/Gilroy-Black.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Galano-Grotesque';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueRegular.otf') format('opentype');
+  font-family: "Galano-Grotesque";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueRegular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Galano-Grotesque';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueMedium.otf') format('opentype');
+  font-family: "Galano-Grotesque";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueMedium.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Galano-Grotesque';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueSemiBold.otf') format('opentype');
+  font-family: "Galano-Grotesque";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/GalanoGrotesqueSemiBold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'League-Spartan';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+  font-family: "League-Spartan";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/LeagueSpartan-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: regular;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Josefine-Sans';
-  src: url('Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-family: "Josefine-Sans";
+  src: url("Media/LOGOTIPOS_Y_COLORES_INSTITUCIONALES_DIF_SALTILLO/ID DIF Saltillo_Carpeta/Fonts/JosefinSans-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
