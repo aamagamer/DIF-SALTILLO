@@ -6,7 +6,7 @@ const progInfo = [
       "Ofrecer asesoría jurídica gratuita a personas que enfrentan situaciones legales que afectan su estabilidad personal o familiar.",
     descripcion:
       "La Procuraduría Municipal en DIF Saltillo brinda orientación legal gratuita y acompañamiento jurídico en temas familiares, civiles y sociales. Este servicio está pensado para personas que requieren resolver situaciones legales, pero no cuentan con los recursos para contratar un abogado. Nuestro compromiso es garantizar el acceso a la justicia de forma humana, cercana y profesional.",
-    imagen: "procuraduría_municipal.png",
+    imagen: "procuraduría_municipal.webp",
   },
 ];
 

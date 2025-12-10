@@ -6,7 +6,7 @@ const progInfo = [
       "Brindar apoyos económicos a personas en situación de vulnerabilidad para atender necesidades que afectan su bienestar.",
     descripcion:
       "Apoyos de Corazón es un programa del DIF Saltillo que tiene como prioridad atender a quienes más lo necesitan. A través de apoyos económicos directos que representan un acto de solidaridad y empatía, fortaleciendo la red de protección social en nuestra comunidad.",
-    imagen: "apoyos_de_corazón.png",
+    imagen: "apoyos_de_corazón.webp",
   },
 
   {
@@ -16,7 +16,7 @@ const progInfo = [
       "Contribuir a la seguridad alimentaria de familias en situación de vulnerabilidad mediante la entrega de insumos alimenticios.",
     descripcion:
       "A través de Alimentos de Corazón, el DIF Saltillo entrega paquetes alimentarios a familias que atraviesan momentos complicados. Esta iniciativa busca asegurar que nadie en nuestra ciudad se quede sin lo más básico: una alimentación digna y suficiente. Además de cubrir una necesidad urgente, este programa fortalece el tejido comunitario y promueve el acceso equitativo a una vida más saludable.",
-    imagen: "alimentos_de_corazón.png",
+    imagen: "alimentos_de_corazón.webp",
   },
 
   {
@@ -26,7 +26,7 @@ const progInfo = [
       "Acercar los servicios del DIF Saltillo a las colonias y comunidades que más lo necesitan mediante brigadas comunitarias.",
     descripcion:
       "Las Jornadas DIF son brigadas integrales que llevan servicios gratuitos directamente a colonias y sectores con alta vulnerabilidad. A través de estas jornadas, las personas pueden acceder a atención médica, psicológica, asesoría legal, cortes de cabello, entrega de apoyos y más, sin salir de su comunidad. El objetivo es eliminar barreras de acceso, estar cerca y al servicio de todas las familias.",
-    imagen: "jornadas_dif.png",
+    imagen: "jornadas_dif.webp",
   },
 
   {
@@ -36,7 +36,7 @@ const progInfo = [
       "Fomentar la cultura del reciclaje y el intercambio responsable, a través de la entrega de productos de limpieza a cambio de materiales reciclables.",
     descripcion:
       "El Mercadito DIF es una iniciativa que une dos causas fundamentales: el cuidado del medio ambiente y el apoyo al hogar. Las personas pueden llevar materiales reciclables como botellas de plástico, papel o cartón, y recibir a cambio productos de limpieza para su casa. Este programa impulsa la economía circular, busca promover la conciencia ecológica y genera bienestar directo a las familias que participan.",
-    imagen: "marcadito_dif.png",
+    imagen: "marcadito_dif.webp",
   },
 ];
 

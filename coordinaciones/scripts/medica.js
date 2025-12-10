@@ -6,7 +6,7 @@ const progInfo = [
       "Ofrecer medicamentos de calidad a bajo costo en diferentes puntos de la ciudad, con atención cercana y humana.",
     descripcion:
       "Las Farmacias DIF Saltillo están ubicadas estratégicamente en distintos sectores de la ciudad para brindar acceso a medicamentos a precios bajos para todas las familias. Estas farmacias forman parte del compromiso del DIF Saltillo con el bienestar y la salud de la población, especialmente para quienes más lo necesitan. Además de ofrecer medicamentos genéricos y de patente, las farmacias cuentan con personal capacitado para brindar orientación y un trato digno a cada persona.",
-    imagen: "farmacias_dif_saltillo.png",
+    imagen: "farmacias_dif_saltillo.webp",
   },
 
   {
@@ -16,7 +16,7 @@ const progInfo = [
       "Ofrecer servicios de salud visual y dental de calidad, a bajo costo y con enfoque preventivo, para mejorar la calidad de vida de niñas, niños, adolescentes, personas adultas y adultas mayores.",
     descripcion:
       "Te Cuidamos Con Amor es un programa integral del DIF Saltillo que brinda atención óptica y dental accesible. A través de nuestras clínicas, las personas pueden acceder a estudios de la vista, lentes a bajo costo, limpiezas dentales, extracciones, resinas, entre otros servicios, con enfoque preventivo y humano. Este programa busca que más personas puedan cuidar su salud sin barreras económicas.",
-    imagen: "te_cuidamos_con_amor.png",
+    imagen: "te_cuidamos_con_amor.webp",
   },
 
   {
@@ -26,7 +26,7 @@ const progInfo = [
       "Fomentar la prevención y el cuidado de la salud bucal en niñas y niños de Saltillo desde las primeras etapas de su vida.",
     descripcion:
       "El programa Con Amor a las Sonrisas Sanas está enfocado en la atención dental infantil. A través de brigadas y visitas a centros educativos, se realizan revisiones, limpiezas, talleres de higiene bucal y actividades para promover el cuidado dental desde la infancia. Esta iniciativa del DIF Saltillo busca generar hábitos de prevención, reducir la incidencia de enfermedades bucales en niñas y niños, y sembrar la importancia del autocuidado en la salud.",
-    imagen: "con_amor_a_las_sonrisas_sanas.png",
+    imagen: "con_amor_a_las_sonrisas_sanas.webp",
   },
 
   {
@@ -36,7 +36,7 @@ const progInfo = [
       "Identificar, valorar, canalizar y realizar operaciones a personas adultas mayores candidatas a cirugía de cataratas, con el objetivo de recuperar su visión y calidad de vida.",
     descripcion:
       "Visión Con Amor es un programa del DIF Saltillo que brinda acceso gratuito a cirugías de cataratas para adultos mayores. A través de un proceso de valoración médica, se identifican candidatos aptos y se les brinda seguimiento hasta su operación y recuperación. Recuperar la vista es recuperar independencia, dignidad y esperanza. Por eso, este programa es una forma de ver la vida con nuevos ojos y con amor.",
-    imagen: "vision_con_amor.png",
+    imagen: "vision_con_amor.webp",
   },
 
   {
@@ -46,7 +46,7 @@ const progInfo = [
       "Ofrecer cirugías correctivas gratuitas a niñas, niños y adolescentes con labio y/o paladar hendido, para mejorar su salud, su desarrollo y su inclusión social.",
     descripcion:
       "A través de alianzas con especialistas y hospitales, el DIF Saltillo impulsa este programa que brinda atención médica integral, cirugías y acompañamiento a familias con niñas y niños que presentan labio y/o paladar hendido. Además del procedimiento quirúrgico, se acompaña a cada caso con seguimiento emocional, terapias del lenguaje y orientación médica, en un proceso lleno de empatía y compromiso.",
-    imagen: "labio_paladar_hendido.png",
+    imagen: "labio_paladar_hendido.webp",
   },
 
   {
@@ -56,7 +56,7 @@ const progInfo = [
       "Brindar atención terapéutica y rehabilitación física a personas con alguna discapacidad o lesión temporal, promoviendo su recuperación e inclusión.",
     descripcion:
       "La Unidad Básica de Rehabilitación (UBR) es parte fundamental del sistema DIF Saltillo. En ella se ofrecen servicios de fisioterapia, estimulación temprana, mecanoterapia, electroterapia, terapia ocupacional y más. Está dirigida a personas con discapacidad o en procesos de recuperación física, incluyendo infancias, adultos y adultos mayores. La atención es profesional, accesible y siempre enfocada en mejorar la autonomía y calidad de vida de cada paciente.",
-    imagen: "unidad_basica_de_rehabilitacion.png",
+    imagen: "unidad_basica_de_rehabilitacion.webp",
   },
 ];
 

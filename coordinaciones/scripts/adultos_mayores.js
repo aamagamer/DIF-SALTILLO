@@ -6,7 +6,7 @@ const progInfo = [
       "Brindar un espacio integral de atención, desarrollo y convivencia para adultos mayores de Saltillo, donde se promueve el bienestar físico, emocional y social.",
     descripcion:
       "El Centro de los Grandes Con Amor a Saltillo es un lugar diseñado especialmente para personas adultas mayores, donde se ofrecen actividades recreativas, talleres, servicios de salud y espacios de convivencia diaria. Este centro del DIF Saltillo busca que las y los adultos mayores se mantengan activos, acompañados y valorados. Con un enfoque de respeto y dignidad, el centro promueve el envejecimiento activo, el aprendizaje continuo y la inclusión de los adultos mayores en la vida comunitaria.",
-    imagen: "centro_de_los_grandes_con_amor_a_saltillo.png",
+    imagen: "centro_de_los_grandes_con_amor_a_saltillo.webp",
   },
 
   {
@@ -16,7 +16,7 @@ const progInfo = [
       "Fomentar la integración social y emocional de adultos mayores a través de grupos de convivencia y apoyo comunitario en diferentes sectores de Saltillo.",
     descripcion:
       "Grupos Cercanos Con Amor es una red de grupos comunitarios para adultos mayores organizada por el DIF Saltillo en distintas colonias y comunidades. En estos espacios se realizan actividades culturales, recreativas, deportivas y de reflexión, fortaleciendo el sentido de pertenencia, la autoestima y los vínculos afectivos. Los grupos son liderados por promotores voluntarios y forman parte de una estrategia de prevención del aislamiento social en las personas mayores, promoviendo la empatía, el cuidado mutuo y la cercanía intergeneracional.",
-    imagen: "grupos_cercanos_con_amor.png",
+    imagen: "grupos_cercanos_con_amor.webp",
   },
 
   {
@@ -26,7 +26,7 @@ const progInfo = [
       "Acercar a los adultos mayores a la riqueza cultural de la ciudad y el estado, mediante visitas guiadas y recorridos organizados por espacios históricos, culturales y naturales.",
     descripcion:
       "Recorridos Con Amor: Rutas Culturales es una experiencia organizada por el DIF Saltillo para que los adultos mayores disfruten de visitas culturales a museos, parques, teatros, sitios históricos y eventos artísticos. Además de promover el derecho al esparcimiento, estos recorridos contribuyen al aprendizaje, la socialización y la construcción de memorias compartidas entre los participantes. Es una forma de reconocer la vida, la historia y la presencia activa de las personas mayores en la comunidad.",
-    imagen: "recorridos_con_amor_rutas_culturales.png",
+    imagen: "recorridos_con_amor_rutas_culturales.webp",
   },
 
   {
@@ -36,7 +36,7 @@ const progInfo = [
       "Llevar acompañamiento, servicios, entretenimiento y cuidado a personas adultas mayores que viven en asilos o que asisten a comedores comunitarios en Saltillo.",
     descripcion:
       "Con las Jornadas Con Amor, el DIF Saltillo visita asilos y comedores comunitarios para ofrecer actividades recreativas, sesiones informativas, atención médica y emocional, así como momentos de compañía y alegría a quienes más lo necesitan. Estas jornadas fortalecen la dignidad y calidad de vida de las personas adultas mayores, especialmente de aquellas que viven en situación de vulnerabilidad o soledad. Cada jornada es un recordatorio de que en Saltillo nadie envejece solo.",
-    imagen: "jornadas_con_amor_asilos_y_comedores.png",
+    imagen: "jornadas_con_amor_asilos_y_comedores.webp",
   },
 ];
 
