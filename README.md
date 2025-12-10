@@ -22,9 +22,9 @@ Abre el proyecto con VS Code:
 code .
 ```
 
-# 📂 Carpeta Media
+# 📂 Carpeta media
 
-Por cuestiones de tamaño, la carpeta Media no está incluida en este repositorio (GitHub no permite archivos mayores a 100MB).
+Por cuestiones de tamaño, la carpeta media no está incluida en este repositorio (GitHub no permite archivos mayores a 100MB).
 
 Puedes descargarla por [Google Drive](https://drive.google.com/drive/folders/1FGkRsFys6YII-K1y4o5GhzPY5Enzh9zX?usp=drive_link).
 
@@ -33,15 +33,15 @@ Una vez descargada, colócala en la raíz del proyecto:
 ```bash
 DIF SALTILLO/
 ├── index.html
-├── Media/   <-- aquí va la carpeta
+├── media/   <-- aquí va la carpeta
 └── ...
 ```
 
-# 📂 Carpeta Media
+# 📂 Carpeta media
 
 ¡¡¡ UPDATE IMPORTANTE !!!
 
-La carpeta Media ya está incluida en el repositorio, ya no necesita agregarse manualmente.
+La carpeta media ya está incluida en el repositorio, ya no necesita agregarse manualmente.
 
 # 👥 Colaboradores
 
@@ -63,6 +63,6 @@ La carpeta Media ya está incluida en el repositorio, ya no necesita agregarse m
 
 # 📌 Notas
 
-- Recuerda mantener la carpeta Media fuera del control de Git.
+- Recuerda mantener la carpeta media fuera del control de Git.
 
 - Si haces cambios grandes, crea una rama (git checkout -b nombre-rama) y luego haz un Pull Request.
