@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- Right side (image placeholder) -->
             <div class="flex items-center justify-center">
-                <img src="../media/COORDINACIONES/programas/sin_color/${info.imagen}" alt="${info.titulo}" class="rounded-lg max-h-90 object-cover">
+                <img src="../Media/COORDINACIONES/programas/sin_color/${info.imagen}" alt="${info.titulo}" class="rounded-lg max-h-90 object-cover">
             </div>
         </div>`;
 

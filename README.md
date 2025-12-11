@@ -33,7 +33,7 @@ Una vez descargada, colócala en la raíz del proyecto:
 ```bash
 DIF SALTILLO/
 ├── index.html
-├── media/   <-- aquí va la carpeta
+├── Media/   <-- aquí va la carpeta
 └── ...
 ```
 
